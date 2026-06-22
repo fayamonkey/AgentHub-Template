@@ -1,14 +1,14 @@
 ---
-title: Willkommen in deinem Hub
+title: Welcome to your Hub
 emoji: 🏠
 rung: R3
 category: tools
 updated: 2026-06-11
 ---
-# Willkommen 👋
+# Welcome 👋
 
-Das ist dein persönlicher AI-Hub. Jede Markdown-Datei, die dein **Cowork-Agent** in den
-`content/`-Ordner committet, erscheint hier automatisch als Karte.
+This is your personal AI Hub. Every markdown file your **Cowork agent** commits to the
+`content/` folder shows up here automatically as a card.
 
-Leg los: lass einen Cowork-Task sein Ergebnis hierher schreiben — und schau im
-**Ideas**-Board, was du als Nächstes bauen willst.
+Get started: have a Cowork task write its result here — then check the **Ideas** board
+to plan what you want to build next.

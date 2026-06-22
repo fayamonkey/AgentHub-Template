@@ -57,7 +57,7 @@ export default function App() {
     CATEGORIES.forEach((c) => (map[c.id] = []));
     cards.forEach((x) => {
       let cat = (x.fm.category || "tools").toLowerCase();
-      // Unbekannte/falsch geschriebene category -> "tools", damit nie eine Karte still verschwindet.
+      // Unknown/misspelled category -> "tools" so a card is never silently dropped.
       if (!Object.prototype.hasOwnProperty.call(map, cat)) cat = "tools";
       map[cat].push(x);
     });
