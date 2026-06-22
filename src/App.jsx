@@ -56,8 +56,10 @@ export default function App() {
     const map = {};
     CATEGORIES.forEach((c) => (map[c.id] = []));
     cards.forEach((x) => {
-      const cat = (x.fm.category || "tools").toLowerCase();
-      (map[cat] || (map[cat] = [])).push(x);
+      let cat = (x.fm.category || "tools").toLowerCase();
+      // Unbekannte/falsch geschriebene category -> "tools", damit nie eine Karte still verschwindet.
+      if (!Object.prototype.hasOwnProperty.call(map, cat)) cat = "tools";
+      map[cat].push(x);
     });
     return map;
   }, [cards]);
