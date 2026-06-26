@@ -113,26 +113,11 @@ export default function App() {
           <button className={tab === "wins" ? "on" : ""} onClick={() => { setTab("wins"); setMenu(null); }}>
             🏆 Wins
           </button>
-          {CATEGORIES.map((c) => {
-            const items = c.id === "library" ? [...(itemsByCat.library || []), ...(dna.length ? [DNA_CARD] : [])] : itemsByCat[c.id] || [];
-            return (
-              <div key={c.id} className="navitem" onMouseEnter={() => setMenu(c.id)}>
-                <button className={tab === c.id ? "on" : ""} onClick={() => { setTab(c.id); setMenu(null); }}>
-                  {c.emoji} {c.label} <span className="ct">{counts[c.id] || 0}</span> <span className="caret">⌄</span>
-                </button>
-                {menu === c.id && items.length > 0 && (
-                  <div className="dropdown">
-                    {items.map((it, i) => (
-                      <button key={i} className="dropitem" onClick={() => { it.isDna ? setDnaOpen(true) : setOpen(it); setMenu(null); }}>
-                        <span>{it.fm.emoji || "📄"}</span>
-                        <span>{it.fm.title || it.file}</span>
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </div>
-            );
-          })}
+          {CATEGORIES.map((c) => (
+            <button key={c.id} className={tab === c.id ? "on" : ""} onClick={() => { setTab(c.id); setMenu(null); }}>
+              {c.emoji} {c.label} <span className="ct">{counts[c.id] || 0}</span>
+            </button>
+          ))}
         </div>
         <button className="themebtn" onClick={() => setDark((d) => !d)} title="Toggle dark mode">
           {dark ? "☀️" : "🌙"}
