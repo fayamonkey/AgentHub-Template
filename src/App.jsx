@@ -122,7 +122,6 @@ export default function App() {
         <button className="themebtn" onClick={() => setDark((d) => !d)} title="Toggle dark mode">
           {dark ? "☀️" : "🌙"}
         </button>
-        <a className="repo" href={`https://github.com/${CONFIG.githubRepo}`} target="_blank" rel="noreferrer">vault ↗</a>
       </nav>
 
       {tab === "ideas" ? <Ideas /> : tab === "wins" ? <Wins /> : (
@@ -212,7 +211,7 @@ export default function App() {
         </div>
       )}
 
-      <footer>Built with my AI Hub · powered by Claude Cowork + GitHub</footer>
+      <footer>Built with my AI Hub · powered by Claude Cowork + GitHub · <a className="repo" href={`https://github.com/${CONFIG.githubRepo}`} target="_blank" rel="noreferrer">vault ↗</a></footer>
     </div>
   );
 }

@@ -40,6 +40,15 @@ body { margin: 0; background: var(--bg); color: var(--txt);
 .repo { color:var(--mut); font-size:13px; text-decoration:none; white-space:nowrap; }
 .repo:hover { color:var(--accent); }
 
+/* Mobile nav: one scrollable row, every tab reachable (no wrap, nothing cut off) */
+@media (max-width: 760px) {
+  .nav { gap:8px; padding:0 12px; }
+  .brand span:not(.logo) { display:none; }
+  .navtabs { flex-wrap:nowrap; overflow-x:auto; min-width:0; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
+  .navtabs::-webkit-scrollbar { display:none; }
+  .navtabs button { flex:0 0 auto; white-space:nowrap; }
+}
+
 .wrap { max-width: 1000px; margin: 0 auto; padding: 48px 22px 90px; }
 .hello { font-size: 15px; color: var(--mut); }
 h1 { font-size: 38px; margin: 6px 0 4px; font-weight: 700; letter-spacing:-.022em; }
