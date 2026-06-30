@@ -423,7 +423,13 @@ footer { margin:50px auto 0; max-width:1000px; padding:0 22px; text-align:center
 
 
 /* ---- Certificate ---- */
-.cert-actions { margin: 4px 0 22px; }
+.cert-actions { margin: 4px 0 22px; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.cert-name-field {
+  padding: 10px 14px; border-radius: 999px; border: 1px solid var(--line, #e5e7eb);
+  background: var(--card, #fff); color: var(--text, #111827); font-size: 14px;
+  min-width: 220px; outline: none;
+}
+.cert-name-field:focus { border-color: #c9a64a; box-shadow: 0 0 0 1px #c9a64a inset; }
 
 .cert-frame {
   position: relative;

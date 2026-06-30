@@ -56,6 +56,7 @@ export default function Certificate() {
   const [sel, setSel] = useState(null);
   const [loading, setLoading] = useState(true);
   const [busy, setBusy] = useState(false);
+  const [name, setName] = useState(CONFIG.ownerName || "");
 
   const hubName = CONFIG.ownerName ? `${CONFIG.ownerName}'s AI Hub` : "My AI Hub";
 
@@ -81,9 +82,10 @@ export default function Certificate() {
 
   async function generate() {
     setBusy(true);
+    const owner = (name || "").trim();
     const badges = detectBadges({ cards, ideas: counts.ideas, wins: counts.wins, changelog: counts.changelog });
-    const citation = citationFor({ hubName, ownerName: CONFIG.ownerName });
-    const row = { hub_name: hubName, owner_name: CONFIG.ownerName || "", badges, stats: { cards: cards.length, ...counts, citation } };
+    const citation = citationFor({ hubName, ownerName: owner });
+    const row = { hub_name: hubName, owner_name: owner, badges, stats: { cards: cards.length, ...counts, citation } };
     try {
       const { data } = await supabase.from("certificates").insert(row).select().single();
       if (data) { setCerts((c) => [data, ...c]); setSel(data); }
@@ -105,6 +107,15 @@ export default function Certificate() {
       <p className="sub">An official, living record of your hub. It grows as your hub fills up. Generate one anytime.</p>
 
       <div className="cert-actions">
+        <input
+          className="cert-name-field"
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Your name (optional)"
+          maxLength={48}
+          onKeyDown={(e) => { if (e.key === "Enter" && !busy) generate(); }}
+        />
         <button className="btn-primary" onClick={generate} disabled={busy}>
           {busy ? "Generating…" : (certs.length ? "Generate a new one" : "Generate your certificate")}
         </button>
