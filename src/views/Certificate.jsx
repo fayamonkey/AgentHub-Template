@@ -5,7 +5,14 @@ import { CONFIG } from "../config.js";
 import { Icon } from "../lib/certIcons.jsx";
 
 const HUB_TITLE = "My AI Hub Win";
-const CITATION = "I built and operate My AI Hub, a calm command center that organizes my AI tools, workflows, agents, ideas, and shipped wins.";
+
+function bodyLines(owner) {
+  const who = owner && owner.trim() ? owner.trim() : "I";
+  return [
+    `${who} built an AgentHub, a command center to reduce AI overwhelm and focus on productivity.`,
+    "The AgentHub is a remote control for agentic AI workers.",
+  ];
+}
 
 function detectBadges({ cards, ideas, wins, changelog }) {
   const b = [];
@@ -21,23 +28,6 @@ function detectBadges({ cards, ideas, wins, changelog }) {
   if (changelog > 0) b.push({ key: "log", icon: "history", label: "Changelog kept", desc: changelog + " entr" + (changelog > 1 ? "ies" : "y") + " logged." });
   if (cards.length >= 5) b.push({ key: "builder", icon: "rocket", label: "Hub builder", desc: cards.length + " cards live." });
   return b;
-}
-
-function MountainFlag({ size = 76 }) {
-  return (
-    <svg width={size} height={size * 0.82} viewBox="0 0 100 82" aria-hidden="true">
-      <defs>
-        <linearGradient id="winGold" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#f6dd95" /><stop offset="0.5" stopColor="#d6a93f" /><stop offset="1" stopColor="#a87e22" />
-        </linearGradient>
-      </defs>
-      <rect x="49" y="2" width="2.2" height="16" rx="1" fill="url(#winGold)" />
-      <polygon points="51.2,3 67,6.5 51.2,10" fill="url(#winGold)" />
-      <polygon points="50,17 86,74 14,74" fill="url(#winGold)" />
-      <polygon points="50,17 50,74 14,74" fill="#00000026" />
-      <polygon points="50,17 60,33 50,40 41,33" fill="#ffffff2e" />
-    </svg>
-  );
 }
 
 export default function Certificate() {
@@ -73,7 +63,7 @@ export default function Certificate() {
     setBusy(true);
     const owner = (name || "").trim();
     const badges = detectBadges({ cards, ideas: counts.ideas, wins: counts.wins, changelog: counts.changelog });
-    const row = { hub_name: "My AI Hub", owner_name: owner, badges, stats: { cards: cards.length, ...counts, citation: CITATION } };
+    const row = { hub_name: "My AI Hub", owner_name: owner, badges, stats: { cards: cards.length, ...counts, citation: bodyLines(owner).join(" ") } };
     try {
       const { data } = await supabase.from("certificates").insert(row).select().single();
       if (data) { setCerts((c) => [data, ...c]); setSel(data); }
@@ -85,8 +75,8 @@ export default function Certificate() {
 
   const c = sel;
   const badges = c ? (c.badges || []) : [];
-  const citation = c && c.stats && c.stats.citation ? c.stats.citation : CITATION;
   const owner = c ? (c.owner_name || "") : "";
+  const lines = bodyLines(owner);
 
   return (
     <div className="wrap">
@@ -113,10 +103,13 @@ export default function Certificate() {
         <div className="empty">No Win card yet. Press the button to mint your first one.</div>
       ) : (
         <div className="cert-win">
-          <div className="cert-win-mark"><MountainFlag /></div>
-          <div className="cert-win-kicker">AI&nbsp;✦&nbsp;MASTERY</div>
+          <div className="cert-win-mark"><img src="/brand/aia-icon.png" alt="" width="70" height="70" /></div>
+          <img className="cert-win-brand" src="/brand/aia-logo-white.png" alt="AI Advantage" />
           <div className="cert-win-title">{HUB_TITLE}</div>
-          <div className="cert-win-body">{citation}</div>
+
+          <div className="cert-win-body">
+            {lines.map((ln, i) => <p key={i}>{ln}</p>)}
+          </div>
 
           <div className="cert-win-cap">
             <span className="cert-win-cap-rule" />
@@ -133,7 +126,9 @@ export default function Certificate() {
             ))}
           </div>
 
-          <div className="cert-win-foot">{owner ? `Built by ${owner}` : "Built with my AI Hub"}</div>
+          <div className="cert-win-foot">
+            {new Date(c.created_at).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+          </div>
         </div>
       )}
 

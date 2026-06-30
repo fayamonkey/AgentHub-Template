@@ -445,12 +445,15 @@ footer { margin:50px auto 0; max-width:1000px; padding:0 22px; text-align:center
   background-size: 26px 26px; mask-image: radial-gradient(120% 80% at 50% 0%, #000 30%, transparent 80%);
 }
 .cert-win > * { position: relative; }
-.cert-win-mark { display: flex; justify-content: center; margin-bottom: 12px; }
-.cert-win-mark svg { filter: drop-shadow(0 8px 16px rgba(214,169,63,.35)); }
+.cert-win-mark { display: flex; justify-content: center; margin-bottom: 10px; }
+.cert-win-mark img { width: 70px; height: 70px; border-radius: 16px; box-shadow: 0 12px 26px -10px rgba(0,0,0,.65); }
+.cert-win-brand { display: block; height: 17px; width: auto; margin: 0 auto; opacity: .9; }
+.cert-win-body p { margin: 0 0 8px; }
+.cert-win-body p:last-child { margin-bottom: 0; }
 .cert-win-kicker { color: #e8c46a; letter-spacing: .32em; font-size: 11px; font-weight: 700; text-transform: uppercase; }
 .cert-win-title {
-  font-family: Georgia, "Times New Roman", serif; font-size: 34px; font-weight: 700;
-  color: #fff; margin: 8px 0 0; line-height: 1.1;
+  font-family: Georgia, "Times New Roman", serif; font-size: 32px; font-weight: 700;
+  color: #fff; margin: 14px 0 0; line-height: 1.1;
 }
 .cert-win-body { max-width: 432px; margin: 14px auto 0; color: #c4ccdd; font-size: 15px; line-height: 1.62; }
 
