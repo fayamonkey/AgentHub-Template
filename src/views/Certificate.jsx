@@ -4,47 +4,38 @@ import { loadVault } from "../lib/vault.js";
 import { CONFIG } from "../config.js";
 import { Icon } from "../lib/certIcons.jsx";
 
-const SIGNATORIES = ["Igor", "Dean", "Tony"];
+const HUB_TITLE = "My AI Hub Win";
+const CITATION = "I built and operate My AI Hub, a calm command center that organizes my AI tools, workflows, agents, ideas, and shipped wins.";
 
 function detectBadges({ cards, ideas, wins, changelog }) {
   const b = [];
-  b.push({ key: "hub", icon: "badge-check", label: "AgentHub Operator", desc: "Built and runs a private AI hub." });
-  if (cards.length > 0) b.push({ key: "chain", icon: "link", label: "Three-Tool Chain", desc: "Lovable, GitHub and Cowork in one loop." });
-  if (cards.some((c) => (c.fm && c.fm.schedule) || /briefing/i.test(c.file || ""))) b.push({ key: "auto", icon: "repeat", label: "Self-Feeding Automation", desc: "A scheduled task fills the hub on its own." });
-  if (cards.some((c) => /cheat/i.test(c.file || "") || /cheat/i.test((c.fm && c.fm.title) || ""))) b.push({ key: "cheat", icon: "bookmark", label: "Hub Cheat-Sheet", desc: "Keeps a working reference on hand." });
+  b.push({ key: "calm", icon: "badge-check", label: "Reduced AI overwhelm", desc: "One calm place instead of scattered tools." });
+  b.push({ key: "hub", icon: "rocket", label: "AgentHub operator", desc: "Built and runs a private AI hub." });
+  if (cards.length > 0) b.push({ key: "chain", icon: "link", label: "Three-tool chain", desc: "Lovable, GitHub and Cowork in one loop." });
+  if (cards.some((c) => (c.fm && c.fm.schedule) || /briefing/i.test(c.file || ""))) b.push({ key: "auto", icon: "repeat", label: "Self-feeding automation", desc: "A scheduled task fills the hub on its own." });
+  if (ideas > 0) b.push({ key: "ideas", icon: "lightbulb", label: "Ideas in motion", desc: ideas + " idea" + (ideas > 1 ? "s" : "") + " captured." });
+  if (wins > 0) b.push({ key: "wins", icon: "trophy", label: "Wins shipped", desc: wins + " win" + (wins > 1 ? "s" : "") + " on the wall." });
   const lib = cards.filter((c) => ((c.fm && c.fm.category) || "").toLowerCase() === "library").length;
-  if (lib > 0) b.push({ key: "library", icon: "book", label: "Library Curator", desc: lib + " reference card" + (lib > 1 ? "s" : "") + " saved." });
-  if (ideas > 0) b.push({ key: "ideas", icon: "lightbulb", label: "Ideas in Motion", desc: ideas + " idea" + (ideas > 1 ? "s" : "") + " captured." });
-  if (wins > 0) b.push({ key: "wins", icon: "trophy", label: "Wins Shipped", desc: wins + " win" + (wins > 1 ? "s" : "") + " on the wall." });
-  if (changelog > 0) b.push({ key: "log", icon: "history", label: "Changelog Keeper", desc: changelog + " entr" + (changelog > 1 ? "ies" : "y") + " logged." });
-  if (cards.length >= 5) b.push({ key: "builder", icon: "rocket", label: "Hub Builder", desc: cards.length + " cards live." });
+  if (lib > 0) b.push({ key: "library", icon: "book", label: "Library curator", desc: lib + " reference card" + (lib > 1 ? "s" : "") + " saved." });
+  if (cards.some((c) => /cheat/i.test(c.file || "") || /cheat/i.test((c.fm && c.fm.title) || ""))) b.push({ key: "cheat", icon: "bookmark", label: "Hub cheat-sheet", desc: "Keeps a working reference on hand." });
+  if (changelog > 0) b.push({ key: "log", icon: "history", label: "Changelog kept", desc: changelog + " entr" + (changelog > 1 ? "ies" : "y") + " logged." });
+  if (cards.length >= 5) b.push({ key: "builder", icon: "rocket", label: "Hub builder", desc: cards.length + " cards live." });
   return b;
 }
 
-function citationFor({ hubName, ownerName }) {
-  const who = ownerName ? ownerName : "the holder";
-  return `Awarded to ${who}, who built and now operates ${hubName}, turning scattered AI work into one calm, orchestrated place.`;
-}
-
-function GoldSeal({ size = 82 }) {
-  const pts = [];
-  const n = 24, r1 = 46, r2 = 50, cx = 50, cy = 50;
-  for (let i = 0; i < n * 2; i++) {
-    const ang = (Math.PI * i) / n;
-    const r = i % 2 === 0 ? r2 : r1;
-    pts.push(`${(cx + r * Math.cos(ang)).toFixed(1)},${(cy + r * Math.sin(ang)).toFixed(1)}`);
-  }
+function MountainFlag({ size = 76 }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 100 100" aria-hidden="true">
+    <svg width={size} height={size * 0.82} viewBox="0 0 100 82" aria-hidden="true">
       <defs>
-        <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#f4d680" /><stop offset="0.5" stopColor="#c9962b" /><stop offset="1" stopColor="#9a6f1c" />
+        <linearGradient id="winGold" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor="#f6dd95" /><stop offset="0.5" stopColor="#d6a93f" /><stop offset="1" stopColor="#a87e22" />
         </linearGradient>
       </defs>
-      <polygon points={pts.join(" ")} fill="url(#gold)" />
-      <circle cx="50" cy="50" r="38" fill="none" stroke="#fbf3da" strokeWidth="2" opacity="0.7" />
-      <circle cx="50" cy="50" r="33" fill="#1f2a44" />
-      <path d="M40 51 l7 7 14 -15" fill="none" stroke="#f4d680" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" />
+      <rect x="49" y="2" width="2.2" height="16" rx="1" fill="url(#winGold)" />
+      <polygon points="51.2,3 67,6.5 51.2,10" fill="url(#winGold)" />
+      <polygon points="50,17 86,74 14,74" fill="url(#winGold)" />
+      <polygon points="50,17 50,74 14,74" fill="#00000026" />
+      <polygon points="50,17 60,33 50,40 41,33" fill="#ffffff2e" />
     </svg>
   );
 }
@@ -57,8 +48,6 @@ export default function Certificate() {
   const [loading, setLoading] = useState(true);
   const [busy, setBusy] = useState(false);
   const [name, setName] = useState(CONFIG.ownerName || "");
-
-  const hubName = CONFIG.ownerName ? `${CONFIG.ownerName}'s AI Hub` : "My AI Hub";
 
   const loadCerts = useCallback(async () => {
     try {
@@ -84,8 +73,7 @@ export default function Certificate() {
     setBusy(true);
     const owner = (name || "").trim();
     const badges = detectBadges({ cards, ideas: counts.ideas, wins: counts.wins, changelog: counts.changelog });
-    const citation = citationFor({ hubName, ownerName: owner });
-    const row = { hub_name: hubName, owner_name: owner, badges, stats: { cards: cards.length, ...counts, citation } };
+    const row = { hub_name: "My AI Hub", owner_name: owner, badges, stats: { cards: cards.length, ...counts, citation: CITATION } };
     try {
       const { data } = await supabase.from("certificates").insert(row).select().single();
       if (data) { setCerts((c) => [data, ...c]); setSel(data); }
@@ -97,14 +85,14 @@ export default function Certificate() {
 
   const c = sel;
   const badges = c ? (c.badges || []) : [];
-  const citation = c && c.stats && c.stats.citation ? c.stats.citation : (c ? citationFor({ hubName: c.hub_name, ownerName: c.owner_name }) : "");
-  const serial = c ? String(c.id).replace(/-/g, "").slice(0, 10).toUpperCase() : "";
+  const citation = c && c.stats && c.stats.citation ? c.stats.citation : CITATION;
+  const owner = c ? (c.owner_name || "") : "";
 
   return (
     <div className="wrap">
       <div className="hello">Your achievement</div>
-      <h1>Certificate</h1>
-      <p className="sub">An official, living record of your hub. It grows as your hub fills up. Generate one anytime.</p>
+      <h1>My AI Hub Win</h1>
+      <p className="sub">A shareable snapshot of what your hub is and what it does. Generate one anytime and post it anywhere.</p>
 
       <div className="cert-actions">
         <input
@@ -117,60 +105,45 @@ export default function Certificate() {
           onKeyDown={(e) => { if (e.key === "Enter" && !busy) generate(); }}
         />
         <button className="btn-primary" onClick={generate} disabled={busy}>
-          {busy ? "Generating…" : (certs.length ? "Generate a new one" : "Generate your certificate")}
+          {busy ? "Generating…" : (certs.length ? "Generate a new one" : "Generate your Win card")}
         </button>
       </div>
 
       {!c ? (
-        <div className="empty">No certificate yet. Press the button to mint your first one.</div>
+        <div className="empty">No Win card yet. Press the button to mint your first one.</div>
       ) : (
-        <div className="cert-frame">
-          <div className="cert-corner tl" /><div className="cert-corner tr" /><div className="cert-corner bl" /><div className="cert-corner br" />
-          <div className="cert-brand">AI&nbsp;ADVANTAGE</div>
-          <div className="cert-kicker">Certificate of Capability</div>
-          <div className="cert-seal"><GoldSeal /></div>
-          <div className="cert-presents">This certifies</div>
-          <div className="cert-name">{c.hub_name}</div>
-          {c.owner_name && <div className="cert-owner">operated by {c.owner_name}</div>}
+        <div className="cert-win">
+          <div className="cert-win-mark"><MountainFlag /></div>
+          <div className="cert-win-kicker">AI&nbsp;✦&nbsp;MASTERY</div>
+          <div className="cert-win-title">{HUB_TITLE}</div>
+          <div className="cert-win-body">{citation}</div>
 
-          <div className="cert-purpose">
-            <span className="cert-purpose-rule" />
-            <span className="cert-purpose-text">Reduce AI Overwhelm</span>
-            <span className="cert-purpose-rule" />
+          <div className="cert-win-cap">
+            <span className="cert-win-cap-rule" />
+            <span className="cert-win-cap-pill">Capabilities unlocked</span>
+            <span className="cert-win-cap-rule" />
           </div>
 
-          <div className="cert-citation">{citation}</div>
-
-          <div className="cert-badges">
+          <div className="cert-win-badges">
             {badges.map((b, i) => (
-              <div key={i} className="cert-badge" title={b.desc}>
-                <span className="cert-badge-ico"><Icon name={b.icon} size={16} /></span>
-                <span className="cert-badge-label">{b.label}</span>
+              <div key={i} className="cert-win-badge" title={b.desc}>
+                <span className="cert-win-badge-ico"><Icon name={b.icon} size={16} /></span>
+                <span className="cert-win-badge-l">{b.label}</span>
               </div>
             ))}
           </div>
 
-          <div className="cert-sigs">
-            {SIGNATORIES.map((n) => (
-              <div className="cert-sig" key={n}>
-                <div className="cert-sig-name">{n}</div>
-                <div className="cert-sig-rule" />
-              </div>
-            ))}
-          </div>
-          <div className="cert-issuer">
-            AI Advantage Mastery &nbsp;·&nbsp; {new Date(c.created_at).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })} &nbsp;·&nbsp; No. {serial}
-          </div>
+          <div className="cert-win-foot">{owner ? `Built by ${owner}` : "Built with my AI Hub"}</div>
         </div>
       )}
 
       {certs.length > 1 && (
         <div className="cert-gallery">
-          <div className="cert-gallery-head">Your certificates</div>
+          <div className="cert-gallery-head">Your Win cards</div>
           <div className="cert-gallery-row">
             {certs.map((x) => (
               <button key={x.id} className={`cert-thumb${sel && sel.id === x.id ? " on" : ""}`} onClick={() => setSel(x)}>
-                <Icon name="badge-check" size={15} />
+                <Icon name="trophy" size={15} />
                 <span>{new Date(x.created_at).toLocaleDateString()}</span>
                 <span className="cert-thumb-n">{(x.badges || []).length} badges</span>
               </button>
