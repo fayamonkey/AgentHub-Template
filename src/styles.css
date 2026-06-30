@@ -565,3 +565,5 @@ footer { margin:50px auto 0; max-width:1000px; padding:0 22px; text-align:center
   .img-layout { grid-template-columns: 1fr; }
   .img-side { position: static; }
 }
+
+.cert-win-grow { margin-top: 12px; font-size: 12px; font-style: italic; color: #9aa3b6; }
