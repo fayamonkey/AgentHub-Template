@@ -4,32 +4,29 @@ import { loadVault } from "../lib/vault.js";
 import { CONFIG } from "../config.js";
 import { Icon } from "../lib/certIcons.jsx";
 
+const SIGNATORIES = ["Igor", "Dean", "Tony"];
+
 function detectBadges({ cards, ideas, wins, changelog }) {
   const b = [];
   b.push({ key: "hub", icon: "badge-check", label: "AgentHub Operator", desc: "Built and runs a private AI hub." });
-  if (cards.length > 0) b.push({ key: "chain", icon: "link", label: "Three-Tool Chain", desc: "Lovable, GitHub and Cowork wired into one loop." });
-  if (cards.some((c) => (c.fm && c.fm.schedule) || /briefing/i.test(c.file || ""))) b.push({ key: "auto", icon: "repeat", label: "Self-Feeding Automation", desc: "A scheduled task that fills the hub on its own." });
+  if (cards.length > 0) b.push({ key: "chain", icon: "link", label: "Three-Tool Chain", desc: "Lovable, GitHub and Cowork in one loop." });
+  if (cards.some((c) => (c.fm && c.fm.schedule) || /briefing/i.test(c.file || ""))) b.push({ key: "auto", icon: "repeat", label: "Self-Feeding Automation", desc: "A scheduled task fills the hub on its own." });
   if (cards.some((c) => /cheat/i.test(c.file || "") || /cheat/i.test((c.fm && c.fm.title) || ""))) b.push({ key: "cheat", icon: "bookmark", label: "Hub Cheat-Sheet", desc: "Keeps a working reference on hand." });
   const lib = cards.filter((c) => ((c.fm && c.fm.category) || "").toLowerCase() === "library").length;
   if (lib > 0) b.push({ key: "library", icon: "book", label: "Library Curator", desc: lib + " reference card" + (lib > 1 ? "s" : "") + " saved." });
-  if (ideas > 0) b.push({ key: "ideas", icon: "lightbulb", label: "Ideas in Motion", desc: ideas + " idea" + (ideas > 1 ? "s" : "") + " on the board." });
+  if (ideas > 0) b.push({ key: "ideas", icon: "lightbulb", label: "Ideas in Motion", desc: ideas + " idea" + (ideas > 1 ? "s" : "") + " captured." });
   if (wins > 0) b.push({ key: "wins", icon: "trophy", label: "Wins Shipped", desc: wins + " win" + (wins > 1 ? "s" : "") + " on the wall." });
   if (changelog > 0) b.push({ key: "log", icon: "history", label: "Changelog Keeper", desc: changelog + " entr" + (changelog > 1 ? "ies" : "y") + " logged." });
-  if (cards.length >= 5) b.push({ key: "builder", icon: "rocket", label: "Hub Builder", desc: cards.length + " cards live in the hub." });
+  if (cards.length >= 5) b.push({ key: "builder", icon: "rocket", label: "Hub Builder", desc: cards.length + " cards live." });
   return b;
 }
 
-function citationFor({ hubName, ownerName, badges }) {
+function citationFor({ hubName, ownerName }) {
   const who = ownerName ? ownerName : "the holder";
-  const skills = badges.slice(1, 3).map((b) => b.label.toLowerCase());
-  const inc = skills.length ? ", including " + skills.join(" and ") : "";
-  return `This is to certify that ${who} has assembled, connected, and now operates ${hubName}: a living, ` +
-    `self-feeding AI hub of their own making. Across ${badges.length} verified capabilities${inc}, the holder has ` +
-    `demonstrated the craft of turning scattered work into one orchestrated system, and of steering their AI from a single place. ` +
-    `Granted with distinction by AI Advantage.`;
+  return `Awarded to ${who}, who built and now operates ${hubName}, turning scattered AI work into one calm, orchestrated place.`;
 }
 
-function GoldSeal({ size = 84 }) {
+function GoldSeal({ size = 82 }) {
   const pts = [];
   const n = 24, r1 = 46, r2 = 50, cx = 50, cy = 50;
   for (let i = 0; i < n * 2; i++) {
@@ -85,7 +82,7 @@ export default function Certificate() {
   async function generate() {
     setBusy(true);
     const badges = detectBadges({ cards, ideas: counts.ideas, wins: counts.wins, changelog: counts.changelog });
-    const citation = citationFor({ hubName, ownerName: CONFIG.ownerName, badges });
+    const citation = citationFor({ hubName, ownerName: CONFIG.ownerName });
     const row = { hub_name: hubName, owner_name: CONFIG.ownerName || "", badges, stats: { cards: cards.length, ...counts, citation } };
     try {
       const { data } = await supabase.from("certificates").insert(row).select().single();
@@ -98,14 +95,14 @@ export default function Certificate() {
 
   const c = sel;
   const badges = c ? (c.badges || []) : [];
-  const citation = c && c.stats && c.stats.citation ? c.stats.citation : (c ? citationFor({ hubName: c.hub_name, ownerName: c.owner_name, badges }) : "");
+  const citation = c && c.stats && c.stats.citation ? c.stats.citation : (c ? citationFor({ hubName: c.hub_name, ownerName: c.owner_name }) : "");
   const serial = c ? String(c.id).replace(/-/g, "").slice(0, 10).toUpperCase() : "";
 
   return (
     <div className="wrap">
       <div className="hello">Your achievement</div>
       <h1>Certificate</h1>
-      <p className="sub">An official, living record of what your hub is and what you can do. Each one you generate is saved.</p>
+      <p className="sub">An official, living record of your hub. It grows as your hub fills up. Generate one anytime.</p>
 
       <div className="cert-actions">
         <button className="btn-primary" onClick={generate} disabled={busy}>
@@ -124,25 +121,34 @@ export default function Certificate() {
           <div className="cert-presents">This certifies</div>
           <div className="cert-name">{c.hub_name}</div>
           {c.owner_name && <div className="cert-owner">operated by {c.owner_name}</div>}
+
+          <div className="cert-purpose">
+            <span className="cert-purpose-rule" />
+            <span className="cert-purpose-text">Reduce AI Overwhelm</span>
+            <span className="cert-purpose-rule" />
+          </div>
+
           <div className="cert-citation">{citation}</div>
+
           <div className="cert-badges">
             {badges.map((b, i) => (
               <div key={i} className="cert-badge" title={b.desc}>
-                <span className="cert-badge-ico"><Icon name={b.icon} size={18} /></span>
+                <span className="cert-badge-ico"><Icon name={b.icon} size={16} /></span>
                 <span className="cert-badge-label">{b.label}</span>
               </div>
             ))}
           </div>
-          <div className="cert-foot">
-            <div className="cert-sig">
-              <div className="cert-sig-name">AI&nbsp;Advantage&nbsp;Mastery</div>
-              <div className="cert-sig-rule" />
-              <div className="cert-sig-role">Issuing authority</div>
-            </div>
-            <div className="cert-meta">
-              <div>Issued {new Date(c.created_at).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</div>
-              <div>Certificate No. {serial}</div>
-            </div>
+
+          <div className="cert-sigs">
+            {SIGNATORIES.map((n) => (
+              <div className="cert-sig" key={n}>
+                <div className="cert-sig-name">{n}</div>
+                <div className="cert-sig-rule" />
+              </div>
+            ))}
+          </div>
+          <div className="cert-issuer">
+            AI Advantage Mastery &nbsp;·&nbsp; {new Date(c.created_at).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })} &nbsp;·&nbsp; No. {serial}
           </div>
         </div>
       )}
