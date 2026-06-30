@@ -80,16 +80,14 @@ export default function App() {
       .filter((g) => g.cat);
   }, [itemsByCat, tab]);
 
-  const DNA_CARD = { isDna: true, fm: { title: "DNA Files", emoji: "🧬", rung: "R2" } };
+  const DNA_CARD = { isDna: true, fm: { title: "DNA Files", emoji: "🧬" } };
 
   const Tile = ({ c, onClick }) => {
-    const rung = (c.fm.rung || "").toUpperCase();
     return (
       <button className="tile" onClick={onClick}>
         <div className="icon">{c.fm.emoji || "📄"}</div>
         <div className="tiletitle">{c.fm.title || c.file}</div>
         <div className="tilemeta">
-          {rung && <span className={`dot ${rung}`} title={`Rung ${rung[1]}`}></span>}
           {c.isDna ? <span className="sched">{dna.length} files</span> : c.fm.schedule && <span className="sched">{c.fm.schedule}</span>}
         </div>
       </button>
@@ -99,14 +97,11 @@ export default function App() {
   return (
     <div className="app">
       <nav className="nav" onMouseLeave={() => setMenu(null)}>
-        <div className="brand">
+        <div className="brand" onClick={() => { setTab("all"); setMenu(null); }} style={{ cursor: "pointer" }} title="Home">
           <span className="logo">◆</span>
           <span>{CONFIG.ownerName ? `${CONFIG.ownerName}'s Hub` : "My Hub"}</span>
         </div>
         <div className="navtabs">
-          <button className={tab === "all" ? "on" : ""} onClick={() => { setTab("all"); setMenu(null); }}>
-            Home
-          </button>
           <button className={tab === "ideas" ? "on" : ""} onClick={() => { setTab("ideas"); setMenu(null); }}>
             💡 Ideas
           </button>
@@ -129,12 +124,6 @@ export default function App() {
         <div className="hello">Welcome back 👋</div>
         <h1>{CONFIG.ownerName ? `${CONFIG.ownerName}'s AI Hub` : "My AI Hub"}</h1>
         <p className="sub">Everything my AI builds for me — in one place.</p>
-
-        <div className="ladder">
-          {RUNGS.map((r) => (
-            <span key={r.id} className={`rung ${r.id}`} title={`Rung ${r.id[1]}: ${r.label}`}>{r.id} {r.label}</span>
-          ))}
-        </div>
 
         {loading && <div className="empty">Loading your tools…</div>}
         {error && (

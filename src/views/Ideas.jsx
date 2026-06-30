@@ -39,7 +39,6 @@ function Card({ idea, onClick, onArchive, onDelete }) {
           <button title="Delete" className="iconbtn danger" onClick={(e) => { stop(e); onDelete(idea); }}>🗑</button>
         </div>
       </div>
-      {idea.category && <div className="kcard-cat">{idea.category}</div>}
     </div>
   );
 }
@@ -73,7 +72,7 @@ export default function Ideas() {
   const [activeId, setActiveId] = useState(null);
   const [modal, setModal] = useState(null);
   const [creating, setCreating] = useState(null);
-  const [form, setForm] = useState({ title: "", context: "", category: "" });
+  const [form, setForm] = useState({ title: "", context: "" });
 
   const sensors = useSensors(useSensor(PointerSensor, { activationConstraint: { distance: 5 } }));
 
@@ -137,12 +136,11 @@ export default function Ideas() {
     await supabase.from("ideas").insert({
       title: form.title.trim(),
       context: form.context,
-      category: form.category,
       status,
       position,
     });
     setCreating(null);
-    setForm({ title: "", context: "", category: "" });
+    setForm({ title: "", context: "" });
     load();
   }
 
@@ -150,7 +148,6 @@ export default function Ideas() {
     await supabase.from("ideas").update({
       title: modal.title,
       context: modal.context,
-      category: modal.category,
       status: modal.status,
     }).eq("id", modal.id);
     setModal(null);
@@ -183,7 +180,6 @@ export default function Ideas() {
   function copyPrompt(idea) {
     const text =
 `Idea: ${idea.title}
-Category: ${idea.category || "-"}
 Card ID: ${idea.id}
 Context: ${idea.context || "-"}
 
@@ -242,7 +238,6 @@ When done, append an entry to my changelog under today's date with the title and
             <h2 style={{ marginTop: 0 }}>New idea</h2>
             <div className="formgrid">
               <label>Title*<input value={form.title} onChange={(e) => setForm({ ...form, title: e.target.value })} autoFocus /></label>
-              <label>Category<input value={form.category} onChange={(e) => setForm({ ...form, category: e.target.value })} placeholder="Tool, Content, System…" /></label>
               <label>Context<textarea rows={5} value={form.context} onChange={(e) => setForm({ ...form, context: e.target.value })} /></label>
               <div className="formrow">
                 <button className="btn-primary" onClick={createIdea}>Create</button>
@@ -260,7 +255,6 @@ When done, append an entry to my changelog under today's date with the title and
             <h2 style={{ marginTop: 0 }}>Edit idea</h2>
             <div className="formgrid">
               <label>Title<input value={modal.title} onChange={(e) => setModal({ ...modal, title: e.target.value })} /></label>
-              <label>Category<input value={modal.category || ""} onChange={(e) => setModal({ ...modal, category: e.target.value })} /></label>
               <label>Context<textarea rows={6} value={modal.context || ""} onChange={(e) => setModal({ ...modal, context: e.target.value })} /></label>
               <label>Status
                 <select value={modal.status} onChange={(e) => setModal({ ...modal, status: e.target.value })}>
@@ -292,7 +286,6 @@ When done, append an entry to my changelog under today's date with the title and
                   <div key={a.id} className="archive-row">
                     <div>
                       <div className="kcard-title">{a.title}</div>
-                      {a.category && <div className="kcard-cat">{a.category}</div>}
                     </div>
                     <div className="formrow">
                       <button className="btn-ghost" onClick={() => restoreIdea(a)}>↺ Restore</button>
