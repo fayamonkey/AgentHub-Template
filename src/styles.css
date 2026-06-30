@@ -421,3 +421,26 @@ footer { margin:50px auto 0; max-width:1000px; padding:0 22px; text-align:center
   .avatar-chat-view .avatar-stage { flex:0 0 38%; min-height:260px; }
 }
 
+
+/* ---- Certificate ---- */
+.cert-actions { margin: 4px 0 18px; }
+.cert { background: var(--surface, #fff); border: 1px solid var(--line, #e5e7eb); border-radius: 18px; padding: 28px 26px; max-width: 660px; box-shadow: 0 6px 24px rgba(0,0,0,.06); }
+.cert-head { display: flex; align-items: center; gap: 12px; }
+.cert-seal { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #fde68a, #f59e0b); color: #7c2d12; }
+.cert-issued { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; opacity: .6; font-weight: 700; }
+.cert-name { font-size: 30px; font-weight: 800; margin-top: 14px; line-height: 1.15; }
+.cert-owner { opacity: .7; margin-top: 2px; }
+.cert-date { opacity: .55; font-size: 13px; margin-top: 4px; }
+.cert-badges { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 22px; }
+.cert-badge { display: flex; gap: 11px; align-items: flex-start; padding: 11px 12px; border: 1px solid var(--line, #e5e7eb); border-radius: 12px; background: var(--bg, #fafafa); }
+.cert-badge-ico { width: 38px; height: 38px; flex: 0 0 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; background: #eef2ff; color: #4f46e5; }
+.cert-badge-label { font-weight: 700; font-size: 13.5px; }
+.cert-badge-desc { font-size: 12px; opacity: .7; line-height: 1.3; margin-top: 2px; }
+.cert-gallery { margin-top: 22px; }
+.cert-gallery-head { font-size: 12px; font-weight: 700; opacity: .6; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 8px; }
+.cert-gallery-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.cert-thumb { display: flex; align-items: center; gap: 6px; padding: 7px 10px; border: 1px solid var(--line, #e5e7eb); border-radius: 10px; background: var(--surface, #fff); cursor: pointer; font-size: 12px; }
+.cert-thumb.on { border-color: #4f46e5; box-shadow: 0 0 0 2px rgba(79,70,229,.2); }
+.cert-thumb-n { opacity: .55; }
+.cert-tab-ico { vertical-align: -2px; margin-right: 3px; }
+@media (max-width: 760px) { .cert-badges { grid-template-columns: 1fr; } }
