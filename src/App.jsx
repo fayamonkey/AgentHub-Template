@@ -4,6 +4,7 @@ import { loadVault, loadDna, mdToHtml } from "./lib/vault.js";
 import Ideas from "./views/Ideas.jsx";
 import Wins from "./views/Wins.jsx";
 import Certificate from "./views/Certificate.jsx";
+import Images from "./views/Images.jsx";
 
 const RUNGS = [
   { id: "R1", label: "Prompt" },
@@ -109,6 +110,9 @@ export default function App() {
           <button className={tab === "wins" ? "on" : ""} onClick={() => { setTab("wins"); setMenu(null); }}>
             🏆 Wins
           </button>
+          <button className={tab === "images" ? "on" : ""} onClick={() => { setTab("images"); setMenu(null); }}>
+            🎨 Images
+          </button>
           <button className={tab === "certificate" ? "on" : ""} onClick={() => { setTab("certificate"); setMenu(null); }}>
             <svg className="cert-tab-ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg> Certificate
           </button>
@@ -123,7 +127,7 @@ export default function App() {
         </button>
       </nav>
 
-      {tab === "ideas" ? <Ideas /> : tab === "wins" ? <Wins /> : tab === "certificate" ? <Certificate /> : (
+      {tab === "ideas" ? <Ideas /> : tab === "wins" ? <Wins /> : tab === "images" ? <Images /> : tab === "certificate" ? <Certificate /> : (
       <div className="wrap">
         <div className="hello">Welcome back 👋</div>
         <h1>{CONFIG.ownerName ? `${CONFIG.ownerName}'s AI Hub` : "My AI Hub"}</h1>
