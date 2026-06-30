@@ -492,3 +492,27 @@ footer { margin:50px auto 0; max-width:1000px; padding:0 22px; text-align:center
   .cert-win-title { font-size: 27px; }
   .cert-win-badges { grid-template-columns: 1fr; }
 }
+
+/* Win card — signatures, promo, share buttons */
+.cert-win-sigs { display: flex; justify-content: center; gap: 26px; margin: 26px auto 0; }
+.cert-win-sig { text-align: center; min-width: 84px; }
+.cert-win-sig-name {
+  font-family: "Segoe Script", "Bradley Hand", "Brush Script MT", "Snell Roundhand", cursive;
+  font-size: 23px; color: #eef2f9; line-height: 1; padding-bottom: 7px;
+}
+.cert-win-sig-rule { height: 1px; background: rgba(255,255,255,.24); }
+.cert-win-foot { margin-top: 16px; color: #8a93a8; font-style: normal; font-size: 12px; }
+.cert-win-promo {
+  margin: 14px auto 0; padding-top: 13px; border-top: 1px solid rgba(255,255,255,.09);
+  color: #c2a052; font-size: 11.5px; letter-spacing: .015em; max-width: 460px;
+}
+
+.cert-share { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 18px auto 0; max-width: 560px; }
+.cert-share-btn {
+  display: inline-flex; align-items: center; gap: 6px; padding: 9px 14px; border-radius: 999px;
+  border: 1px solid var(--line, #e5e7eb); background: var(--card, #fff); color: var(--text, #111827);
+  font-size: 13px; font-weight: 600; cursor: pointer; transition: .15s;
+}
+.cert-share-btn:hover { border-color: #c9a24a; }
+.cert-share-btn.primary { background: linear-gradient(135deg, #f1d27e, #c9a24a); border-color: transparent; color: #2a1c05; }
+.cert-share-msg { text-align: center; margin-top: 10px; font-size: 12.5px; color: var(--muted, #6b7280); }

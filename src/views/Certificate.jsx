@@ -1,10 +1,13 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState, useCallback, useRef } from "react";
 import { supabase } from "../integrations/supabase/client";
 import { loadVault } from "../lib/vault.js";
 import { CONFIG } from "../config.js";
 import { Icon } from "../lib/certIcons.jsx";
 
 const HUB_TITLE = "My AI Hub Win";
+const SIGNATORIES = ["Igor", "Dean", "Tony"];
+const SHARE_URL = "https://aiadvantage.com";
+const PROMO = "Learn how to amplify yourself and your business with AI Advantage: aiadvantage.com";
 
 function bodyLines(owner) {
   const who = owner && owner.trim() ? owner.trim() : "I";
@@ -12,6 +15,10 @@ function bodyLines(owner) {
     `${who} built an AgentHub, a command center to reduce AI overwhelm and focus on productivity.`,
     "The AgentHub is a remote control for agentic AI workers.",
   ];
+}
+function captionFor(owner) {
+  const l = bodyLines(owner);
+  return `My AI Hub Win 🏆\n\n${l[0]} ${l[1]}\n\n${PROMO}`;
 }
 
 function detectBadges({ cards, ideas, wins, changelog }) {
@@ -38,6 +45,9 @@ export default function Certificate() {
   const [loading, setLoading] = useState(true);
   const [busy, setBusy] = useState(false);
   const [name, setName] = useState(CONFIG.ownerName || "");
+  const [copied, setCopied] = useState(false);
+  const [shareMsg, setShareMsg] = useState(null);
+  const cardRef = useRef(null);
 
   const loadCerts = useCallback(async () => {
     try {
@@ -71,18 +81,56 @@ export default function Certificate() {
     setBusy(false);
   }
 
+  const owner = sel ? (sel.owner_name || "") : "";
+
+  async function makePng() {
+    const mod = await import(/* @vite-ignore */ "https://esm.sh/html-to-image@1.11.11");
+    return await mod.toPng(cardRef.current, { pixelRatio: 2, cacheBust: true, backgroundColor: "#0a0e18" });
+  }
+  async function download() {
+    setShareMsg("Rendering…");
+    try {
+      const url = await makePng();
+      const a = document.createElement("a"); a.href = url; a.download = "my-ai-hub-win.png"; a.click();
+      setShareMsg(null);
+    } catch { setShareMsg("Could not render the image. Take a screenshot of the card instead."); }
+  }
+  async function shareNative() {
+    try {
+      const url = await makePng();
+      const blob = await (await fetch(url)).blob();
+      const file = new File([blob], "my-ai-hub-win.png", { type: "image/png" });
+      if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        await navigator.share({ files: [file], text: captionFor(owner) });
+      } else {
+        await navigator.share({ text: captionFor(owner), url: SHARE_URL });
+      }
+    } catch { /* user cancelled */ }
+  }
+  function openIntent(kind) {
+    const text = captionFor(owner);
+    let u;
+    if (kind === "x") u = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
+    else if (kind === "li") u = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(SHARE_URL)}`;
+    else u = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(SHARE_URL)}&quote=${encodeURIComponent(text)}`;
+    window.open(u, "_blank", "noopener,noreferrer,width=620,height=640");
+  }
+  async function copyCaption() {
+    try { await navigator.clipboard.writeText(captionFor(owner)); setCopied(true); setTimeout(() => setCopied(false), 1500); } catch { /* ignore */ }
+  }
+
   if (loading) return <div className="wrap"><div className="empty">Loading…</div></div>;
 
   const c = sel;
   const badges = c ? (c.badges || []) : [];
-  const owner = c ? (c.owner_name || "") : "";
   const lines = bodyLines(owner);
+  const canShare = typeof navigator !== "undefined" && !!navigator.share;
 
   return (
     <div className="wrap">
       <div className="hello">Your achievement</div>
       <h1>My AI Hub Win</h1>
-      <p className="sub">A shareable snapshot of what your hub is and what it does. Generate one anytime and post it anywhere.</p>
+      <p className="sub">A shareable snapshot of what your hub is and what it does. Generate one anytime and share it anywhere.</p>
 
       <div className="cert-actions">
         <input
@@ -102,34 +150,56 @@ export default function Certificate() {
       {!c ? (
         <div className="empty">No Win card yet. Press the button to mint your first one.</div>
       ) : (
-        <div className="cert-win">
-          <div className="cert-win-mark"><img src="/brand/aia-icon.png" alt="" width="70" height="70" /></div>
-          <img className="cert-win-brand" src="/brand/aia-logo-white.png" alt="AI Advantage" />
-          <div className="cert-win-title">{HUB_TITLE}</div>
+        <>
+          <div className="cert-win" ref={cardRef}>
+            <div className="cert-win-mark"><img src="/brand/aia-icon.png" alt="" width="70" height="70" /></div>
+            <img className="cert-win-brand" src="/brand/aia-logo-white.png" alt="AI Advantage" />
+            <div className="cert-win-title">{HUB_TITLE}</div>
 
-          <div className="cert-win-body">
-            {lines.map((ln, i) => <p key={i}>{ln}</p>)}
+            <div className="cert-win-body">
+              {lines.map((ln, i) => <p key={i}>{ln}</p>)}
+            </div>
+
+            <div className="cert-win-cap">
+              <span className="cert-win-cap-rule" />
+              <span className="cert-win-cap-pill">Capabilities unlocked</span>
+              <span className="cert-win-cap-rule" />
+            </div>
+
+            <div className="cert-win-badges">
+              {badges.map((b, i) => (
+                <div key={i} className="cert-win-badge" title={b.desc}>
+                  <span className="cert-win-badge-ico"><Icon name={b.icon} size={16} /></span>
+                  <span className="cert-win-badge-l">{b.label}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="cert-win-sigs">
+              {SIGNATORIES.map((n) => (
+                <div className="cert-win-sig" key={n}>
+                  <div className="cert-win-sig-name">{n}</div>
+                  <div className="cert-win-sig-rule" />
+                </div>
+              ))}
+            </div>
+
+            <div className="cert-win-foot">
+              {new Date(c.created_at).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+            </div>
+            <div className="cert-win-promo">{PROMO}</div>
           </div>
 
-          <div className="cert-win-cap">
-            <span className="cert-win-cap-rule" />
-            <span className="cert-win-cap-pill">Capabilities unlocked</span>
-            <span className="cert-win-cap-rule" />
+          <div className="cert-share">
+            <button className="cert-share-btn primary" onClick={download}>⬇ Download image</button>
+            {canShare && <button className="cert-share-btn" onClick={shareNative}>Share…</button>}
+            <button className="cert-share-btn" onClick={() => openIntent("x")}>Post on X</button>
+            <button className="cert-share-btn" onClick={() => openIntent("li")}>LinkedIn</button>
+            <button className="cert-share-btn" onClick={() => openIntent("fb")}>Facebook</button>
+            <button className="cert-share-btn" onClick={copyCaption}>{copied ? "Copied!" : "Copy caption"}</button>
           </div>
-
-          <div className="cert-win-badges">
-            {badges.map((b, i) => (
-              <div key={i} className="cert-win-badge" title={b.desc}>
-                <span className="cert-win-badge-ico"><Icon name={b.icon} size={16} /></span>
-                <span className="cert-win-badge-l">{b.label}</span>
-              </div>
-            ))}
-          </div>
-
-          <div className="cert-win-foot">
-            {new Date(c.created_at).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-          </div>
-        </div>
+          {shareMsg && <div className="cert-share-msg">{shareMsg}</div>}
+        </>
       )}
 
       {certs.length > 1 && (
