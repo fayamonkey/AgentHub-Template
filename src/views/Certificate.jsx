@@ -3,6 +3,8 @@ import { supabase } from "../integrations/supabase/client";
 import { loadVault } from "../lib/vault.js";
 import { CONFIG } from "../config.js";
 import { Icon } from "../lib/certIcons.jsx";
+import aiaIcon from "../assets/aia-icon.png";
+import aiaWordmark from "../assets/aia-logo-white.png";
 
 const HUB_TITLE = "My AI Hub Win";
 const SIGNATORIES = ["Igor", "Dean", "Tony"];
@@ -161,8 +163,8 @@ export default function Certificate() {
       ) : (
         <>
           <div className="cert-win" ref={cardRef}>
-            <div className="cert-win-mark"><img src="/brand/aia-icon.png" alt="" width="70" height="70" /></div>
-            <img className="cert-win-brand" src="/brand/aia-logo-white.png" alt="AI Advantage" />
+            <div className="cert-win-mark"><img src={aiaIcon} alt="" width="70" height="70" /></div>
+            <img className="cert-win-brand" src={aiaWordmark} alt="AI Advantage" />
             <div className="cert-win-title">{HUB_TITLE}</div>
 
             <div className="cert-win-body">
