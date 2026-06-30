@@ -266,11 +266,15 @@ function PresetEditor({ editor, setEditor, onSaved }) {
       model: p.model || null, ratio: p.ratio || null, reference_images: p.reference_images || [],
     };
     try {
-      if (isEdit) await supabase.from("image_presets").update(row).eq("id", p.id);
-      else await supabase.from("image_presets").insert(row);
+      const { error } = isEdit
+        ? await supabase.from("image_presets").update(row).eq("id", p.id)
+        : await supabase.from("image_presets").insert(row);
+      if (error) throw new Error(error.message);
       setEditor(null);
       onSaved();
-    } catch (e) { alert("Could not save: " + (e.message || e)); }
+    } catch (e) {
+      alert("Could not save the preset: " + (e.message || e) + "\n\nIf this says the table is missing, ask Lovable to apply the Images migration.");
+    }
     setSaving(false);
   }
   async function remove() {
