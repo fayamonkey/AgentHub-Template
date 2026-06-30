@@ -84,18 +84,32 @@ export default function Certificate() {
   const owner = sel ? (sel.owner_name || "") : "";
 
   async function makePng() {
-    const node = cardRef.current;
+    const src = cardRef.current;
+    if (!src) return null;
     const mod = await import(/* @vite-ignore */ "https://esm.sh/html-to-image@1.11.11");
     try { if (document.fonts && document.fonts.ready) await document.fonts.ready; } catch (e) { /* ignore */ }
-    await Promise.all(Array.from(node.querySelectorAll("img")).map((img) =>
-      img.complete ? (img.decode ? img.decode().catch(() => {}) : Promise.resolve())
-                   : new Promise((res) => { img.onload = img.onerror = res; })
-    ));
-    const opts = { pixelRatio: 2, backgroundColor: "#0a0e18", width: node.offsetWidth, height: node.offsetHeight, cacheBust: true };
-    // html-to-image often misses images/fonts on the first pass(es); render a few times and keep the last.
-    await mod.toPng(node, opts);
-    await mod.toPng(node, opts);
-    return await mod.toPng(node, opts);
+    const w = src.offsetWidth;
+    const h = src.offsetHeight;
+    // Capture an off-screen clone at an exact size so centering / parent padding can't offset or crop it.
+    const holder = document.createElement("div");
+    holder.style.cssText = "position:fixed;left:-10000px;top:0;z-index:-1;pointer-events:none;";
+    const clone = src.cloneNode(true);
+    clone.style.margin = "0";
+    clone.style.boxShadow = "none";
+    clone.style.width = w + "px";
+    holder.appendChild(clone);
+    document.body.appendChild(holder);
+    try {
+      await Promise.all(Array.from(clone.querySelectorAll("img")).map((img) =>
+        img.complete ? (img.decode ? img.decode().catch(() => {}) : Promise.resolve())
+                     : new Promise((res) => { img.onload = img.onerror = res; })
+      ));
+      const opts = { pixelRatio: 2, backgroundColor: "#0a0e18", width: w, height: h, cacheBust: true };
+      await mod.toPng(clone, opts);          // warm-up pass
+      return await mod.toPng(clone, opts);   // final
+    } finally {
+      document.body.removeChild(holder);
+    }
   }
   async function download() {
     setShareMsg("Rendering…");
