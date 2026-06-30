@@ -19,6 +19,39 @@ function detectBadges({ cards, ideas, wins, changelog }) {
   return b;
 }
 
+function citationFor({ hubName, ownerName, badges }) {
+  const who = ownerName ? ownerName : "the holder";
+  const skills = badges.slice(1, 3).map((b) => b.label.toLowerCase());
+  const inc = skills.length ? ", including " + skills.join(" and ") : "";
+  return `This is to certify that ${who} has assembled, connected, and now operates ${hubName}: a living, ` +
+    `self-feeding AI hub of their own making. Across ${badges.length} verified capabilities${inc}, the holder has ` +
+    `demonstrated the craft of turning scattered work into one orchestrated system, and of steering their AI from a single place. ` +
+    `Granted with distinction by AI Advantage.`;
+}
+
+function GoldSeal({ size = 84 }) {
+  const pts = [];
+  const n = 24, r1 = 46, r2 = 50, cx = 50, cy = 50;
+  for (let i = 0; i < n * 2; i++) {
+    const ang = (Math.PI * i) / n;
+    const r = i % 2 === 0 ? r2 : r1;
+    pts.push(`${(cx + r * Math.cos(ang)).toFixed(1)},${(cy + r * Math.sin(ang)).toFixed(1)}`);
+  }
+  return (
+    <svg width={size} height={size} viewBox="0 0 100 100" aria-hidden="true">
+      <defs>
+        <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor="#f4d680" /><stop offset="0.5" stopColor="#c9962b" /><stop offset="1" stopColor="#9a6f1c" />
+        </linearGradient>
+      </defs>
+      <polygon points={pts.join(" ")} fill="url(#gold)" />
+      <circle cx="50" cy="50" r="38" fill="none" stroke="#fbf3da" strokeWidth="2" opacity="0.7" />
+      <circle cx="50" cy="50" r="33" fill="#1f2a44" />
+      <path d="M40 51 l7 7 14 -15" fill="none" stroke="#f4d680" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 export default function Certificate() {
   const [cards, setCards] = useState([]);
   const [counts, setCounts] = useState({ ideas: 0, wins: 0, changelog: 0 });
@@ -52,7 +85,8 @@ export default function Certificate() {
   async function generate() {
     setBusy(true);
     const badges = detectBadges({ cards, ideas: counts.ideas, wins: counts.wins, changelog: counts.changelog });
-    const row = { hub_name: hubName, owner_name: CONFIG.ownerName || "", badges, stats: { cards: cards.length, ...counts } };
+    const citation = citationFor({ hubName, ownerName: CONFIG.ownerName, badges });
+    const row = { hub_name: hubName, owner_name: CONFIG.ownerName || "", badges, stats: { cards: cards.length, ...counts, citation } };
     try {
       const { data } = await supabase.from("certificates").insert(row).select().single();
       if (data) { setCerts((c) => [data, ...c]); setSel(data); }
@@ -64,12 +98,14 @@ export default function Certificate() {
 
   const c = sel;
   const badges = c ? (c.badges || []) : [];
+  const citation = c && c.stats && c.stats.citation ? c.stats.citation : (c ? citationFor({ hubName: c.hub_name, ownerName: c.owner_name, badges }) : "");
+  const serial = c ? String(c.id).replace(/-/g, "").slice(0, 10).toUpperCase() : "";
 
   return (
     <div className="wrap">
       <div className="hello">Your achievement</div>
       <h1>Certificate</h1>
-      <p className="sub">A living snapshot of what your hub is and what you can do. Generate one anytime; each is saved.</p>
+      <p className="sub">An official, living record of what your hub is and what you can do. Each one you generate is saved.</p>
 
       <div className="cert-actions">
         <button className="btn-primary" onClick={generate} disabled={busy}>
@@ -80,24 +116,33 @@ export default function Certificate() {
       {!c ? (
         <div className="empty">No certificate yet. Press the button to mint your first one.</div>
       ) : (
-        <div className="cert">
-          <div className="cert-head">
-            <div className="cert-seal"><Icon name="badge-check" size={40} /></div>
-            <div className="cert-issued">Certificate of Capability</div>
-          </div>
+        <div className="cert-frame">
+          <div className="cert-corner tl" /><div className="cert-corner tr" /><div className="cert-corner bl" /><div className="cert-corner br" />
+          <div className="cert-brand">AI&nbsp;ADVANTAGE</div>
+          <div className="cert-kicker">Certificate of Capability</div>
+          <div className="cert-seal"><GoldSeal /></div>
+          <div className="cert-presents">This certifies</div>
           <div className="cert-name">{c.hub_name}</div>
           {c.owner_name && <div className="cert-owner">operated by {c.owner_name}</div>}
-          <div className="cert-date">{new Date(c.created_at).toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" })}</div>
+          <div className="cert-citation">{citation}</div>
           <div className="cert-badges">
             {badges.map((b, i) => (
-              <div key={i} className="cert-badge">
-                <div className="cert-badge-ico"><Icon name={b.icon} size={26} /></div>
-                <div className="cert-badge-text">
-                  <div className="cert-badge-label">{b.label}</div>
-                  <div className="cert-badge-desc">{b.desc}</div>
-                </div>
+              <div key={i} className="cert-badge" title={b.desc}>
+                <span className="cert-badge-ico"><Icon name={b.icon} size={18} /></span>
+                <span className="cert-badge-label">{b.label}</span>
               </div>
             ))}
+          </div>
+          <div className="cert-foot">
+            <div className="cert-sig">
+              <div className="cert-sig-name">AI&nbsp;Advantage&nbsp;Mastery</div>
+              <div className="cert-sig-rule" />
+              <div className="cert-sig-role">Issuing authority</div>
+            </div>
+            <div className="cert-meta">
+              <div>Issued {new Date(c.created_at).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</div>
+              <div>Certificate No. {serial}</div>
+            </div>
           </div>
         </div>
       )}
@@ -108,7 +153,7 @@ export default function Certificate() {
           <div className="cert-gallery-row">
             {certs.map((x) => (
               <button key={x.id} className={`cert-thumb${sel && sel.id === x.id ? " on" : ""}`} onClick={() => setSel(x)}>
-                <Icon name="badge-check" size={16} />
+                <Icon name="badge-check" size={15} />
                 <span>{new Date(x.created_at).toLocaleDateString()}</span>
                 <span className="cert-thumb-n">{(x.badges || []).length} badges</span>
               </button>
