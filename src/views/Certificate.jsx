@@ -84,8 +84,18 @@ export default function Certificate() {
   const owner = sel ? (sel.owner_name || "") : "";
 
   async function makePng() {
+    const node = cardRef.current;
     const mod = await import(/* @vite-ignore */ "https://esm.sh/html-to-image@1.11.11");
-    return await mod.toPng(cardRef.current, { pixelRatio: 2, cacheBust: true, backgroundColor: "#0a0e18" });
+    try { if (document.fonts && document.fonts.ready) await document.fonts.ready; } catch (e) { /* ignore */ }
+    await Promise.all(Array.from(node.querySelectorAll("img")).map((img) =>
+      img.complete ? (img.decode ? img.decode().catch(() => {}) : Promise.resolve())
+                   : new Promise((res) => { img.onload = img.onerror = res; })
+    ));
+    const opts = { pixelRatio: 2, backgroundColor: "#0a0e18", width: node.offsetWidth, height: node.offsetHeight, cacheBust: true };
+    // html-to-image often misses images/fonts on the first pass(es); render a few times and keep the last.
+    await mod.toPng(node, opts);
+    await mod.toPng(node, opts);
+    return await mod.toPng(node, opts);
   }
   async function download() {
     setShareMsg("Rendering…");
@@ -198,6 +208,7 @@ export default function Certificate() {
             <button className="cert-share-btn" onClick={() => openIntent("fb")}>Facebook</button>
             <button className="cert-share-btn" onClick={copyCaption}>{copied ? "Copied!" : "Copy caption"}</button>
           </div>
+          <div className="cert-share-hint">Use “Share…” (mobile) or “Download image” to post the card itself. The X, LinkedIn and Facebook buttons prefill your caption and link; attach the downloaded image there.</div>
           {shareMsg && <div className="cert-share-msg">{shareMsg}</div>}
         </>
       )}
