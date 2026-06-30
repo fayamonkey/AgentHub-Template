@@ -8,7 +8,7 @@ export const CONFIG = {
   ownerName: "",
 
   // Your private hub repo: "your-username/your-repo"
-  githubRepo: "your-username/your-repo",
+  githubRepo: "",
 
   // The folder inside the repo where your task outputs (cards) live.
   vaultFolder: "content",

@@ -28,16 +28,19 @@ ALTER TABLE public.image_presets ENABLE ROW LEVEL SECURITY;
 DROP POLICY IF EXISTS "image_presets open all" ON public.image_presets;
 CREATE POLICY "image_presets open all" ON public.image_presets FOR ALL USING (true) WITH CHECK (true);
 
--- Public storage bucket for generated images (easy display + download)
+-- Storage bucket for generated images. PRIVATE (Lovable rejects public buckets);
+-- the edge function uploads with the service role and serves images via long-lived signed URLs.
 INSERT INTO storage.buckets (id, name, public)
-VALUES ('hub-images', 'hub-images', true)
-ON CONFLICT (id) DO NOTHING;
+VALUES ('hub-images', 'hub-images', false)
+ON CONFLICT (id) DO UPDATE SET public = false;
 
 DROP POLICY IF EXISTS "hub-images read" ON storage.objects;
-CREATE POLICY "hub-images read" ON storage.objects FOR SELECT USING (bucket_id = 'hub-images');
 DROP POLICY IF EXISTS "hub-images insert" ON storage.objects;
-CREATE POLICY "hub-images insert" ON storage.objects FOR INSERT WITH CHECK (bucket_id = 'hub-images');
 DROP POLICY IF EXISTS "hub-images update" ON storage.objects;
-CREATE POLICY "hub-images update" ON storage.objects FOR UPDATE USING (bucket_id = 'hub-images');
 DROP POLICY IF EXISTS "hub-images delete" ON storage.objects;
-CREATE POLICY "hub-images delete" ON storage.objects FOR DELETE USING (bucket_id = 'hub-images');
+DROP POLICY IF EXISTS "Authenticated read hub-images" ON storage.objects;
+CREATE POLICY "Authenticated read hub-images" ON storage.objects FOR SELECT TO authenticated USING (bucket_id = 'hub-images');
+DROP POLICY IF EXISTS "Authenticated write hub-images" ON storage.objects;
+CREATE POLICY "Authenticated write hub-images" ON storage.objects FOR INSERT TO authenticated WITH CHECK (bucket_id = 'hub-images');
+DROP POLICY IF EXISTS "Authenticated delete hub-images" ON storage.objects;
+CREATE POLICY "Authenticated delete hub-images" ON storage.objects FOR DELETE TO authenticated USING (bucket_id = 'hub-images');

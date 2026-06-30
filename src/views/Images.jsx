@@ -3,12 +3,12 @@ import { supabase } from "../integrations/supabase/client";
 
 // Curated list of Lovable AI image models (gateway slugs). Easy to update as Lovable's list changes.
 const MODELS = [
-  { slug: "openai/gpt-image-2", label: "GPT Image 2 — best, supports logos" },
-  { slug: "openai/gpt-image-1-mini", label: "GPT Image 1 Mini — cheaper" },
-  { slug: "google/gemini-3-pro-image-preview", label: "Gemini 3 Pro Image (Nano Banana Pro)" },
-  { slug: "google/gemini-3-flash-image-preview", label: "Gemini 3 Flash Image (Nano Banana 2)" },
-  { slug: "google/gemini-2.5-flash-image-preview", label: "Gemini 2.5 Flash Image — cheapest" },
-];
+  { slug: "google/gemini-2.5-flash-image", label: "Gemini 2.5 Flash Image — supports logos/references ⭐" },
+  { slug: "google/gemini-3-pro-image-preview", label: "Gemini 3 Pro Image (Nano Banana Pro) — supports logos" },
+  { slug: "google/gemini-3-flash-image-preview", label: "Gemini 3 Flash Image (Nano Banana 2) — supports logos" },
+  { slug: "openai/gpt-image-2", label: "GPT Image 2 — text-to-image only (no logos)" },
+  { slug: "openai/gpt-image-1-mini", label: "GPT Image 1 Mini — text-to-image only (no logos)" },
+]
 const RATIOS = ["1:1", "16:9", "9:16", "4:3", "3:4", "3:2", "2:3"];
 
 const LS = "hub-images-defaults";

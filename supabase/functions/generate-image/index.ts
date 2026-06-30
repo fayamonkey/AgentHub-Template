@@ -24,7 +24,7 @@ function extractImage(data: any): string | null {
     }
     if (data?.data?.[0]?.b64_json) return 'data:image/png;base64,' + data.data[0].b64_json;
     if (data?.data?.[0]?.url) return data.data[0].url;
-  } catch (_) { /* ignore */ }
+  } catch (_) {}
   return null;
 }
 
@@ -46,20 +46,45 @@ Deno.serve(async (req) => {
     const { prompt, model, ratio, presetId, instructions, referenceImages } = await req.json();
     if (!prompt || !String(prompt).trim()) return json({ error: 'Please enter a prompt.' }, 400);
 
-    const useModel = (model && String(model).trim()) || 'openai/gpt-image-2';
+    const useModel = (model && String(model).trim()) || 'google/gemini-2.5-flash-image';
     const ratioText = ratio ? ` Aspect ratio ${ratio}.` : '';
     const fullText = (instructions ? String(instructions).trim() + '\n\n' : '') + String(prompt).trim() + ratioText;
 
     const refs: string[] = Array.isArray(referenceImages) ? referenceImages.filter(Boolean) : [];
-    const content: any = refs.length
-      ? [{ type: 'text', text: fullText }, ...refs.map((u) => ({ type: 'image_url', image_url: { url: u } }))]
-      : fullText;
 
-    const aiResp = await fetch('https://ai.gateway.lovable.dev/v1/chat/completions', {
-      method: 'POST',
-      headers: { Authorization: `Bearer ${LOVABLE_API_KEY}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ model: useModel, messages: [{ role: 'user', content }], modalities: ['image', 'text'] }),
-    });
+    // OpenAI image models on the Lovable AI Gateway do NOT accept reference images.
+    // If refs are attached, auto-route to a Gemini image model that does.
+    let effectiveModel = useModel;
+    if (refs.length && !effectiveModel.startsWith('google/')) {
+      effectiveModel = 'google/gemini-2.5-flash-image';
+    }
+    const isGemini = effectiveModel.startsWith('google/');
+
+    let aiResp: Response;
+    if (isGemini) {
+      // Gemini image models go through chat completions with modalities=['image','text'].
+      aiResp = await fetch('https://ai.gateway.lovable.dev/v1/chat/completions', {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${LOVABLE_API_KEY}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          model: effectiveModel,
+          messages: [{
+            role: 'user',
+            content: refs.length
+              ? [{ type: 'text', text: fullText }, ...refs.map((u) => ({ type: 'image_url', image_url: { url: u } }))]
+              : fullText,
+          }],
+          modalities: ['image', 'text'],
+        }),
+      });
+    } else {
+      // OpenAI image models use the dedicated images endpoint and do NOT support refs.
+      aiResp = await fetch('https://ai.gateway.lovable.dev/v1/images/generations', {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${LOVABLE_API_KEY}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ model: effectiveModel, prompt: fullText, n: 1 }),
+      });
+    }
 
     if (!aiResp.ok) {
       const detail = (await aiResp.text()).slice(0, 400);
@@ -84,15 +109,16 @@ Deno.serve(async (req) => {
       storage_path = `${crypto.randomUUID()}.${ext}`;
       const up = await supa.storage.from(BUCKET).upload(storage_path, bytes, { contentType, upsert: false });
       if (up.error) return json({ error: 'Image generated, but saving it failed: ' + up.error.message }, 500);
-      url = supa.storage.from(BUCKET).getPublicUrl(storage_path).data.publicUrl;
+      const signed = await supa.storage.from(BUCKET).createSignedUrl(storage_path, 60 * 60 * 24 * 365 * 10);
+      url = signed.data?.signedUrl || url;
     }
 
     const ins = await supa.from('images').insert({
-      prompt: String(prompt).trim(), model: useModel, ratio: ratio || null,
+      prompt: String(prompt).trim(), model: effectiveModel, ratio: ratio || null,
       preset_id: presetId || null, storage_path, url,
     }).select().single();
 
-    return json({ ok: true, image: ins.data || { url, prompt, model: useModel, ratio } });
+    return json({ ok: true, image: ins.data || { url, prompt, model: effectiveModel, ratio } });
   } catch (e) {
     return json({ error: String((e as Error)?.message || e) }, 500);
   }
