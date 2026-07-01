@@ -13,6 +13,48 @@ const RATIOS = ["1:1", "16:9", "9:16", "4:3", "3:4", "3:2", "2:3"];
 const MAX_CHARS = 2000;
 const LS = "hub-images-defaults";
 function loadDefaults() { try { return JSON.parse(localStorage.getItem(LS)) || {}; } catch { return {}; } }
+
+// Example presets seeded on first run (in code, so Lovable keeps the exact text). Deletable; a
+// localStorage flag stops them from coming back after you delete them.
+const SEED_FLAG = "hub-presets-seeded";
+const DEFAULT_PRESETS = [
+  {
+    name: "My Brand", emoji: "🏷️", model: "google/gemini-2.5-flash-image", ratio: "1:1", reference_images: [],
+    instructions: `Always create images in MY brand style, so everything looks consistent.
+
+- Colors: use [MAIN COLOR] and [ACCENT COLOR]. Backgrounds mostly [light / dark].
+- Feeling: [e.g. calm, clean and premium].
+- Look: [e.g. real photography / flat illustration / 3D render]. Keep it simple, lots of clean space, never cluttered.
+- My logo (attached): place it [e.g. bottom-right], small and tidy, never stretched or recolored.
+- Never use: [e.g. stock-photo people, busy patterns, neon colors].
+- Text in the image: [only if I ask / never].
+
+Whatever I describe, apply these rules so every image clearly belongs to my brand.`,
+  },
+  {
+    name: "Doodle", emoji: "✏️", model: null, ratio: "1:1", reference_images: [],
+    instructions: `Turn whatever I describe into a simple hand-drawn doodle.
+
+- Style: black felt-tip pen on plain white paper, loose and playful, thick slightly wobbly lines, like a quick notebook sketch.
+- Keep it minimal: just the main thing plus a couple of fun details. No background, black ink only (unless I ask for one splash of color).
+- No realism, no photos, no soft shading. It should look charming and hand-drawn.
+- Center the subject with clean white space around it.
+
+Whatever I type, draw it as this kind of doodle.`,
+  },
+  {
+    name: "Clean Illustration", emoji: "🖌️", model: "google/gemini-2.5-flash-image", ratio: "16:9", reference_images: [],
+    instructions: `Turn whatever I describe into a clean, modern flat illustration I can drop into a blog post, slide, newsletter, or social post.
+
+- Style: simple modern flat vector illustration, friendly and professional, smooth shapes, soft shadows, a small tasteful palette of 2 to 4 colors, lots of clean negative space.
+- Keep it clear and uncluttered: one main idea, easy to read at a glance.
+- No text or words in the image. No photorealism, no 3D, no busy background.
+- A consistent, polished look every time, like the illustrations on a good SaaS landing page.
+
+Whatever I type, illustrate it in this clean style.`,
+  },
+];
+
 function fileToDataUrl(file) {
   return new Promise((res, rej) => { const r = new FileReader(); r.onload = () => res(r.result); r.onerror = rej; r.readAsDataURL(file); });
 }
@@ -40,7 +82,19 @@ export default function Images() {
         supabase.from("image_presets").select("*").order("created_at", { ascending: false }),
         supabase.from("images").select("*").order("created_at", { ascending: false }),
       ]);
-      setPresets(p.data || []);
+      let presetList = p.data || [];
+      // First run: seed the example presets with their exact instructions.
+      if (presetList.length === 0 && !localStorage.getItem(SEED_FLAG)) {
+        try {
+          const now = Date.now();
+          const rows = DEFAULT_PRESETS.map((d, idx) => ({ ...d, created_at: new Date(now - idx * 1000).toISOString() }));
+          await supabase.from("image_presets").insert(rows);
+          localStorage.setItem(SEED_FLAG, "1");
+          const re = await supabase.from("image_presets").select("*").order("created_at", { ascending: false });
+          presetList = re.data || [];
+        } catch (e) { /* table may not exist yet; ignore */ }
+      }
+      setPresets(presetList);
       setImages(i.data || []);
       setCurrent((i.data && i.data[0]) || null);
     } catch (e) { setError(String(e.message || e)); }
