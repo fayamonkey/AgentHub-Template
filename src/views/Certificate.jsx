@@ -10,6 +10,11 @@ const SIGNATORIES = ["Igor", "Dean", "Tony"];
 const SHARE_URL = "https://aiadvantage.com";
 const PROMO = "Learn how to amplify yourself and your business with AI Advantage: aiadvantage.com";
 
+const LINES = [
+  "I built my own AI Hub, a home for every AI tool, idea, and resource I'm working on.",
+  "Everything lives in one place, organized and easy to find.",
+];
+
 const hubNameCfg = (CONFIG.hubName && CONFIG.hubName.trim()) || "My AI Hub";
 const ownerCfg = (CONFIG.ownerName && CONFIG.ownerName.trim()) || "";
 
@@ -167,6 +172,11 @@ export default function Certificate() {
             <div className="cert-win-mark"><img src={aiaIcon} alt="" width="70" height="70" /></div>
             <img className="cert-win-brand" src={aiaWordmark} alt="AI Advantage" />
             <div className="cert-win-title">{title}</div>
+
+            <div className="cert-win-body">
+              {LINES.map((ln, i) => <p key={i}>{ln}</p>)}
+            </div>
+
             <div className="cert-win-lead">{lead}</div>
 
             <div className="cert-win-badges">
