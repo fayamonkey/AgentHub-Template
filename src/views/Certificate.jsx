@@ -208,11 +208,9 @@ export default function Certificate() {
             <button className="cert-share-btn primary" onClick={download}>⬇ Download image</button>
             {canShare && <button className="cert-share-btn" onClick={shareCard}>Share…</button>}
             <button className="cert-share-btn" onClick={() => openIntent("x")}>Post on X</button>
-            <button className="cert-share-btn" onClick={() => openIntent("li")}>LinkedIn</button>
-            <button className="cert-share-btn" onClick={() => openIntent("fb")}>Facebook</button>
             <button className="cert-share-btn" onClick={copyCaption}>{copied ? "Copied!" : "Copy caption"}</button>
           </div>
-          <div className="cert-share-hint">Use “Share…” (mobile) or “Download image” to post the card itself. The X, LinkedIn and Facebook buttons prefill your caption and link; attach the downloaded image there.</div>
+          <div className="cert-share-hint">The image posts via “Share…” (mobile) or “Download image” (then attach it to your post). “Post on X” prefills your caption and link.</div>
           {shareMsg && <div className="cert-share-msg">{shareMsg}</div>}
         </>
       )}
