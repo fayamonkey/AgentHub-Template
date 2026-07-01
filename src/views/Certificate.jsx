@@ -6,18 +6,12 @@ import { Icon } from "../lib/certIcons.jsx";
 import aiaIcon from "../assets/aia-icon.png";
 import aiaWordmark from "../assets/aia-logo-white.png";
 
-const HUB_TITLE = "My AI Hub Win";
 const SIGNATORIES = ["Igor", "Dean", "Tony"];
 const SHARE_URL = "https://aiadvantage.com";
 const PROMO = "Learn how to amplify yourself and your business with AI Advantage: aiadvantage.com";
 
-const LINES = [
-  "I built my own AI Hub, a home for every AI tool, idea, and resource I'm working on.",
-  "Everything lives in one place, organized and easy to find.",
-];
-function captionFor() {
-  return `My AI Hub Win 🏆\n\n${LINES[0]} ${LINES[1]}\n\n${PROMO}`;
-}
+const hubNameCfg = (CONFIG.hubName && CONFIG.hubName.trim()) || "My AI Hub";
+const ownerCfg = (CONFIG.ownerName && CONFIG.ownerName.trim()) || "";
 
 // Capabilities = the hub's built-in apps (always) + tools discovered from the vault (these grow over time).
 function detectCapabilities(cards) {
@@ -40,7 +34,6 @@ export default function Certificate() {
   const [sel, setSel] = useState(null);
   const [loading, setLoading] = useState(true);
   const [busy, setBusy] = useState(false);
-  const [name, setName] = useState(CONFIG.ownerName || "");
   const [copied, setCopied] = useState(false);
   const [shareMsg, setShareMsg] = useState(null);
   const cardRef = useRef(null);
@@ -65,9 +58,8 @@ export default function Certificate() {
 
   async function generate() {
     setBusy(true);
-    const owner = (name || "").trim();
     const caps = detectCapabilities(cards);
-    const row = { hub_name: "My AI Hub", owner_name: owner, badges: caps, stats: { cards: cards.length } };
+    const row = { hub_name: hubNameCfg, owner_name: ownerCfg, badges: caps, stats: { cards: cards.length } };
     try {
       const { data } = await supabase.from("certificates").insert(row).select().single();
       if (data) { setCerts((c) => [data, ...c]); setSel(data); }
@@ -75,7 +67,15 @@ export default function Certificate() {
     setBusy(false);
   }
 
-  const owner = sel ? (sel.owner_name || "") : "";
+  function caption() {
+    const hn = (sel && sel.hub_name) || hubNameCfg;
+    const ow = (sel && sel.owner_name) || "";
+    const t = `${hn} Win`;
+    const line = ow
+      ? `${ow} built a home for every AI tool, idea, and resource, all in one place.`
+      : "A home for every AI tool, idea, and resource, all in one place.";
+    return `${t} 🏆\n\n${line}\n\n${PROMO}`;
+  }
 
   async function makePng() {
     const src = cardRef.current;
@@ -113,20 +113,20 @@ export default function Certificate() {
       const blob = await (await fetch(url)).blob();
       const file = new File([blob], "my-ai-hub-win.png", { type: "image/png" });
       if (navigator.canShare && navigator.canShare({ files: [file] })) {
-        await navigator.share({ files: [file], text: captionFor() });
+        await navigator.share({ files: [file], text: caption() });
         setShareMsg(null);
       } else {
         const a = document.createElement("a"); a.href = url; a.download = "my-ai-hub-win.png"; a.click();
-        try { await navigator.clipboard.writeText(captionFor()); } catch (e) { /* ignore */ }
+        try { await navigator.clipboard.writeText(caption()); } catch (e) { /* ignore */ }
         setShareMsg("Your browser can't attach files to a share, so I downloaded the image and copied the caption — attach the image to your post.");
       }
     } catch (e) {
-      if (String(e).includes("Abort")) { setShareMsg(null); return; } // user cancelled the share sheet
+      if (String(e).includes("Abort")) { setShareMsg(null); return; }
       setShareMsg("Couldn't open the share sheet. Use Download image instead.");
     }
   }
   function openIntent(kind) {
-    const text = captionFor();
+    const text = caption();
     let u;
     if (kind === "x") u = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
     else if (kind === "li") u = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(SHARE_URL)}`;
@@ -134,25 +134,26 @@ export default function Certificate() {
     window.open(u, "_blank");
   }
   async function copyCaption() {
-    try { await navigator.clipboard.writeText(captionFor()); setCopied(true); setTimeout(() => setCopied(false), 1500); } catch { /* ignore */ }
+    try { await navigator.clipboard.writeText(caption()); setCopied(true); setTimeout(() => setCopied(false), 1500); } catch { /* ignore */ }
   }
 
   if (loading) return <div className="wrap"><div className="empty">Loading…</div></div>;
 
   const c = sel;
+  const hubName = (c && c.hub_name) || hubNameCfg;
+  const owner = (c && c.owner_name) || "";
+  const title = `${hubName} Win`;
+  const lead = owner ? `What ${owner} built:` : "What's inside your hub:";
   const caps = c ? (c.badges || []) : [];
   const canShare = typeof navigator !== "undefined" && !!navigator.share;
 
   return (
     <div className="wrap">
       <div className="hello">Your achievement</div>
-      <h1>My AI Hub Win</h1>
+      <h1>{title}</h1>
       <p className="sub">A shareable snapshot of what your hub is and what it does. Generate one anytime and share it anywhere.</p>
 
       <div className="cert-actions">
-        <input className="cert-name-field" type="text" value={name} onChange={(e) => setName(e.target.value)}
-          placeholder="Your name (optional)" maxLength={48}
-          onKeyDown={(e) => { if (e.key === "Enter" && !busy) generate(); }} />
         <button className="btn-primary" onClick={generate} disabled={busy}>
           {busy ? "Generating…" : (certs.length ? "Generate a new one" : "Generate your Win card")}
         </button>
@@ -165,17 +166,8 @@ export default function Certificate() {
           <div className="cert-win" ref={cardRef}>
             <div className="cert-win-mark"><img src={aiaIcon} alt="" width="70" height="70" /></div>
             <img className="cert-win-brand" src={aiaWordmark} alt="AI Advantage" />
-            <div className="cert-win-title">{HUB_TITLE}</div>
-
-            <div className="cert-win-body">
-              {LINES.map((ln, i) => <p key={i}>{ln}</p>)}
-            </div>
-
-            <div className="cert-win-cap">
-              <span className="cert-win-cap-rule" />
-              <span className="cert-win-cap-pill">The capabilities</span>
-              <span className="cert-win-cap-rule" />
-            </div>
+            <div className="cert-win-title">{title}</div>
+            <div className="cert-win-lead">{lead}</div>
 
             <div className="cert-win-badges">
               {caps.map((b, i) => (
@@ -197,7 +189,7 @@ export default function Certificate() {
             </div>
 
             <div className="cert-win-foot">
-              {(owner ? `Built by ${owner}` : "Built with my AI Hub")} &nbsp;·&nbsp; {new Date(c.created_at).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+              {new Date(c.created_at).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
             </div>
             <div className="cert-win-promo">{PROMO}</div>
           </div>
