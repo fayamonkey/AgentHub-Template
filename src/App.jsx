@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { CONFIG } from "./config.js";
+import { supabase } from "./integrations/supabase/client";
 import { loadVault, loadDna, mdToHtml } from "./lib/vault.js";
 import Ideas from "./views/Ideas.jsx";
 import Wins from "./views/Wins.jsx";
@@ -19,6 +20,15 @@ const CATEGORIES = [
   { id: "library", label: "Library", emoji: "📚", blurb: "Saved prompts, skills, DNA & references" },
 ];
 
+// Built-in apps. One source of truth: this list drives BOTH the top nav and the homepage tiles,
+// so they always mirror each other. Add an app here and it appears in both places.
+const APP_SECTIONS = [
+  { id: "ideas", label: "Ideas", emoji: "💡", table: "ideas", unit: "ideas", blurb: "Capture ideas, move them to done" },
+  { id: "wins", label: "Wins", emoji: "🏆", table: "wins", unit: "wins", blurb: "Everything you have shipped" },
+  { id: "images", label: "Images", emoji: "🎨", table: "images", unit: "images", blurb: "Generate images with AI" },
+  { id: "certificate", label: "Certificate", emoji: "🏅", table: "certificates", unit: "cards", blurb: "Your shareable Win card" },
+];
+
 export default function App() {
   const [cards, setCards] = useState([]);
   const [dna, setDna] = useState([]);
@@ -29,6 +39,7 @@ export default function App() {
   const [tab, setTab] = useState("all");
   const [menu, setMenu] = useState(null);
   const [dark, setDark] = useState(() => localStorage.getItem("hub-theme") === "dark");
+  const [appCounts, setAppCounts] = useState({});
 
   useEffect(() => {
     loadVault(CONFIG.githubRepo, CONFIG.vaultFolder)
@@ -42,6 +53,20 @@ export default function App() {
     document.documentElement.dataset.theme = dark ? "dark" : "light";
     localStorage.setItem("hub-theme", dark ? "dark" : "light");
   }, [dark]);
+
+  // Live counts for the app tiles, so the homepage visibly grows. Missing tables just show the blurb.
+  useEffect(() => {
+    (async () => {
+      const out = {};
+      for (const a of APP_SECTIONS) {
+        try {
+          const { count } = await supabase.from(a.table).select("*", { count: "exact", head: true });
+          out[a.table] = typeof count === "number" ? count : null;
+        } catch { out[a.table] = null; }
+      }
+      setAppCounts(out);
+    })();
+  }, []);
 
   async function downloadDna(file) {
     try {
@@ -104,18 +129,11 @@ export default function App() {
           <span>{CONFIG.hubName || (CONFIG.ownerName ? `${CONFIG.ownerName}'s Hub` : "My Hub")}</span>
         </div>
         <div className="navtabs">
-          <button className={tab === "ideas" ? "on" : ""} onClick={() => { setTab("ideas"); setMenu(null); }}>
-            💡 Ideas
-          </button>
-          <button className={tab === "wins" ? "on" : ""} onClick={() => { setTab("wins"); setMenu(null); }}>
-            🏆 Wins
-          </button>
-          <button className={tab === "images" ? "on" : ""} onClick={() => { setTab("images"); setMenu(null); }}>
-            🎨 Images
-          </button>
-          <button className={tab === "certificate" ? "on" : ""} onClick={() => { setTab("certificate"); setMenu(null); }}>
-            <svg className="cert-tab-ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg> Certificate
-          </button>
+          {APP_SECTIONS.map((a) => (
+            <button key={a.id} className={tab === a.id ? "on" : ""} onClick={() => { setTab(a.id); setMenu(null); }}>
+              {a.emoji} {a.label}
+            </button>
+          ))}
           {CATEGORIES.map((c) => (
             <button key={c.id} className={tab === c.id ? "on" : ""} onClick={() => { setTab(c.id); setMenu(null); }}>
               {c.emoji} {c.label} <span className="ct">{counts[c.id] || 0}</span>
@@ -131,7 +149,29 @@ export default function App() {
       <div className="wrap">
         <div className="hello">Welcome back 👋</div>
         <h1>{CONFIG.hubName || (CONFIG.ownerName ? `${CONFIG.ownerName}'s AI Hub` : "My AI Hub")}</h1>
-        <p className="sub">Everything my AI builds for me — in one place.</p>
+        <p className="sub">Everything my AI builds for me, all in one place.</p>
+
+        {tab === "all" && (
+          <section className="section">
+            <div className="sechead">
+              <h2><span className="secemoji">🚀</span> Apps</h2>
+              <span className="secblurb">Everything your hub can do</span>
+            </div>
+            <div className="grid">
+              {APP_SECTIONS.map((a) => (
+                <button key={a.id} className="tile" onClick={() => setTab(a.id)}>
+                  <div className="icon">{a.emoji}</div>
+                  <div className="tiletitle">{a.label}</div>
+                  <div className="tilemeta">
+                    {typeof appCounts[a.table] === "number"
+                      ? <span className="sched">{appCounts[a.table]} {a.unit}</span>
+                      : <span className="sched">{a.blurb}</span>}
+                  </div>
+                </button>
+              ))}
+            </div>
+          </section>
+        )}
 
         {loading && <div className="empty">Loading your tools…</div>}
         {error && (
