@@ -101,7 +101,7 @@ export default function App() {
       <nav className="nav" onMouseLeave={() => setMenu(null)}>
         <div className="brand" onClick={() => { setTab("all"); setMenu(null); }} style={{ cursor: "pointer" }} title="Home">
           <span className="logo">◆</span>
-          <span>{CONFIG.ownerName ? `${CONFIG.ownerName}'s Hub` : "My Hub"}</span>
+          <span>{CONFIG.hubName || (CONFIG.ownerName ? `${CONFIG.ownerName}'s Hub` : "My Hub")}</span>
         </div>
         <div className="navtabs">
           <button className={tab === "ideas" ? "on" : ""} onClick={() => { setTab("ideas"); setMenu(null); }}>
@@ -130,7 +130,7 @@ export default function App() {
       {tab === "ideas" ? <Ideas /> : tab === "wins" ? <Wins /> : tab === "images" ? <Images /> : tab === "certificate" ? <Certificate /> : (
       <div className="wrap">
         <div className="hello">Welcome back 👋</div>
-        <h1>{CONFIG.ownerName ? `${CONFIG.ownerName}'s AI Hub` : "My AI Hub"}</h1>
+        <h1>{CONFIG.hubName || (CONFIG.ownerName ? `${CONFIG.ownerName}'s AI Hub` : "My AI Hub")}</h1>
         <p className="sub">Everything my AI builds for me — in one place.</p>
 
         {loading && <div className="empty">Loading your tools…</div>}
