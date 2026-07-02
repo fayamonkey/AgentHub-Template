@@ -1,1 +1,0 @@
-alter view public.hub_glossary set (security_invoker = on);

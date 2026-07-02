@@ -51,10 +51,17 @@ Deno.serve(async (req) => {
 
   try {
     const url = new URL(req.url);
-    const repo = url.searchParams.get('repo') || 'fayamonkey/masteryhub';
+    const repo = url.searchParams.get('repo') || '';
     const folder = url.searchParams.get('folder') || 'content';
     const mode = url.searchParams.get('mode'); // 'list' | 'file' | null (default = old combined)
     const file = url.searchParams.get('file');
+
+    // No repo configured yet: return an empty (not errored) hub.
+    if (!repo) {
+      return new Response(JSON.stringify({ cards: [], dna: [], items: [] }), {
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
 
     // Single file fetch: lazy-load full transcript on click
     if (mode === 'file' && file) {

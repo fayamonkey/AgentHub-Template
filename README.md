@@ -1,12 +1,12 @@
 # AI Hub — Starter Template (Workshop 1)
 
-Dein persönliches Command Center: **Hub + Ideas-Pipeline + Wins-Tracker.**
+Your personal command center: **Hub + Ideas pipeline + Wins tracker + Images + Certificate.**
 
-## Setup (kurz)
-1. Privates GitHub-Repo (dieser Remix) + Fine-grained Token (Contents: Read & Write).
-2. In Lovable verbinden, **Lovable Cloud** aktivieren.
-3. Secret **`GITHUB_VAULT_TOKEN`** = dein Token setzen.
-4. `src/config.js`: deinen Namen + dein Repo eintragen.
+## Setup (short)
+1. Make this repo your own private GitHub repo (use it as the template) and create a fine-grained token (Contents: Read & Write).
+2. Connect it in Lovable and enable **Lovable Cloud**.
+3. Set the secret **`GITHUB_VAULT_TOKEN`** to your token.
+4. In `src/config.js`, fill in your Hub name, your name, and your repo.
 
-Danach: Dein Cowork-Agent committet Markdown nach `content/` → erscheint im Hub.
-Ideen sammelst du im **Ideas**-Board; erledigte Ideen werden automatisch zu **Wins**.
+After that: your Cowork agent commits markdown into `content/` and it shows up in the Hub automatically.
+Collect ideas on the **Ideas** board; finished ideas turn into **Wins** automatically.
