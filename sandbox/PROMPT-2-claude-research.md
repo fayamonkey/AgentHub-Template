@@ -1,12 +1,13 @@
-# Build your recurring Research (Sandbox)
+# Build your recurring Research (Sandbox) — one prompt, start to finish
 
 I'll set up a Research that runs by itself and keeps a fresh card in your Hub's Sandbox, so you can just
-look and stay up to date, the digging happens in the background. A few quick questions, then I build it and
-run it once so you see your first card.
+look and stay up to date, the digging happens in the background. This single prompt does everything, there
+is no separate Lovable step. A few quick questions, then I build it and run it once so you see your first
+card.
 
 First, quick context: let me glance at the DNA / context files in this folder so I tune the research to you
-and your work. I'll tell you in one line what I picked up. (If there are none, no problem, we go from your
-answers.)
+and your work. I'll tell you in one line what I picked up. Then I'll ask if you have more DNA or context to
+share before we go on. (If there are none, no problem, we go from your answers.)
 
 Then three questions, one at a time:
 
@@ -22,19 +23,31 @@ Then three questions, one at a time:
    short summary, a list of what's new since last time, specific numbers or prices, links to the sources, a
    heads-up flag when something important shifts. Tell me the shape and the length that's genuinely useful.
 
-Then I build it:
-- I set it up as a background task on your cadence (daily or weekly). It uses web search by default, and
-  browser control only if one of your sources needs a login or a click to reach.
+Then I build it, all in one go:
+
+- **Make sure your Hub has a Sandbox tab.** I'll look at your Hub's repo (the one named in your CLAUDE.md /
+  config). If it does not already have a "sandbox" category, I'll add exactly this one line as the first
+  item of the CATEGORIES list in src/App.jsx, and push it:
+
+  { id: "sandbox", label: "Sandbox", emoji: "🧪", blurb: "Mini-apps you build here, safe from the rest of your Hub" },
+
+  then tell you to hit **Sync** in Lovable once so the Sandbox tab appears. I only touch that one line and
+  nothing else in that file. If your Hub isn't the standard template and I'm not certain where the line
+  goes, I'll stop and hand you a one-line Lovable prompt instead, rather than guess and risk your Hub.
+
+- **Set up the research as a background task** on your cadence (daily or weekly). It uses web search by
+  default, and browser control only if one of your sources needs a login or a click to reach.
+
 - Each run it does the research your way and writes (overwrites) a Sandbox card at
   content/sandbox-research-<topic>.md (frontmatter: title, emoji 🔎, category: sandbox, updated: today),
   then pushes it to your vault. The card LEADS with what's new or changed since the last run, then the
   detail in the shape you asked for, with sources.
-- I run it once now so you get your first card. From then on it keeps itself current, you just open the
-  Sandbox to stay up to date.
 
-Then: I tell you how to see it (reload your Hub, open the Sandbox tab). Test it and come back with anything,
-we'll refine it. When you only come back happy, I'll ask if it feels final. Once it's final, I'll offer to
-zip it up so you can share your Research app with the other students.
+- I run it once now so you get your first card.
+
+Then: reload your Hub and open the Sandbox tab to see it. Test it and come back with anything, we'll refine
+it. When you only come back happy, I'll ask if it feels final. Once it's final, I'll offer to zip it up so
+you can share your Research app with the other students.
 
 Rules: work only inside the Sandbox, cards only, never send/pay/post/delete on your behalf. Read
 gh-token.txt only to authenticate git, never print it, always mask github_pat_.
