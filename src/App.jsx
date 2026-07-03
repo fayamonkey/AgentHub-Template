@@ -16,6 +16,7 @@ const RUNGS = [
 ];
 
 const CATEGORIES = [
+  { id: "sandbox", label: "Sandbox", emoji: "🧪", blurb: "Mini-apps you build here, safe from the rest of your Hub" },
   { id: "tools", label: "Tools", emoji: "⚙️", blurb: "Things your AI runs for you" },
   { id: "library", label: "Library", emoji: "📚", blurb: "Saved prompts, skills, DNA & references" },
 ];
