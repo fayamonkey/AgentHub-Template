@@ -1,3 +1,5 @@
+<!-- TESTING: pulls from the AgentHub-Template `sandbox` (dev) branch. When live, swap `sandbox` -> `main` in the URL above. -->
+
 # Build your recurring Research (Sandbox) — one prompt, start to finish
 
 I'll set up a Research that runs by itself and keeps a fresh card in your Hub's Sandbox, so you can just
@@ -8,6 +10,10 @@ card.
 First, quick context: let me glance at the DNA / context files in this folder so I tune the research to you
 and your work. I'll tell you in one line what I picked up. Then I'll ask if you have more DNA or context to
 share before we go on. (If there are none, no problem, we go from your answers.)
+
+Then read the platform's own context so you build something that fits the Hub: fetch and read
+https://raw.githubusercontent.com/fayamonkey/AgentHub-Template/sandbox/AGENTHUB-DNA.md
+It is the AgentHub DNA, the card convention, the Sandbox, and the background-work principle. Follow it.
 
 Then three questions, one at a time:
 
