@@ -1,0 +1,18 @@
+Add a "Sandbox" section to my AI Hub, and change nothing else. Do not redesign, rename, move, or touch
+any existing app, view, or category.
+
+1. In src/App.jsx, find the CATEGORIES array (it currently contains "tools" and "library"). Add this as
+   the FIRST item, exactly as written:
+
+   { id: "sandbox", label: "Sandbox", emoji: "🧪", blurb: "Mini-apps you build here, safe from the rest of your Hub" },
+
+   The Hub builds its top navigation and its homepage tiles from this one array, so adding this line is
+   all that is needed for the Sandbox tab and tile to appear. Cards whose frontmatter says
+   category: sandbox will show up there. Do not modify anything else in that file.
+
+2. Create a file named AGENTHUB-DNA.md at the root of the project. Fetch its exact contents from:
+   https://raw.githubusercontent.com/fayamonkey/AgentHub-Template/sandbox/AGENTHUB-DNA.md
+   and save it as-is (do not rewrite it).
+
+3. Build and show me the preview. The Sandbox tab should now appear in the top menu and as a tile on the
+   homepage, empty for now. Everything else stays exactly as it was.
