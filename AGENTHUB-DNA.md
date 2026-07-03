@@ -35,25 +35,28 @@ demand, and shows its latest result as a card in the Sandbox.
 - Writing = commit the file to the vault repo with plain git over HTTPS and push. The member's
   gh-token.txt (in their connected folder) authenticates. Never print or commit that token.
 
-## The two ways a mini-app can run
+## The principle every Sandbox app follows
 
-**1. Claude-in-the-background (recommended, the strongest path).**
-Claude (in the member's Cowork agenthub folder) does the actual work and writes/updates a Sandbox card,
-then pushes it to the vault. Runs on demand or as a scheduled task. **Zero Hub code changes, so it can
-never break anything.** Best for: anything that needs real reasoning, real data from the member's
-connectors, web research, drafting, summarizing, watching something and reporting. This is where the
-"wow" is, the member's own AI employee doing a real recurring job and surfacing it as a card.
-- Delivery: a small task prompt (and, if recurring, a scheduled task) plus a Card-Emitter step that
-  writes content/sandbox-<app>.md (category: sandbox) and pushes.
+The work happens in the background, Claude in the member's Cowork agenthub folder, and the Hub is the
+frontend: the member opens the Sandbox and sees the latest result as a card. The member does not work in
+the Hub, they watch it. So every mini-app works the same way: Claude does the job (on a schedule or on
+demand), writes or overwrites a Sandbox card, and pushes it to the vault. Zero Hub code changes, so
+nothing can break.
 
-**2. Lovable-LLM (in-browser).**
-A small interactive view Lovable builds inside the Sandbox that calls the built-in Lovable AI gateway.
-Runs on the member's **Lovable AI credits**. Best for: a quick in-Hub interaction (type something, get an
-LLM answer or a generated snippet) where the member wants to click, not wait for a background run.
-- Delivery: a Lovable handoff describing one contained Sandbox view. Keep it self-contained; never touch
-  the built-in apps.
+Recurring cards should LEAD with what is new or changed since the last run, then the detail, then sources,
+so the member sees the delta at a glance instead of re-reading everything.
 
-Prefer path 1 unless the app is genuinely an in-browser click-and-answer tool.
+_(Rare exception: a genuinely interactive click-and-answer tool that Lovable builds as one small
+in-browser Sandbox view on Lovable AI credits. Use only when the app truly needs live in-browser
+interaction. The default and the strength is background work + a card.)_
+
+## The flagship starter: Research
+
+The first Sandbox workflow every member builds is a recurring **Research**. Claude interviews them in three
+steps, what they research, how they usually do it, and what output they need, then sets it up as a
+background task on their cadence (web search by default, browser control only when a source needs it) and
+keeps a live Sandbox card with what's new. This is the shared, guaranteed-win experience; the open-ended
+builder is an optional advanced path.
 
 ## What's available to a Claude-background mini-app
 
