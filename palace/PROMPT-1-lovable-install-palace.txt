@@ -1,0 +1,27 @@
+Add the "Braindump Palace" to my AI Hub, and change nothing else. Do not redesign, rename, or touch any
+existing app or view.
+
+Pull these from https://github.com/fayamonkey/AgentHub-Template (branch: braindump-palace) and add them to
+my project:
+
+1. supabase/migrations/20260703120000_braindumps.sql  — apply it. It creates a `braindumps` table with
+   open RLS, the same style as my existing `ideas` table.
+
+2. src/views/BraindumpPalace.jsx  — add this file exactly as-is.
+
+3. In src/App.jsx, make three small additions and nothing else:
+   - add the import:  import BraindumpPalace from "./views/BraindumpPalace.jsx";
+   - add this as the FIRST item of the APP_SECTIONS array:
+     { id: "braindump", label: "Braindump", emoji: "🧠", table: "braindumps", unit: "dumps", blurb: "Drop a thought, get it back sorted" },
+   - in the line that renders the views, add this branch right before  tab === "ideas" ? <Ideas /> :
+       tab === "braindump" ? <BraindumpPalace /> :
+
+4. Append the "Braindump Palace" CSS block (from src/styles.css on that branch) to my src/styles.css.
+
+5. In src/config.js, add two fields and set them to THIS project's own values:
+     supabaseUrl: <this project's VITE_SUPABASE_URL>,
+     supabaseAnonKey: <this project's VITE_SUPABASE_PUBLISHABLE_KEY>,
+   These are public values; they let my background job reach the database. Keep them committed.
+
+Then build and show the preview. A "🧠 Braindump" tab should appear in the top menu and as a homepage tile,
+with an input box and an empty list. Everything else stays exactly as it was.
