@@ -6,6 +6,7 @@ import Ideas from "./views/Ideas.jsx";
 import Wins from "./views/Wins.jsx";
 import Certificate from "./views/Certificate.jsx";
 import Images from "./views/Images.jsx";
+import BraindumpPalace from "./views/BraindumpPalace.jsx";
 
 const RUNGS = [
   { id: "R1", label: "Prompt" },
@@ -23,6 +24,7 @@ const CATEGORIES = [
 // Built-in apps. One source of truth: this list drives BOTH the top nav and the homepage tiles,
 // so they always mirror each other. Add an app here and it appears in both places.
 const APP_SECTIONS = [
+  { id: "braindump", label: "Braindump", emoji: "🧠", table: "braindumps", unit: "dumps", blurb: "Drop a thought, get it back sorted" },
   { id: "ideas", label: "Ideas", emoji: "💡", table: "ideas", unit: "ideas", blurb: "Capture ideas, move them to done" },
   { id: "wins", label: "Wins", emoji: "🏆", table: "wins", unit: "wins", blurb: "Everything you have shipped" },
   { id: "images", label: "Images", emoji: "🎨", table: "images", unit: "images", blurb: "Generate images with AI" },
@@ -145,7 +147,7 @@ export default function App() {
         </button>
       </nav>
 
-      {tab === "ideas" ? <Ideas /> : tab === "wins" ? <Wins /> : tab === "images" ? <Images /> : tab === "certificate" ? <Certificate /> : (
+      {tab === "braindump" ? <BraindumpPalace /> : tab === "ideas" ? <Ideas /> : tab === "wins" ? <Wins /> : tab === "images" ? <Images /> : tab === "certificate" ? <Certificate /> : (
       <div className="wrap">
         <div className="hello">Welcome back 👋</div>
         <h1>{CONFIG.hubName || (CONFIG.ownerName ? `${CONFIG.ownerName}'s AI Hub` : "My AI Hub")}</h1>

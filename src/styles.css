@@ -582,3 +582,20 @@ footer { margin:50px auto 0; max-width:1000px; padding:0 22px; text-align:center
 .cert-win-grow { margin-top: 12px; font-size: 12px; font-style: italic; color: #9aa3b6; }
 
 .cert-win-lead { margin: 16px auto 4px; font-size: 15px; font-weight: 600; color: #e8c46a; letter-spacing: .01em; }
+
+/* ---- Braindump Palace ---- */
+.bd-input{border:2px solid var(--txt);border-radius:12px;padding:12px;margin:8px 0 22px;background:var(--surface)}
+.bd-input textarea{width:100%;box-sizing:border-box;border:none;background:transparent;color:var(--txt);font:inherit;resize:vertical;outline:none}
+.bd-inputrow{display:flex;align-items:center;gap:10px;margin-top:8px;flex-wrap:wrap}
+.bd-spacer{flex:1}
+.bd-sent{color:#1f7a4d;font-size:13px}
+.bd-mic-on{background:#b91c1c;color:#fff;border-color:#b91c1c}
+.bd-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.bd-card{border:2px solid var(--txt);border-radius:12px;padding:14px;background:var(--surface);cursor:pointer}
+.bd-card.bd-pending{opacity:.7;cursor:default;border-style:dashed}
+.bd-title{font-weight:700;margin-bottom:6px}
+.bd-preview{color:var(--mut);font-size:14px}
+.bd-meta{color:var(--mut);font-size:12px;margin-top:8px}
+.bd-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.bd-tag{font-size:12px;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:2px 8px}
+.bd-original{white-space:pre-wrap;background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:12px;font-size:14px}
