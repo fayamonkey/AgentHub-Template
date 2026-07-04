@@ -599,3 +599,5 @@ footer { margin:50px auto 0; max-width:1000px; padding:0 22px; text-align:center
 .bd-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
 .bd-tag{font-size:12px;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:2px 8px}
 .bd-original{white-space:pre-wrap;background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:12px;font-size:14px}
+.bd-err{color:#b91c1c;font-size:13px}
+.bd-input .bd-sent a{color:inherit;text-decoration:underline}

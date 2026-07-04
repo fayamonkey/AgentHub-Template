@@ -15,9 +15,4 @@ export const CONFIG = {
 
   // The folder inside the repo where your task outputs (cards) live.
   vaultFolder: "content",
-
-  // Filled by the Braindump install so the background job can reach your database.
-  // The anon key is a public key (safe here); your data stays protected by row-level security.
-  supabaseUrl: "",
-  supabaseAnonKey: "",
 };

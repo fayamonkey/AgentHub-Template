@@ -1,27 +1,21 @@
-Add the "Braindump Palace" to my AI Hub, and change nothing else. Do not redesign, rename, or touch any
-existing app or view.
+Add the "Braindump Palace" to my AI Hub, and change nothing else. Do not redesign or touch any existing app.
 
-Pull these from https://github.com/fayamonkey/AgentHub-Template (branch: braindump-palace) and add them to
-my project:
+Pull these from https://github.com/fayamonkey/AgentHub-Template (branch: braindump-palace) and add them:
 
-1. supabase/migrations/20260703120000_braindumps.sql  — apply it. It creates a `braindumps` table with
-   open RLS, the same style as my existing `ideas` table.
+1. supabase/functions/submit-braindump/index.ts  — add this edge function and DEPLOY it. It writes a new
+   braindump file into my vault repo using the existing GITHUB_VAULT_TOKEN secret (the same token get-cards
+   uses to read). No new secret needed.
 
-2. src/views/BraindumpPalace.jsx  — add this file exactly as-is.
+2. src/views/BraindumpInput.jsx  — add this file exactly as-is.
 
-3. In src/App.jsx, make three small additions and nothing else:
-   - add the import:  import BraindumpPalace from "./views/BraindumpPalace.jsx";
-   - add this as the FIRST item of the APP_SECTIONS array:
-     { id: "braindump", label: "Braindump", emoji: "🧠", table: "braindumps", unit: "dumps", blurb: "Drop a thought, get it back sorted" },
-   - in the line that renders the views, add this branch right before  tab === "ideas" ? <Ideas /> :
-       tab === "braindump" ? <BraindumpPalace /> :
+3. In src/App.jsx, make exactly these additions and nothing else:
+   - add the import:  import BraindumpInput from "./views/BraindumpInput.jsx";
+   - add this as the FIRST item of the CATEGORIES array:
+     { id: "braindump", label: "Braindump", emoji: "🧠", blurb: "Dump a thought, get it back sorted" },
+   - immediately after the line  <p className="sub">Everything my AI builds for me, all in one place.</p>
+     add this line:  {tab === "braindump" && <BraindumpInput />}
 
-4. Append the "Braindump Palace" CSS block (from src/styles.css on that branch) to my src/styles.css.
+4. Append the Braindump CSS lines (from src/styles.css on that branch) to my src/styles.css.
 
-5. In src/config.js, add two fields and set them to THIS project's own values:
-     supabaseUrl: <this project's VITE_SUPABASE_URL>,
-     supabaseAnonKey: <this project's VITE_SUPABASE_PUBLISHABLE_KEY>,
-   These are public values; they let my background job reach the database. Keep them committed.
-
-Then build and show the preview. A "🧠 Braindump" tab should appear in the top menu and as a homepage tile,
-with an input box and an empty list. Everything else stays exactly as it was.
+Then build and show the preview. A "🧠 Braindump" tab appears in the top menu with a text box and a mic
+button. Braindump cards will show under it. Everything else stays exactly as it was.
