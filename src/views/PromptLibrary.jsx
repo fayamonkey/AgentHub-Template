@@ -109,15 +109,6 @@ export default function PromptLibrary() {
 
   return (
     <div className="pl">
-      <header className="pl-hero">
-        <div className="pl-hero-txt">
-          <div className="pl-eyebrow">Prompt Library</div>
-          <h1>{counts.all} prompts, styles &amp; follow-ups</h1>
-          <p>Search everything, copy in one click, or add your own — yours travel with your hub.</p>
-        </div>
-        <button className="pl-add-btn" onClick={() => setAdding(true)}>＋ Add prompt</button>
-      </header>
-
       {/* Top navigation — works on mobile (chips scroll horizontally) */}
       <nav className="pl-nav">
         <div className="pl-search">
@@ -144,6 +135,15 @@ export default function PromptLibrary() {
           ))}
         </div>
       </nav>
+
+      <header className="pl-hero">
+        <div className="pl-hero-txt">
+          <div className="pl-eyebrow">Prompt Library</div>
+          <h1>{counts.all} prompts, styles &amp; follow-ups</h1>
+          <p>Search everything, copy in one click, or add your own — yours travel with your hub.</p>
+        </div>
+        <button className="pl-add-btn" onClick={() => setAdding(true)}>＋ Add prompt</button>
+      </header>
 
       <div className="pl-count">{filtered.length} result{filtered.length !== 1 ? "s" : ""}</div>
 

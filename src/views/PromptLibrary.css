@@ -12,8 +12,8 @@
   --pl-mut: var(--mut, #86868b);
   --pl-line: var(--line, #e7e7ec);
   --pl-soft: var(--soft, #f5f5f7);
-  display: flex; flex-direction: column; gap: 18px;
-  max-width: 1180px; margin: 0 auto; padding: 22px 20px 60px;
+  display: flex; flex-direction: column; gap: 16px;
+  margin: 0; padding: 0 0 48px;
   color: var(--pl-txt);
 }
 
@@ -43,13 +43,14 @@
 
 /* Top navigation */
 .pl-nav {
-  position: sticky; top: 8px; z-index: 5;
-  display: flex; flex-direction: column; gap: 12px;
-  padding: 14px; border-radius: 18px;
-  border: 1px solid color-mix(in srgb, var(--pl-line) 88%, transparent);
-  background: color-mix(in srgb, var(--pl-surface) 82%, transparent);
-  -webkit-backdrop-filter: blur(16px) saturate(1.3); backdrop-filter: blur(16px) saturate(1.3);
-  box-shadow: 0 10px 30px -20px rgba(0,0,0,.4);
+  position: sticky; top: 0; z-index: 20;
+  display: flex; flex-direction: column; gap: 11px;
+  /* full-bleed to hub-main padding edges so it reads as a second nav bar */
+  margin: 0 -32px; padding: 13px 32px 12px;
+  border: none; border-bottom: 1px solid color-mix(in srgb, var(--pl-line) 78%, transparent);
+  background: color-mix(in srgb, var(--pl-surface) 90%, transparent);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4); backdrop-filter: blur(18px) saturate(1.4);
+  box-shadow: 0 10px 22px -18px rgba(0,0,0,.55);
 }
 .pl-search {
   display: flex; align-items: center; gap: 10px; padding: 11px 14px; border-radius: 12px;
@@ -166,5 +167,5 @@
   .pl-grid { grid-template-columns: 1fr; }
   .pl-panel { width: 100%; }
   .pl-form-row { grid-template-columns: 1fr; }
-  .pl-nav { top: 4px; }
+  .pl-nav { margin: 0 -14px; padding: 11px 14px 10px; }
 }
