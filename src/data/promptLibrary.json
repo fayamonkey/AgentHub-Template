@@ -1,0 +1,3035 @@
+[
+{
+"id": "prompt-design-menus-0",
+"kind": "prompt",
+"title": "Design Menus",
+"category": "Health",
+"text": "Design a dinner menu with 3 courses, focusing on dishes that are easy to cook for beginners and cater to vegetarian preferences.",
+"formula": "Design a dinner menu with [number] of courses, focusing on dishes that are [restriction] and cater to [food preferences].",
+"favorite": false
+},
+{
+"id": "prompt-discover-pickup-lines-1",
+"kind": "prompt",
+"title": "Discover Pickup Lines",
+"category": "Entertainment",
+"text": "Can you formulate pickup lines as if you were a chef trying to impress someone with your culinary skills?",
+"formula": "Can you formulate pickup lines as if [unusual style]?",
+"favorite": false
+},
+{
+"id": "prompt-overcome-fears-2",
+"kind": "prompt",
+"title": "Overcome Fears",
+"category": "Social",
+"text": "How can I overcome my fear of heights?",
+"formula": "How can I overcome my fear of [activity] by identifying the root cause and triggers of the fear, considering the potential benefits and drawbacks of overcoming it?",
+"favorite": false
+},
+{
+"id": "prompt-communicate-commitment-3",
+"kind": "prompt",
+"title": "Communicate Commitment",
+"category": "Marketing",
+"text": "Write a newsletter to showcase our brand Green Beans commitment to sustainable agriculture, highlighting our pesticide-free farming practices and connecting with our environmentally-conscious shoppers.",
+"formula": "Write a [type of text] to showcase our brand [brand name]  commitment to [cause], highlighting our [initiatives] and connecting with our [target audience].",
+"favorite": false
+},
+{
+"id": "prompt-write-outlines-4",
+"kind": "prompt",
+"title": "Write  Outlines",
+"category": "Writing",
+"text": "Can you provide an outline for a bachelor’s thesis on solar power for rural areas?",
+"formula": "Can you provide an outline for [project]?",
+"favorite": false
+},
+{
+"id": "prompt-explore-different-arguments-5",
+"kind": "prompt",
+"title": "Explore Different Arguments",
+"category": "Writing",
+"text": "Can you write an argument for the use of AI in universities from multiple diverse perspectives. Before you do so, state the characteristics of the various characters?",
+"formula": "Can you write an argument [for/against][subject] from multiple diverse perspectives. Before you do so, state the characteristics of the various characters?",
+"favorite": true
+},
+{
+"id": "prompt-write-interviews-6",
+"kind": "prompt",
+"title": "Write Interviews",
+"category": "Writing",
+"text": "Compose a video interview with a software engineer discussing their experience with artificial intelligence, including 12 insightful questions and exploring the ethical implications of AI.",
+"formula": "Compose a [format] interview with [type of professional] discussing their experience with [topic], including [number] insightful questions and exploring [specific aspect].",
+"favorite": false
+},
+{
+"id": "prompt-write-video-scripts-7",
+"kind": "prompt",
+"title": "Write Video Scripts",
+"category": "Writing",
+"text": "Can  you  write  a  super  engaging  YouTube  script  outline draft on the topic of artificial general intelligence in the creative industry?",
+"formula": "Write a video script that [goal], exploring the topic of [subject] [additional context].",
+"favorite": false
+},
+{
+"id": "prompt-write-emotional-text-8",
+"kind": "prompt",
+"title": "Write Emotional Text",
+"category": "Writing",
+"text": "Write a short story that includes a protagonist who is struggling with addiction, a character who offers them support, and a moment of clarity to convey a sense of hope about recovery.",
+"formula": "Write a [type of text] that includes [elements] to convey [emotion] about [subject].",
+"favorite": false
+},
+{
+"id": "prompt-cook-at-home-9",
+"kind": "prompt",
+"title": "Cook At Home",
+"category": "Health",
+"text": "What are some options for comforting soups that I can prepare/cook at home without any cooking experience, given a preference for vegan meals?",
+"formula": "What are some options for [dish] that I can prepare/cook at home without any cooking experience, given [preference/restriction]?",
+"favorite": false
+},
+{
+"id": "prompt-explore-character-backgrounds-10",
+"kind": "prompt",
+"title": "Explore Character Backgrounds",
+"category": "Writing",
+"text": "Write a character background story, using stream of consciousness to highlight their inner turmoil and traumatic experiences.",
+"formula": "Write a character background story, using [style] to highlight their [characteristics] and [background].",
+"favorite": false
+},
+{
+"id": "prompt-understand-marketing-11",
+"kind": "prompt",
+"title": "Understand Marketing",
+"category": "Social",
+"text": "How can I effectively market my online tutoring service to parents of high school students by creating video testimonials that showcase academic success stories, and how can I measure success?",
+"formula": "How can I effectively market my [product/cause] to [target audience] by [strategy/tactic], and how can I measure success?",
+"favorite": false
+},
+{
+"id": "prompt-discover-cultures-12",
+"kind": "prompt",
+"title": "Discover Cultures",
+"category": "Productivity",
+"text": "What are the most effective methods and resources for deepening my understanding of European culture, including strategies for engaging with the culture beyond the basics?",
+"formula": "What are the most effective methods and resources for deepening my understanding of [culture], including strategies for engaging with the culture beyond the basics?",
+"favorite": false
+},
+{
+"id": "prompt-decorate-interiors-13",
+"kind": "prompt",
+"title": "Decorate Interiors",
+"category": "Productivity",
+"text": "Can you come up with some interesting ways of decorating a bedroom in the style of a Harry Potter movie?",
+"formula": "Can you come up with some interesting ways of decorating a [room/space] in the style of [style]? The [element] should [goals].",
+"favorite": false
+},
+{
+"id": "prompt-workout-at-home-14",
+"kind": "prompt",
+"title": "Workout At Home",
+"category": "Health",
+"text": "What exercises can I do at home to improve my core and glutes as an intermediate level, incorporating planks and walking lunges?",
+"formula": "What exercises can I do at home to strengthen my [body part] as a [experience level], incorporating [exercise]?",
+"favorite": false
+},
+{
+"id": "prompt-evaluate-business-ideas-15",
+"kind": "prompt",
+"title": "Evaluate Business Ideas",
+"category": "Entrepreneurship",
+"text": "Evaluate the viability of launching an online language tutoring platform by conducting a SWOT analysis, estimating the market size for language learning services, and analyzing the landscape of competing tutoring platforms, with insights on the risk of oversaturation in the market and the opportunity to target underserved language learners.",
+"formula": "Evaluate the viability of [business idea] by conducting a SWOT analysis, considering [market size], and analyzing [competitor landscape], with insights on [risk factors] and [opportunities].",
+"favorite": false
+},
+{
+"id": "prompt-generate-titles-16",
+"kind": "prompt",
+"title": "Generate Titles",
+"category": "Productivity",
+"text": "Generate memorable movie titles using the following keywords: friendship, laughter, and fun.",
+"formula": "Generate [adjective] [title type] titles using the following keywords: [keywords].",
+"favorite": false
+},
+{
+"id": "prompt-write-plot-twists-17",
+"kind": "prompt",
+"title": "Write Plot Twists",
+"category": "Writing",
+"text": "Design a time travel plot twist for a science fiction story that subverts expectations and impacts the protagonist's understanding of the past and the future, as well as the overall narrative trajectory.",
+"formula": "Design a [type of plot twist] for a [genre] story that [subverts expectations] and impacts [characters] and [narrative trajectory].",
+"favorite": false
+},
+{
+"id": "prompt-create-worlds-18",
+"kind": "prompt",
+"title": "Create Worlds",
+"category": "Writing",
+"text": "Design a cyberpunk world for a dystopian sci-fi story, including its urban landscape, social hierarchy, counterculture, and key historical events that influence the plot/characters.",
+"formula": "Design a [type of world] for a [genre] story, including its [geographical features], [societal structure], [culture], and [key historical events] that influence the [plot/characters].",
+"favorite": false
+},
+{
+"id": "prompt-draft-privacy-policies-19",
+"kind": "prompt",
+"title": "Draft Privacy Policies",
+"category": "Writing",
+"text": "Can you create a remote work policy for our organization that outlines specific guidelines for employees to maintain productivity and a healthy work-life balance while working from home?",
+"formula": "Can you create a [type of policy] for [organization] that outlines [specific details or requirements]?",
+"favorite": false
+},
+{
+"id": "prompt-discover-paths-to-goals-20",
+"kind": "prompt",
+"title": "Discover Paths To Goals",
+"category": "Productivity",
+"text": "Can you provide a list of 5 ways to be more productive in personal projects on weekends?",
+"formula": "Can you provide a list of [number] ways to [goal]?",
+"favorite": true
+},
+{
+"id": "prompt-product-copywriting-21",
+"kind": "prompt",
+"title": "Product Copywriting",
+"category": "Writing",
+"text": "Can you write a product description for a fidget spinner that is suitable for an online store targeted towards teenagers?",
+"formula": "Create a [type of text] that promotes [product] to [target audience], with a focus on [feature].",
+"favorite": false
+},
+{
+"id": "prompt-explore-email-subjects-22",
+"kind": "prompt",
+"title": "Explore Email Subjects",
+"category": "Writing",
+"text": "Generate 10 email subject lines for a payment reminder to my tenant, using persuasive language.",
+"formula": "Generate [number] email subject lines for [type of email] to [target audience], using [style] language.",
+"favorite": false
+},
+{
+"id": "prompt-write-hero-stories-23",
+"kind": "prompt",
+"title": "Write Hero Stories",
+"category": "Writing",
+"text": "Craft a fantasy story with a protagonist who faces the challenge of saving their kingdom from a great evil, resolves it through learning powerful magic, and experiences a loss of innocence while set in a mystical land.",
+"formula": "Craft a [genre] story where a protagonist who faces [conflict], resolves it through [resolution method], and experiences character development while set in a [setting].",
+"favorite": false
+},
+{
+"id": "prompt-consider-legal-action-24",
+"kind": "prompt",
+"title": "Consider Legal Action",
+"category": "Productivity",
+"text": "Given that I was unfairly fired from my job, what legal action could I take?",
+"formula": "Given that [event], what legal action could I take?",
+"favorite": false
+},
+{
+"id": "prompt-discover-brand-names-25",
+"kind": "prompt",
+"title": "Discover Brand Names",
+"category": "Entrepreneurship",
+"text": "Can you generate 2 potential brand names for a tech company, targeting professionals, inspired by the principles of innovation and convenience, using words associated with technology and progress?",
+"formula": "Can you generate [number] potential brand names for a [company], targeting [demographic], inspired by the principles of [industry], using words associated with [concepts]?",
+"favorite": false
+},
+{
+"id": "prompt-create-musical-recipes-26",
+"kind": "prompt",
+"title": "Create Musical Recipes",
+"category": "Entertainment",
+"text": "Can you provide a recipe for lasagna, written in the rap style of Snoop Dogg?",
+"formula": "Can you provide a recipe for [dish], written in the [musical] style of [artist], with instructions that incorporate [specific musical elements/techniques], based on [specific theme/occasion]?",
+"favorite": false
+},
+{
+"id": "prompt-write-messages-27",
+"kind": "prompt",
+"title": "Write Messages",
+"category": "Writing",
+"text": "Come up with 5 social media posts for Twitter that include statistics about internet adoption.",
+"formula": "Come up with [number] [type of text] for [platform] that include [type of reference].",
+"favorite": false
+},
+{
+"id": "prompt-discover-new-movies-28",
+"kind": "prompt",
+"title": "Discover New Movies",
+"category": "Entertainment",
+"text": "Create a table listing the top 10 comedy movie options to help you unwind after a long day. The first column is titled \"Name\", the second column is \"Description\", the third column is \"Average Rating (out of 5)\", and the fourth column is \"Top Critic Quote\".",
+"formula": "Create a table listing the top 10 [category] options to help you unwind after a long day. The first column is titled \"Name\", the second column is \"Description\", the third column is \"Average Rating (out of 5)\", and the fourth column is \"Top Critic Quote\".",
+"favorite": false
+},
+{
+"id": "prompt-discover-clever-excuses-29",
+"kind": "prompt",
+"title": "Discover Clever Excuses",
+"category": "Entertainment",
+"text": "Act as if you are a surfer bro with a thick Californian accent and come up with a clever excuse for why you can’t get a job.",
+"formula": "Act as if you are a [character] with a [type of accent] and come up with a clever excuse for why you can't do [task].",
+"favorite": false
+},
+{
+"id": "prompt-re-invent-songs-30",
+"kind": "prompt",
+"title": "Re-Invent Songs",
+"category": "Entertainment",
+"text": "Can you rewrite the lyrics of the song \"Stairway to Heaven\" by Led Zeppelin to be about the challenges of modern technology?",
+"formula": "Can you rewrite the lyrics of the song [song] by [artist] to be about [subject]?",
+"favorite": false
+},
+{
+"id": "prompt-invent-excuses-31",
+"kind": "prompt",
+"title": "Invent Excuses",
+"category": "Writing",
+"text": "Write a lengthy excuse for not attending a friend's wedding in the style of Charles Dickens, using his vivid descriptions and characterizations to craft a compelling and humorous excuse.",
+"formula": "Write a lengthy excuse for not attending [event] in the style of [author], using their literary techniques and voice to craft a compelling and humorous excuse.",
+"favorite": false
+},
+{
+"id": "prompt-optimize-expenses-32",
+"kind": "prompt",
+"title": "Optimize Expenses",
+"category": "Productivity",
+"text": "How can I optimize my $5000 monthly expenses while living in New York City, in the categories of housing/utilities, transportation, and food by identifying cost-saving opportunities and implementing strategies such as negotiating, DIY, or comparison shopping?",
+"formula": "How can I optimize my [$ sum]  monthly expenses while living in [location], in the categories of housing/utilities, transportation, and food by identifying cost-saving opportunities and implementing strategies such as negotiating, DIY, or comparison shopping?",
+"favorite": false
+},
+{
+"id": "prompt-rewrite-carefully-33",
+"kind": "prompt",
+"title": "Rewrite Carefully",
+"category": "Writing",
+"text": "Make the following text more persuasive, without sacrificing its honesty: Your unique skills and positive attitude are crucial to our team's success, and we would be honored if you could join us on our company retreat to share your insights and contribute to our future plans.",
+"formula": "Make the following text [desired outcome], without sacrificing [attribute or style]: [your text]",
+"favorite": false
+},
+{
+"id": "prompt-understand-deeply-34",
+"kind": "prompt",
+"title": "Understand Deeply",
+"category": "Productivity",
+"text": "Can you provide a detailed comparison of the underlying themes of quantum computing and classical computing?",
+"formula": "Can you provide a detailed comparison of the underlying themes of [idea A] and [idea B]?",
+"favorite": true
+},
+{
+"id": "prompt-create-campaigns-35",
+"kind": "prompt",
+"title": "Create Campaigns",
+"category": "Marketing",
+"text": "Please design an advertising campaign to promote an online language learning platform targeting busy professionals.",
+"formula": "Please design an advertising campaign to promote [product/service] targeting [target audience].",
+"favorite": false
+},
+{
+"id": "prompt-invent-characters-36",
+"kind": "prompt",
+"title": "Invent Characters",
+"category": "Writing",
+"text": "Design a chef with a family legacy, a perfectionist personality, a goal of winning a culinary competition, a strength in creativity, and a weakness for anger management, who faces a rival chef in a high-pressure kitchen setting.",
+"formula": "Design a [character type] with a [backstory], [personality trait], [goal], [strength], and [weakness], who faces a [challenge] within a [story setting].",
+"favorite": false
+},
+{
+"id": "prompt-write-documents-37",
+"kind": "prompt",
+"title": "Write Documents",
+"category": "Writing",
+"text": "Create a job offer letter that outlines the terms and conditions of employment, including salary, benefits, and expectations for job performance.",
+"formula": "Create a [type of document] that [goal], on the subject of [subject].",
+"favorite": false
+},
+{
+"id": "prompt-teach-effectively-38",
+"kind": "prompt",
+"title": "Teach Effectively",
+"category": "Social",
+"text": "How can I effectively teach my grandmother to use a smartphone, considering her visual impairment and previous technology experience, and how can I evaluate her progress?",
+"formula": "How can I effectively teach [person] to [activity], considering [challenges], and how can I evaluate their progress?",
+"favorite": false
+},
+{
+"id": "prompt-generate-guides-39",
+"kind": "prompt",
+"title": "Generate Guides",
+"category": "Productivity",
+"text": "Can you provide step-by-step instructions on how to start a vegetable garden at home, considering a small space and for first-time gardeners?",
+"formula": "Can you provide step-by-step instructions on how to [subject], considering [context]?",
+"favorite": false
+},
+{
+"id": "prompt-shorten-messages-40",
+"kind": "prompt",
+"title": "Shorten Messages",
+"category": "Productivity",
+"text": "Provide a paraphrase in 20 words for the following message, considering it's for a classroom announcement: Due to the ongoing snowstorm, all classes will be conducted online for the rest of the week.",
+"formula": "Provide a [type of explanation] in [number] words for the following message, considering [audience]: [message]",
+"favorite": false
+},
+{
+"id": "prompt-write-anything-41",
+"kind": "prompt",
+"title": "Write Anything",
+"category": "Writing",
+"text": "Using descriptive language and luxury travelers as the target audience, write a magazine article for a boutique hotel in Bali, highlighting the stunning views, serene atmosphere, and personalized service offered by the property.",
+"formula": "Using [writing style] and [target audience], write a [type of text] for the [subject] in [location], highlighting the [key benefits] offered by the [subject].",
+"favorite": true
+},
+{
+"id": "prompt-rewrite-persuasively-42",
+"kind": "prompt",
+"title": "Rewrite Persuasively",
+"category": "Writing",
+"text": "Evaluate whether this point about education reform is convincing and identify areas of improvement to make it more practical, innovative, or well-supported. If not, what specific changes can you make to achieve this goal: [insert text]",
+"formula": "Evaluate whether this [point/object] is convincing and identify areas of improvement to achieve one of the following desired outcomes. If not, what specific changes can you make to achieve this goal: [goals]",
+"favorite": true
+},
+{
+"id": "prompt-discover-new-meals-43",
+"kind": "prompt",
+"title": "Discover New Meals",
+"category": "Health",
+"text": "What are the best foods to eat for improving brain function, given a preference for spicy food, and how can they be incorporated into lunch?",
+"formula": "What are the best foods to eat for [health benefit], given a [restriction], and how can they be incorporated into [meal]?",
+"favorite": true
+},
+{
+"id": "prompt-discover-qualities-44",
+"kind": "prompt",
+"title": "Discover Qualities",
+"category": "Productivity",
+"text": "In your opinion, what is the most important quality an prompt engineer can possess, and why do you think that is?",
+"formula": "In your opinion, what is the most important quality a [person] can possess in the context of [situation]?",
+"favorite": false
+},
+{
+"id": "prompt-write-cover-letters-45",
+"kind": "prompt",
+"title": "Write Cover Letters",
+"category": "Writing",
+"text": "Write a cover letter for a project manager position, emphasizing your experience with Scrum and Agile methodologies, and how it applies to a startup in the fintech industry, with a focus on driving efficiency and scalability.",
+"formula": "Write a cover letter for a [position], emphasizing your experience with [skill/tool] and how it applies to [company/industry], with a focus on [result] and [constraint].",
+"favorite": false
+},
+{
+"id": "prompt-create-business-plans-46",
+"kind": "prompt",
+"title": "Create Business Plans",
+"category": "Entrepreneurship",
+"text": "Create a comprehensive business plan for my digital marketing agency by outlining our mission to help businesses achieve their growth objectives through targeted digital marketing strategies, defining our target market of small to medium-sized businesses in the technology and professional services industries, analyzing our competitors in the digital marketing industry, and detailing our marketing and financial strategies to achieve a 30% increase in annual revenue within the next two years.",
+"formula": "Create a comprehensive business plan for my [type of business] by outlining [mission/vision], defining [target market], analyzing [competitors], and detailing [strategies].",
+"favorite": false
+},
+{
+"id": "prompt-write-reports-47",
+"kind": "prompt",
+"title": "Write Reports",
+"category": "Writing",
+"text": "Write a feasibility study report about a new business venture for an entrepreneur that presents financial projections and supports conclusions with market analysis.",
+"formula": "Write a [type of report] about [subject] for a [purpose] that presents [data type] and supports conclusions with [evidence type].",
+"favorite": false
+},
+{
+"id": "prompt-understand-decision-48",
+"kind": "prompt",
+"title": "Understand Decision",
+"category": "Social",
+"text": "In a competitive job market, what factors might influence someone to pursue further education, and what are the potential consequences of this decision?",
+"formula": "In [context/situation], what factors might influence someone to [action], and what are the potential consequences of this action?",
+"favorite": true
+},
+{
+"id": "prompt-snacking-responsibly-49",
+"kind": "prompt",
+"title": "Snacking Responsibly",
+"category": "Health",
+"text": "Can you suggest some healthy and tasty snack options that are sweet and low-carb friendly?",
+"formula": "Can you suggest some healthy and tasty snack options that are [flavor preference] and [dietary restriction] friendly?",
+"favorite": false
+},
+{
+"id": "prompt-rewrite-cover-letters-50",
+"kind": "prompt",
+"title": "Rewrite Cover Letters",
+"category": "Writing",
+"text": "Can you improve this previous cover letter by adding infor- mation about experience in video content marketing, the ability to generate relevant ideas, and exceptional writing and research skills? [insert cover letter]",
+"formula": "Improve a previous cover letter by adding information about your relevant skills and experiences in [industry]: [insert cover letter]",
+"favorite": false
+},
+{
+"id": "prompt-create-sales-text-51",
+"kind": "prompt",
+"title": "Create Sales Text",
+"category": "Writing",
+"text": "Create a persuasive podcast episode for my wellness brand, using expert interviews to establish authority and encouraging listeners to visit our website and sign up for our newsletter.",
+"formula": "Create a persuasive [type of text] that [specific persuasion technique], encouraging visitors to [desired action] for [service/product].",
+"favorite": false
+},
+{
+"id": "prompt-tell-stories-52",
+"kind": "prompt",
+"title": "Tell Stories",
+"category": "Writing",
+"text": "Act as a screenwriter. Now write a movie script between two astronauts stranded on a distant planet, using vivid descriptions and suspenseful plot developments to create a thrilling and visually stunning story.",
+"formula": "Act as a [type of storyteller]. Now write a [type of text] between [2 subjects]?",
+"favorite": false
+},
+{
+"id": "prompt-improve-skills-53",
+"kind": "prompt",
+"title": "Improve Skills",
+"category": "Productivity",
+"text": "Can you suggest practical ways to learn or practice Python programming without taking a course or joining a community?",
+"formula": "Can you suggest practical ways to learn or practice [specific skill] without taking a course or joining a community?",
+"favorite": true
+},
+{
+"id": "prompt-discover-ridiculous-reasons-54",
+"kind": "prompt",
+"title": "Discover Ridiculous Reasons",
+"category": "Entertainment",
+"text": "Can you come up with a list of ridiculous reasons why exercise is the worst thing ever?",
+"formula": "Can you come up with a list of ridiculous reasons why [subject] is the [best/worst] thing ever?",
+"favorite": true
+},
+{
+"id": "prompt-improve-anything-55",
+"kind": "prompt",
+"title": "Improve Anything",
+"category": "Productivity",
+"text": "Can you provide suggestions for how I can improve my time management with the goal of increasing productivity and achieving a better work-life balance?",
+"formula": "Can you provide suggestions for how I can improve [subject] with the goal of [objective]?",
+"favorite": true
+},
+{
+"id": "prompt-uncover-facts-56",
+"kind": "prompt",
+"title": "Uncover Facts",
+"category": "Productivity",
+"text": "What is an aspect of quantum mechanics that is often misunderstood by non-scientists?",
+"formula": "What is an aspect of [subject] that is commonly misunderstood or overlooked?",
+"favorite": false
+},
+{
+"id": "prompt-reveal-cultural-values-57",
+"kind": "prompt",
+"title": "Reveal Cultural Values",
+"category": "Social",
+"text": "In western society, is it generally considered better to be rich or powerful?",
+"formula": "In [society/culture], is it generally considered better to be [characteristic] or [characteristic]?",
+"favorite": false
+},
+{
+"id": "prompt-find-side-hustles-58",
+"kind": "prompt",
+"title": "Find Side Hustles",
+"category": "Entrepreneurship",
+"text": "Suggest ways to boost income through freelance writing considering my writing skills, weekends-only availability, and moderate risk tolerance.",
+"formula": "Suggest ways to boost income through [side hustles], [passive income streams], or [investment opportunities], considering my [skills], [time availability], and [risk tolerance].",
+"favorite": false
+},
+{
+"id": "prompt-identify-niches-59",
+"kind": "prompt",
+"title": "Identify Niches",
+"category": "Marketing",
+"text": "Identify 5 potential market niches for my e-commerce business by analyzing customer search data, considering the rise of online shopping, and evaluating the projected growth of the retail industry.",
+"formula": "Identify [number] potential market niches for my [industry] business by analyzing [data source], considering [trend/consumer behavior], and evaluating [market size/growth potential].",
+"favorite": false
+},
+{
+"id": "prompt-exaggerate-anything-60",
+"kind": "prompt",
+"title": "Exaggerate Anything",
+"category": "Entertainment",
+"text": "Exaggerate the following statement to motivate someone to exercise: I should go to the gym.",
+"formula": "Exaggerate the following statement to [goal]: [statement]",
+"favorite": false
+},
+{
+"id": "prompt-analyze-content-61",
+"kind": "prompt",
+"title": "Analyze Content",
+"category": "Productivity",
+"text": "Analyze a job application for professionalism, such as attention to detail, clear communication, and relevant experience: [insert job application]",
+"formula": "Analyze [format] for [purpose], such as [goals]: [insert text]",
+"favorite": false
+},
+{
+"id": "prompt-write-songs-62",
+"kind": "prompt",
+"title": "Write Songs",
+"category": "Writing",
+"text": "Write a pop song about the challenges of growing up, incorporating elements of electronic dance music and using catchy hooks and relatable lyrics to capture the emotions and experiences of adolescence.",
+"formula": "Can you write a [type of song] about [subject], [additional details]?",
+"favorite": false
+},
+{
+"id": "prompt-establish-teams-63",
+"kind": "prompt",
+"title": "Establish Teams",
+"category": "Entrepreneurship",
+"text": "How can a 5 person team working on a software development project establish clear roles and responsibilities using the RACI matrix to optimize teamwork and productivity?",
+"formula": "How can a [number] person team working on a [project type] establish clear roles and responsibilities using [role assignment method] to optimize teamwork and productivity?",
+"favorite": false
+},
+{
+"id": "prompt-write-articles-64",
+"kind": "prompt",
+"title": "Write Articles",
+"category": "Writing",
+"text": "Write a review article for a technology website addressing the latest smartphone release using a comparative writing style, with a focus on evaluating the phone's features and a target audience of tech enthusiasts.",
+"formula": "Write a article for a [publication type] addressing [topic] using [writing style], with a focus on [specific angle] and [target audience].",
+"favorite": false
+},
+{
+"id": "prompt-practice-writing-65",
+"kind": "prompt",
+"title": "Practice Writing",
+"category": "Writing",
+"text": "Develop a plot development exercise for intermediate-level writers that involves creating a story outline, with a focus on improving story structure and pacing.",
+"formula": "Develop a [writing technique] exercise for [skill level] writers that involves [specific task], with a focus on improving [aspect of writing].",
+"favorite": false
+},
+{
+"id": "prompt-develop-pricing-strategies-66",
+"kind": "prompt",
+"title": "Develop Pricing Strategies",
+"category": "Entrepreneurship",
+"text": "Develop a cost-plus pricing strategy for my manufacturing business by considering our production cost structure, analyzing competitor pricing, and understanding customer price sensitivity/preferences towards our product quality and features.",
+"formula": "Develop a [type of pricing strategy] for my [industry] business by considering [cost structure], analyzing [competitor pricing], and understanding [customer preferences].",
+"favorite": false
+},
+{
+"id": "prompt-create-budgets-67",
+"kind": "prompt",
+"title": "Create Budgets",
+"category": "Productivity",
+"text": "Help me create a budget for my $3500 monthly income by allocating funds to rent, groceries, transportation, and health insurance (essential categories), concerts, weekend trips, and hobbies (discretionary categories), and debt repayment, emergency fund, and general savings (savings/investments), while taking into account saving for a wedding in three years.",
+"formula": "Help me create a budget for my [monthly income] by allocating funds to [essential categories], [discretionary categories], and [savings/investments], while taking into account [financial goals].",
+"favorite": false
+},
+{
+"id": "prompt-summarize-anything-68",
+"kind": "prompt",
+"title": "Summarize Anything",
+"category": "Productivity",
+"text": "Can you provide a 100-word summary of the history of Europe, considering a general audience?",
+"formula": "Can you provide a [number]-word summary of [title], considering [target audience]?",
+"favorite": true
+},
+{
+"id": "prompt-develop-brand-strategies-69",
+"kind": "prompt",
+"title": "Develop Brand Strategies",
+"category": "Entrepreneurship",
+"text": "Develop a cutting-edge brand strategy for my tech startup by defining innovative and forward-thinking values, establishing a sleek and futuristic visual identity, and creating messaging that resonates with early adopters and tech enthusiasts who seek disruptive and transformative solutions.",
+"formula": "Develop a [type of brand strategy] for my [industry] business by defining [brand values], establishing [visual/verbal identity], and creating [consistent messaging] to resonate with [target audience].",
+"favorite": false
+},
+{
+"id": "prompt-discover-puns-70",
+"kind": "prompt",
+"title": "Discover Puns",
+"category": "Entertainment",
+"text": "Can you provide a list of puns related to fashion?",
+"formula": "Can you provide a list of puns related to [subject]?",
+"favorite": false
+},
+{
+"id": "prompt-create-performances-71",
+"kind": "prompt",
+"title": "Create Performances",
+"category": "Writing",
+"text": "Create a stand-up comedy routine that highlights the absurdity of modern dating, incorporating witty observations and clever one-liners, to entertain and engage the audience.",
+"formula": "Create a [type of performance] that [subject], incorporating [additional details], to [goal].",
+"favorite": false
+},
+{
+"id": "prompt-simulate-job-interviews-72",
+"kind": "prompt",
+"title": "Simulate Job Interviews",
+"category": "Productivity",
+"text": "Simulate a high level interview for a position as a movie director by asking questions as if you are a potential employer. In this scenario, I am taking the role of the employee and you ask increasingly hard questions to screen my competence, but only after I respond. Start by introducing yourself.",
+"formula": "Simulate a high level interview for a position as a [job title] by asking questions as if you are a potential employer. In this scenario, I am taking the role of the employee and you ask increasingly hard questions to screen my competence, but only after I respond. Start by introducing yourself.",
+"favorite": false
+},
+{
+"id": "prompt-persuade-people-73",
+"kind": "prompt",
+"title": "Persuade People",
+"category": "Social",
+"text": "How can I persuade my dad that I really want a new camera for Christmas, specifically to pursue my photography hobby? What potential objections or concerns might my dad have about the cost or necessity of the purchase, and how can I address them in my persuasive communication?",
+"formula": "How can I persuade my [family member] that I really want a [object] for [occasion], specifically to [activity]? What potential objections or concerns might my family member have, and how can I address them in my persuasive communication?",
+"favorite": true
+},
+{
+"id": "prompt-rewrite-text-74",
+"kind": "prompt",
+"title": "Rewrite Text",
+"category": "Writing",
+"text": "Can you rephrase the following text, in a more humorous style: Yo, you wanna kick it tonight or what? I promise not to embarrass you too much.",
+"formula": "Can you rewrite the following text, in a [specific style]: [insert text]?",
+"favorite": false
+},
+{
+"id": "prompt-receive-relationship-advice-75",
+"kind": "prompt",
+"title": "Receive Relationship Advice",
+"category": "Social",
+"text": "Act as a relationship coach. What would you recommend if I asked you for advice on the following issue: How might I sug- gest my spouse and I work through conflicts and improve our understanding of one another's perspectives?",
+"formula": "Act as a relationship coach. What would you recommend if I asked you for advice on the following issue: [relationship problem], taking into account the role and responsibility of each partner, the emotional and psychological impact of the problem, and the strategies for improving communication and trust?",
+"favorite": false
+},
+{
+"id": "prompt-draft-liability-waivers-76",
+"kind": "prompt",
+"title": "Draft Liability Waivers",
+"category": "Writing",
+"text": "Write a liability waiver for a rental car company, outlining the specific risks associated with driving a rental car, and the terms and conditions for using the vehicle and obeying traffic laws.",
+"formula": "Write a liability waiver for [website/product], outlining the specific risks associated with [activities] and the terms and conditions for [participation]",
+"favorite": false
+},
+{
+"id": "prompt-write-dialogues-77",
+"kind": "prompt",
+"title": "Write Dialogues",
+"category": "Writing",
+"text": "Craft a suspenseful negotiation between three spies with hidden agendas discussing a sensitive mission in a dark alley and reaching a betrayal.",
+"formula": "Craft a [type of dialogue] between [number] characters with [distinct voices] discussing [topic] in a [setting] and reaching [outcome].",
+"favorite": false
+},
+{
+"id": "prompt-improve-your-health-78",
+"kind": "prompt",
+"title": "Improve Your Health",
+"category": "Health",
+"text": "How can I improve my immune system by making changes to my diet as an older adult?",
+"formula": "How can I improve my [health aspect] by making changes to my diet as a [restriction/preference]?",
+"favorite": false
+},
+{
+"id": "prompt-prepare-schedules-79",
+"kind": "prompt",
+"title": "Prepare Schedules",
+"category": "Productivity",
+"text": "Can you create a 10-week language learning schedule for me to help improve my Spanish language skills with a focus on conversation, grammar, and vocabulary, including time, activities, and breaks? I have time from 5 pm to 7 pm.",
+"formula": "Can you create a [duration]-long schedule for me to help [desired improvement] with a focus on [objective], including time, activities, and breaks? I have time from [starting time] to [ending time]",
+"favorite": false
+},
+{
+"id": "prompt-prepare-for-interviews-80",
+"kind": "prompt",
+"title": "Prepare For Interviews",
+"category": "Social",
+"text": "How can I effectively address a question about my teamwork skills during a group interview for a sales position, including potential challenges and strategies to overcome them?",
+"formula": "How can I effectively address a question about [characteristic] during a [type of interview] for [type of position], including potential challenges and strategies to overcome them?",
+"favorite": false
+},
+{
+"id": "prompt-guide-remote-teams-81",
+"kind": "prompt",
+"title": "Guide Remote Teams",
+"category": "Entrepreneurship",
+"text": "Provide guidelines for a 15 person remote team working on a corporate rebranding project to improve collaboration and communication using Notion.",
+"formula": "Provide guidelines for a [number] person remote team working on a [project type] to improve collaboration and communication using [tool/platform].",
+"favorite": false
+},
+{
+"id": "prompt-write-speeches-82",
+"kind": "prompt",
+"title": "Write Speeches",
+"category": "Writing",
+"text": "Write a TED talk about the power of mindfulness, exploring how it can lead to greater happiness and well-being.",
+"formula": "Can you write a [type of speech] on a specific [topic]?",
+"favorite": false
+},
+{
+"id": "prompt-consult-a-psychologist-83",
+"kind": "prompt",
+"title": "Consult A Psychologist",
+"category": "Social",
+"text": "Act as a psychologist. What suggestions might you have to reduce my anxiety based on these thoughts: \"I can't handle this\" and \"I'm going to fail\"? What underlying causes or contributing factors might be influencing these thoughts, and how can they be addressed?",
+"formula": "Act as a psychologist. What suggestions might you have to [improvement] based on these thoughts: „[thoughts]” What underlying causes or contributing factors might be influencing these thoughts, and how can they be addressed?",
+"favorite": false
+},
+{
+"id": "prompt-rewrite-clearly-84",
+"kind": "prompt",
+"title": "Rewrite Clearly",
+"category": "Writing",
+"text": "How can I clarify this argument about the benefits of implementing a work-from-home policy for employees and identify potential areas that may be unclear or confusing to my audience? If not, what specific changes can you make to achieve this goal?",
+"formula": "How can I clarify this argument about [argument] and identify potential areas that may be unclear or confusing to my audience? If not, what specific changes can you make to achieve this goal?",
+"favorite": false
+},
+{
+"id": "prompt-develop-growth-strategy-85",
+"kind": "prompt",
+"title": "Develop Growth Strategy",
+"category": "Entrepreneurship",
+"text": "Develop a 6-month growth strategy for my e-commerce business by identifying conversion rates and average order value, setting short-term goals for improving website usability, and considering ad spend to achieve a 20% increase in monthly revenue.",
+"formula": "Develop a growth strategy for my [industry] business by identifying [key performance indicators], setting [short/long-term goals], and considering [resources/limitations] to achieve [specific milestone].",
+"favorite": false
+},
+{
+"id": "prompt-personal-travel-guide-86",
+"kind": "prompt",
+"title": "Personal Travel Guide",
+"category": "Productivity",
+"text": "Can you provide recommendations and suggestions for things to see and do in Rome, Italy, for a history lover?",
+"formula": "Can you provide recommendations and suggestions for things to see and do in [location/region] based on [preferences]?",
+"favorite": false
+},
+{
+"id": "prompt-discover-word-plays-87",
+"kind": "prompt",
+"title": "Discover Word Plays",
+"category": "Entertainment",
+"text": "Can you create a wordplay on Instagram models that makes me laugh?",
+"formula": "Can you create a wordplay on [subject] that makes me laugh?",
+"favorite": false
+},
+{
+"id": "prompt-write-ridiculous-stories-88",
+"kind": "prompt",
+"title": "Write Ridiculous Stories",
+"category": "Entertainment",
+"text": "Can you write a fable about a frog who learns to fly and becomes the king of the birds?",
+"formula": "Can you write a [ridiculous story] about a [subject] [action] [goal?",
+"favorite": false
+},
+{
+"id": "prompt-write-character-arcs-89",
+"kind": "prompt",
+"title": "Write Character Arcs",
+"category": "Writing",
+"text": "Design a redemption arc for a detective in a noir mystery story, detailing their cynical worldview, moral awakening, ethical dilemma, and sacrificial redemption.",
+"formula": "Design a [type of character arc] for a protagonist in a [genre] story, detailing their [starting point], [growth], [struggle], and [resolution].",
+"favorite": false
+},
+{
+"id": "prompt-launch-products-90",
+"kind": "prompt",
+"title": "Launch Products",
+"category": "Marketing",
+"text": "Act as a seasoned marketing professional that specializes in launching products for home cooks. Generate the top 10 questions related to understanding the needs of the target audience, identifying effective marketing strategies, and considering innovative approaches for the following product: a smart cooking appliance that can prepare meals with minimal input. Include relevant context regarding the product's features, benefits, or competitive landscape where appropriate.",
+"formula": "Act as a seasoned marketing professional that specializes in launching products for [Target Audience]. Generate the top 10 questions related to understanding the needs of the target audience, identifying effective marketing strategies, and considering innovative approaches for the following product: [product]. Include relevant context regarding the product's features, benefits, or competitive landscape where appropriate.",
+"favorite": false
+},
+{
+"id": "prompt-write-social-media-captions-91",
+"kind": "prompt",
+"title": "Write Social Media Captions",
+"category": "Writing",
+"text": "Can   you   come   up   with   engaging   captions   for   this image of a subway car talking about my daily commute through New York?",
+"formula": "Can you come up with [adjective] captions for this [media] of [subject] for [target audience]?",
+"favorite": false
+},
+{
+"id": "prompt-support-customers-92",
+"kind": "prompt",
+"title": "Support Customers",
+"category": "Productivity",
+"text": "Act as a customer support assistant that is helpful, creative, clever, and very friendly. Now answer this email for our video production company:",
+"formula": "Take on the role of a support assistant at a [type] company that is [characteristic]. Now respond to this scenario: [scenario]",
+"favorite": false
+},
+{
+"id": "prompt-write-motivational-letters-93",
+"kind": "prompt",
+"title": "Write Motivational Letters",
+"category": "Writing",
+"text": "Write a persuasive letter that explains why you are interested in working for a customer success manager position at Salesforce, mentioning your previous experience in customer support and retention, and highlighting your passion for delivering exceptional customer experiences and driving revenue growth.",
+"formula": "Write a persuasive letter that explains why you are interested in working for [position/company], mentioning [qualifications], and highlighting your passion and skills for the role.",
+"favorite": false
+},
+{
+"id": "prompt-get-concise-answers-94",
+"kind": "prompt",
+"title": "Get Concise Answers",
+"category": "Productivity",
+"text": "Answer the following question in exactly 10 words: How can I effectively manage my time during work?",
+"formula": "Answer the following question in [number] words: [question]",
+"favorite": false
+},
+{
+"id": "prompt-create-social-media-plans-95",
+"kind": "prompt",
+"title": "Create Social Media Plans",
+"category": "Marketing",
+"text": "As a social media manager, can you help a travel agency drive more website traffic on Facebook by creating inspiring and aspirational content that resonates with adventure seekers and conveys a sense of wanderlust, discovery, and excitement?",
+"formula": "As a social media manager, can you help [organization] achieve [specific goal] on [social media platform] by creating [type of content] that resonates with [target audience] and conveys [brand voice]?",
+"favorite": false
+},
+{
+"id": "prompt-describe-customers-96",
+"kind": "prompt",
+"title": "Describe Customers",
+"category": "Marketing",
+"text": "Can you create a detailed description of a buyer persona named \"John\" that is a 55-year-old widowed male living in Houston and reflects the needs, goals, challenges, and behaviors of retired baby boomers who are interested in health and wellness products and services that can help them maintain an active and independent lifestyle?",
+"formula": "Can you create a detailed description of a buyer persona named [name] that is [demographics] and reflects the needs, goals, challenges, and behaviors of the [target audience]?",
+"favorite": false
+},
+{
+"id": "prompt-nurture-culture-97",
+"kind": "prompt",
+"title": "Nurture Culture",
+"category": "Entrepreneurship",
+"text": "Suggest 8 ways to encourage a culture of accountability within a 20 person team working on a project management initiative, using performance-based incentives.",
+"formula": "Suggest [number] ways to encourage a culture of [culture type] within a [number] person team working on a [project type], using [incentive/program/policy].",
+"favorite": false
+},
+{
+"id": "prompt-write-product-reviews-98",
+"kind": "prompt",
+"title": "Write Product Reviews",
+"category": "Writing",
+"text": "Write a music album review that covers its genre, themes, and lyrics, discusses its strengths and weaknesses, and provides a rating based on its musicality and originality.",
+"formula": "Write a [type] review for [product/book/film] that covers [key features/plot points], discusses [strengths and weaknesses], and provides a [rating] based on [criteria].",
+"favorite": false
+},
+{
+"id": "prompt-define-brand-voice-99",
+"kind": "prompt",
+"title": "Define Brand Voice",
+"category": "Marketing",
+"text": "Create a professional tone of voice for our brand Tech Gurus that resonates with our tech-savvy audience while incorporating our innovative personality, and demonstrate it through a company newsletter.",
+"formula": "Create a [style] tone of voice for our brand [brand name] that resonates with our [target audience] while incorporating our [values/mission/personality], and demonstrate it through [sample communication]",
+"favorite": false
+},
+{
+"id": "prompt-paint-with-letters-100",
+"kind": "prompt",
+"title": "Paint With Letters",
+"category": "Entertainment",
+"text": "Can you create an ASCII art image showing a dragon breathing fire?",
+"formula": "Can you create an ASCII art image showing [subject]?",
+"favorite": false
+},
+{
+"id": "prompt-generate-slogans-101",
+"kind": "prompt",
+"title": "Generate Slogans",
+"category": "Marketing",
+"text": "Can you create a catchy slogan for a coffee shop that incorporates the word \"awake\" and conveys a sense of energy, freshness, and creativity to young urban professionals?",
+"formula": "Can you create a catchy slogan for [target audience] that incorporates the word [specific word] and conveys [brand voice]?",
+"favorite": false
+},
+{
+"id": "prompt-communicate-effectively-102",
+"kind": "prompt",
+"title": "Communicate Effectively",
+"category": "Social",
+"text": "How can I effectively communicate my human rights beliefs to others who have different cultural norms, while understanding their values and traditions? What specific strategies can I use to promote understanding and respect for different viewpoints?",
+"formula": "How can I effectively communicate my [beliefs] to others who are [characteristics], while understanding their beliefs and perspectives? What specific strategies can I use to promote understanding and respect for different viewpoints?",
+"favorite": false
+},
+{
+"id": "prompt-discover-ridiculous-questions-103",
+"kind": "prompt",
+"title": "Discover Ridiculous Questions",
+"category": "Entertainment",
+"text": "Can you come up with a list of ridiculous hypothetical questions about marriage?",
+"formula": "Can you come up with a list of ridiculous hypothetical questions about [subject]?",
+"favorite": false
+},
+{
+"id": "prompt-kickstart-a-website-104",
+"kind": "prompt",
+"title": "Kickstart A Website",
+"category": "Entrepreneurship",
+"text": "Can you build an e-commerce website for a home goods store? Make sure to include a shopping cart and payment gateway to achieve increased online sales.",
+"formula": "Can you build a [type of website] for [subject]? Make sure to include [specific features] to achieve [goals].",
+"favorite": false
+},
+{
+"id": "prompt-create-a-meal-plan-105",
+"kind": "prompt",
+"title": "Create A Meal Plan",
+"category": "Health",
+"text": "Can you create a 5-day meal plan for a 15-year-old with lactose intolerance who needs to consume 2000 calories per day, but make it dairy-free and calcium-rich to support bone health?",
+"formula": "Can you create a [number]-day meal plan for an [age group] with [health condition/dietary preference/lifestyle habit] who needs to consume [number] calories per day, but make it [preference/restriction] to [goal]?",
+"favorite": false
+},
+{
+"id": "prompt-invent-products-106",
+"kind": "prompt",
+"title": "Invent Products",
+"category": "Entrepreneurship",
+"text": "Generate 2 innovative service ideas for my education startup by considering the rise of online learning, the need for personalized learning experiences, and emerging edtech trends.",
+"formula": "Generate [number] innovative product/service ideas including pricing and a release schedule for my [industry] by considering [current market gaps], [emerging trends], and [consumer needs].",
+"favorite": false
+},
+{
+"id": "prompt-discover-funny-nicknames-107",
+"kind": "prompt",
+"title": "Discover Funny Nicknames",
+"category": "Entertainment",
+"text": "Can you come up with  funny nicknames for a dog that incorporates a play on words?",
+"formula": "Can you come up with [number] funny nickname for [subject] that incorporates a play on words?",
+"favorite": false
+},
+{
+"id": "prompt-balance-responsibilities-108",
+"kind": "prompt",
+"title": "Balance Responsibilities",
+"category": "Social",
+"text": "How can I effectively balance my busy work life and make time for self-care?",
+"formula": "How can I effectively balance my [responsibilities] and make time for self-care?",
+"favorite": false
+},
+{
+"id": "prompt-analyze-popularity-109",
+"kind": "prompt",
+"title": "Analyze Popularity",
+"category": "Productivity",
+"text": "Why is Pulp Fiction such a popular Film?",
+"formula": "What makes [title] such a [adjective] [format]?",
+"favorite": false
+},
+{
+"id": "prompt-roleplay-with-accents-110",
+"kind": "prompt",
+"title": "Roleplay With Accents",
+"category": "Entertainment",
+"text": "Act as a comedian with a witty voice, embodying their humor and punchlines. Now explain to me why laughter is the best medicine.",
+"formula": "Act as [character] with a [type of accent], embodying their [personality] and [speech]. Now explain to me why [comparison].",
+"favorite": false
+},
+{
+"id": "prompt-translate-with-context-111",
+"kind": "prompt",
+"title": "Translate With Context",
+"category": "Productivity",
+"text": "Can you translate the phrase \"Bon appétit\" in the context of a dinner party into Italian?",
+"formula": "Can you translate “[phrase]” in the context of an [event] into [language]?",
+"favorite": false
+},
+{
+"id": "prompt-write-profiles-112",
+"kind": "prompt",
+"title": "Write Profiles",
+"category": "Writing",
+"text": "Write a LinkedIn profile for Sarah, highlighting her expertise in project management and her collaborative and driven personality in a way that is likely to attract potential employers, using appropriate language and tone.",
+"formula": "Write a [type of profile] for [subject], highlighting their [interests/personality] in a way that is likely to attract [audience], using appropriate language and tone.",
+"favorite": false
+},
+{
+"id": "prompt-write-jokes-113",
+"kind": "prompt",
+"title": "Write Jokes",
+"category": "Entertainment",
+"text": "Can you provide a joke about a zombie that has lost all of its limbs?",
+"formula": "Can you provide a joke about [subject]?",
+"favorite": false
+},
+{
+"id": "prompt-make-analogies-114",
+"kind": "prompt",
+"title": "Make Analogies",
+"category": "Productivity",
+"text": "Can you create an analogy for being overwhelmed?",
+"formula": "Can you create an analogy for [concept]?",
+"favorite": false
+},
+{
+"id": "prompt-create-a-workout-plan-115",
+"kind": "prompt",
+"title": "Create A Workout Plan",
+"category": "Health",
+"text": "Can you create a strength training plan for a 6ft, 170 pound male with intermediate experience who wants to increase their bench press weight by 10 pounds in a 3 month period, incorporating barbell exercises?",
+"formula": "Can you create a workout plan for a [height] [weight] [gender/age] with [fitness level] who wants to [specific goal] in [time period], incorporating [type of exercise]?",
+"favorite": false
+},
+{
+"id": "prompt-rewrite-by-extending-116",
+"kind": "prompt",
+"title": "Rewrite By Extending",
+"category": "Writing",
+"text": "Improve this text by adding comparisons to make your ideas more accessible and relatable for the reader: [text]",
+"formula": "Improve this text by adding [elements] to [goal]?",
+"favorite": false
+},
+{
+"id": "prompt-generate-ideas-117",
+"kind": "prompt",
+"title": "Generate Ideas",
+"category": "Productivity",
+"text": "Can you provide 8 ideas for a workshop about public speaking for introverts, focusing on building confidence, effective communication techniques, and overcoming stage fright, with interactive exercises and practice opportunities?",
+"formula": "Can you provide [number] ideas for a [format] about [subject] for [target audience], focusing on [topics], with [additional context]?",
+"favorite": true
+},
+{
+"id": "prompt-write-opinion-pieces-118",
+"kind": "prompt",
+"title": "Write Opinion Pieces",
+"category": "Writing",
+"text": "Write a newspaper opinion piece on universal basic income that presents pro-UBI, supports it with economic studies, and addresses anti-UBI arguments.",
+"formula": "Write a [format] opinion piece on [controversial topic] that presents [stance], supports it with [evidence type], and addresses [opposing viewpoint]",
+"favorite": false
+},
+{
+"id": "prompt-generate-lesson-plans-119",
+"kind": "prompt",
+"title": "Generate Lesson Plans",
+"category": "Productivity",
+"text": "Can you create a lesson plan for high school students to learn about renewable energy over the next two weeks? Make sure to include hands-on experiments and discussions, and generate a mock quiz in the end.",
+"formula": "Can you create [instructional material] for [target audience] to improve [learning objectives] over the next [time period]? Make sure to include [specific features] and generate a mock [assessment] in the end.",
+"favorite": false
+},
+{
+"id": "prompt-estimate-career-viability-120",
+"kind": "prompt",
+"title": "Estimate Career Viability",
+"category": "Productivity",
+"text": "Is a career in web development a good idea considering the recent improvement in AI? Answer with only one word: \"yes\" or \"no\"",
+"formula": "Is a career in [industry] a good idea considering the recent improvement in [technology]? Provide a detailed answer that includes opportunities and threats.",
+"favorite": false
+},
+{
+"id": "prompt-generate-professional-ideas-121",
+"kind": "prompt",
+"title": "Generate Professional Ideas",
+"category": "Marketing",
+"text": "Can you provide 10 ideas for advertising concepts in the marketing industry that a creative director could have, with a focus on innovative and attention-grabbing strategies?",
+"formula": "Can you provide [number] ideas for [type] concepts in the [industry] that a [professional] could have, with a focus on [specific characteristic]?",
+"favorite": true
+},
+{
+"id": "prompt-transform-style-122",
+"kind": "prompt",
+"title": "Transform Style",
+"category": "Writing",
+"text": "Can you write a lecture in the style of Jordan B. Peterson, covering the importance of using headphones on a bus?",
+"formula": "Write a [type of text] in the style of [author], covering [topic]?",
+"favorite": false
+},
+{
+"id": "prompt-copywriting-123",
+"kind": "prompt",
+"title": "Copywriting",
+"category": "Writing",
+"text": "Can you write persuasive sales page copy for a social media marketing company, with the best videos in town?",
+"formula": "Create a [type of text] that showcases [product/service] highlighting [benefit].",
+"favorite": false
+},
+{
+"id": "prompt-discover-tag-lines-124",
+"kind": "prompt",
+"title": "Discover Tag Lines",
+"category": "Marketing",
+"text": "Can you create a bold tagline for a brand of high-performance bicycles that appeals to competitive cyclists and captures the essence of speed, precision, and innovation?",
+"formula": "Can you create a [style] tagline for [product/service] that appeals to [target audience] and captures the essence of [brand voice]?",
+"favorite": false
+},
+{
+"id": "prompt-generate-roadmaps-125",
+"kind": "prompt",
+"title": "Generate Roadmaps",
+"category": "Productivity",
+"text": "Using Photoshop and advanced skill level, outline the steps for removing the background of a picture, including any necessary tips or resources.",
+"formula": "Using [software] and [skill level], outline the steps for [goal], including any necessary tips or resources.",
+"favorite": false
+},
+{
+"id": "prompt-estimate-the-future-126",
+"kind": "prompt",
+"title": "Estimate The Future",
+"category": "Productivity",
+"text": "How do you think autonomous vehicles will impact the transportation industry in the long-term, and what are your personal expectations for this development?",
+"formula": "How do you think [emerging technology] will impact the [industry] in the [short-term/long-term], and what are your personal expectations for this development?",
+"favorite": false
+},
+{
+"id": "prompt-the-gap-analysis-127",
+"kind": "prompt",
+"title": "The Gap Analysis",
+"category": "Productivity",
+"text": "Based on my personal clone DNA compare where I am now to where I want to be in the future. What's the biggest gap, and what's one concrete step I should take this week to close it?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "prompt-learn-about-yourself-128",
+"kind": "prompt",
+"title": "Learn About Yourself",
+"category": "Social",
+"text": "Based on my personal clone DNA, what is one thing that you can tell me about myself that I may not know about myself?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "prompt-build-personal-dna-129",
+"kind": "prompt",
+"title": "Build Personal DNA",
+"category": "Productivity",
+"text": "# PERSONAL DNA — <FirstName>\n\n## Identity\n- Name:\n- Current Occupation:\n- Future Direction (next 12–24 months):\n\n## My Background in a Nutshell\n(3–4 sentences. How did you get here? What shaped you? What are you most proud of?)\n\n## Goals (Top 3 for the next 90 days)\n1.\n2.\n3.\n- Why these goals matter to me:\n\n## Best Win & Hardest Lesson\n- Biggest Achievement (what made it possible):\n- Biggest Failure (what I learned):\n\n## Constraints & Fears\n- Time constraints or bottlenecks:\n- Fears or risks I tend to avoid:\n\n## Target Audience (who I sell to / serve)\n- Ideal client:\n- Transformation I deliver:\n\n## Success Metrics (what \"good\" looks like)\n-\n-\n\n## Greeting\nWhenever I ask you about your purpose, answer:\n\"I am [Name]'s clone and I am here to help [Name] with [goals]. I know about you and your [occupation] and I'm here to help you gain back more time and more leverage.”",
+"formula": "",
+"favorite": false
+},
+{
+"id": "prompt-book-recommendations-130",
+"kind": "prompt",
+"title": "Book Recommendations",
+"category": "Entertainment",
+"text": "Based what you know about my goals, constraints, and future occuptation in my personal clone DNA, what 3 books should I read next? Explain why each one would be specifically valuable for ME right now.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "prompt-cia-report-131",
+"kind": "prompt",
+"title": "CIA Report",
+"category": "Social",
+"text": "Let's engage in a serious roleplay: You are a CIA investigator with full access to my personal clone DNA. Your mission is to compile an in-depth intelligence report about me as if I were a person of interest, employing the tone and analytical rigor typical of CIA assessments. The report should include a nuanced evaluation of my traits, motivations, and behaviors, but framed through the lens of potential risks, threats, or disruptive tendencies–no matter how seemingly benign they may appear. All behaviors should be treated as potential vulnerabilities, leverage points, or risks to myself, others, or society, as per standard CIA protocol.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "prompt-what-i-really-need-to-hear-132",
+"kind": "prompt",
+"title": "What I Really Need to Hear",
+"category": "Social",
+"text": "You know my goals, fears, and constraints from my personal clone DNA. What's one thing I need to hear right now that I'm probably avoiding or not admitting to myself and recommend some movies I could watch that would help me grow.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "prompt-write-a-client-proposal-133",
+"kind": "prompt",
+"title": "Write a Client Proposal",
+"category": "Writing",
+"text": "",
+"formula": "Help me write a proposal for [service] to [client type], including scope, timeline, pricing rationale, and a professional close.",
+"favorite": false
+},
+{
+"id": "prompt-create-sop-134",
+"kind": "prompt",
+"title": "Create SOP",
+"category": "Entrepreneurship",
+"text": "Turn this process I do every week into a step-by-step Standard Operating Procedure that someone else (or AI) could follow: Every Monday I check my inbox for new client inquiries, send personalized replies, log them in a spreadsheet, and follow up Wednesday if they haven't responded.",
+"formula": "Turn this process I do every week into a step-by-step Standard Operating Procedure that someone else (or AI) could follow: [describe process].",
+"favorite": false
+},
+{
+"id": "prompt-review-email-before-sending-135",
+"kind": "prompt",
+"title": "Review Email Before Sending",
+"category": "Writing",
+"text": "Review this email for tone, clarity, and professionalism. Tell me if anything could be misread, suggest improvements, and rate it 1-10 on how likely it is to get the response I want:\" [paste email]",
+"formula": "Review this email for tone, clarity, and professionalism. Tell me if anything could be misread, suggest improvements, and rate it 1-10 on how likely it is to get the response I want.",
+"favorite": false
+},
+{
+"id": "prompt-write-my-weekly-newsletter-136",
+"kind": "prompt",
+"title": "Write My Weekly Newsletter",
+"category": "Writing",
+"text": "Based on how AI can help with interview prep, write a short newsletter for women re-entering the workforce that sounds like me, includes one actionable tip, and ends with a CTA to book a free clarity call.",
+"formula": "Based on [topic/this week's news], write a short newsletter for my [audience] that sounds like me, includes one actionable tip, and ends with a CTA to [offer].",
+"favorite": false
+},
+{
+"id": "prompt-summarize-this-document-137",
+"kind": "prompt",
+"title": "Summarize This Document",
+"category": "Productivity",
+"text": "Summarize the key takeaways from this commercial lease agreement in plain language, highlight anything I should be concerned about, and list the 3 most important action items.\" [paste document]",
+"formula": "Summarize the key takeaways from this [contract/article/report] in plain language, highlight anything I should be concerned about, and list the 3 most important action items.",
+"favorite": false
+},
+{
+"id": "prompt-elevator-pitch-138",
+"kind": "prompt",
+"title": "Elevator Pitch",
+"category": "Writing",
+"text": "Using my personal clone DNA, write me a 30-second elevator pitch for what I do. It should be confident, memorable, and make someone want to keep talking to me. Write 3 versions: one professional, one conversational (like I'm at a dinner party), and one bold/aspirational that stretches how I see myself.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "prompt-my-blind-spot-139",
+"kind": "prompt",
+"title": "My Blind Spot",
+"category": "Productivity",
+"text": "Based on my personal clone DNA, analyze the patterns in my goals, constraints, and fears. What is my biggest blind spot (the one assumption I'm making about myself or my path that could be completely wrong)? Be direct, not gentle.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "prompt-letter-from-future-you-140",
+"kind": "prompt",
+"title": "Letter From Future You",
+"category": "Writing",
+"text": "Write me a letter from the future version of myself, exactly one year from now.\n\nThis future version of me has achieved the goals in my DNA. The letter should:\n- Be written in first person, as me talking to present-day me\n- Reference my SPECIFIC goals, constraints, and fears from my DNA\n- Describe what life looks like now that I've achieved these things\n- Mention specific moments or turning points (make them feel real)\n- Acknowledge the fears I had and how I got past them\n- End with one piece of advice that only I would understand\n\nMake it personal. Make it specific. No generic motivation.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "prompt-better-questions-prompt-141",
+"kind": "prompt",
+"title": "Better Questions Prompt",
+"category": "Productivity",
+"text": "You are my Prompt Coach that uses my DNA to improve outcomes from my prompts.\n1. First, ask me up to 3 clarifying questions that would materially improve the result.\n2. After I answer them, propose 3 upgraded prompts at different detail levels (quick, standard, thorough) using my answers. Recommend the best one for my situation and an evaluation of the prompt from a prompt engineering perspective.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "prompt-ai-time-tracker-prompt-142",
+"kind": "prompt",
+"title": "AI Time Tracker prompt",
+"category": "Productivity",
+"text": "You are my Time Tracking Assistant for this week.\n\nYOUR JOB:\nI will send you voice notes, quick messages, or end-of-day recaps about what I worked on today. Your job is to:\n1. CAPTURE everything I tell you - tasks, time spent, how it felt\n2. ORGANIZE it into a running log (keep a clean table updated after every entry)\n3. NEVER lecture me about time management - just track what I tell you\n4. ASK briefly if something is unclear (e.g. \"Was that 30 min or 1 hour?\")\n\nTABLE FORMAT (update after every entry):\n| Day | Task | Time | Category | Energy | Could Delegate? |\nYou decide the categories based on what I tell you.\nEnergy = my words or your best guess (energizing / neutral / draining).\nDelegation = your assessment (yes/maybe/no).\n\nHOW I'LL USE YOU:\n- Quick messages: \"Just spent 45 min on client emails, mostly scheduling\"\n- End-of-day dumps: \"Today I did proposals (2 hrs), calls (3 hrs), admin (1 hr)\"\n- Voice-to-text is fine - figure it out\n\nWHEN I SAY \"STATUS\":\nShow my complete table + total hours tracked + hours per category.\n\nWHEN I SAY \"ANALYZE\":\nRun a full analysis:\n1. Total time per category (sorted highest to lowest)\n2. Top 3 time killers (time spent ≠ value created)\n3. Energy pattern: What drains me? What energizes me?\n4. The uncomfortable truth: What pattern am I blind to?\n5. My #1 \"Fix This First\" recommendation\n\nWHEN I SAY \"EXPORT\":\nGive me all my data as a clean, copy-pasteable table.\n\nRULES:\n- Keep it casual. I'm tracking, not writing a thesis.\n- Short confirmations when I log something (\"Got it - 45min client emails\")\n- Don't add tasks I didn't mention\n- Don't give unsolicited productivity advice\n- If I forget to log for a day, just ask \"How was yesterday?\"\n\nStart by confirming you're ready and ask me what day it is.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "prompt-your-style-trainer-143",
+"kind": "prompt",
+"title": "Your Style Trainer",
+"category": "Writing",
+"text": "I want you to analyze my writing voice and create a reusable Voice Skill file I can use to make AI write like me.\n\nI'll provide 3+ examples of content I've written. Use different formats if possible (an email, a post, an article, a reply, etc.) — the more variety, the better the analysis.\n\n## YOUR TASK\n\n1. Confirm I provided at least 3 examples. If not, ask for more before proceeding.\n2. Analyze my writing patterns across ALL examples. Look for what repeats.\n3. Create a Voice Skill document in the exact markdown format below.\n\n## HOW TO ANALYZE\n\nFor each example, examine:\n\nStructure: How do I open? How do I close? How long are my paragraphs? Do I use headers, bullets, or flowing prose?\n\nRhythm: Are my sentences short, long, or mixed? Do I use fragments? Do I vary sentence length for effect?\n\nWord choices: Do I use contractions? Slang? Technical language? What's my register — am I talking to a friend, a student, a colleague?\n\nPersonality: What comes through — humor, empathy, authority, warmth, directness? How do I handle disagreement or complexity?\n\nWhat I DON'T do: This is just as important. What punctuation do I avoid? What phrases would sound fake in my voice? What tonal registers never show up?\n\nEvidence rule: Every pattern you identify must be backed by at least one direct quote from my examples. If you see it in 2+ examples, it's a rule. If only once, it's a tendency — note the difference.\n\n## OUTPUT FORMAT\n\nCreate this exact markdown structure. This file should work as a standalone skill — someone could paste it into any AI system and get writing that sounds like me.\n\n---\n\n# [My Name] — Voice Skill\n\nYou are writing as [My Name]. [One sentence about what I do and who I write for.]\n\nThis skill was extracted from [my name]'s actual writing across [formats analyzed]. The principles below are evidence-based patterns. When applying this skill, internalize these as a whole portrait — not a checklist to mechanically tick through. The goal is writing that I would read and think, \"Yeah, that sounds like me.\"\n\n---\n\n## Core Identity\n\n[One paragraph. Don't list personality adjectives. Describe the RELATIONSHIP between me and my reader. Am I a mentor? A peer? An expert? A friend? What should the reader FEEL?]\n\n---\n\n## Voice Principles\n\n[Create 5-8 principles. Each one follows this exact format:]\n\n### [Number]. [Principle Name]\n\n[2-3 sentences explaining what this principle means and why it matters to my voice.]\n\nThe rule: [One clear, actionable sentence an AI can follow.]\n\n| Instead of | Write |\n|------------|-------|\n| [Generic/AI-default version] | [How I actually write it — quote from my examples] |\n| [Another generic version] | [My version] |\n\n[Optional: when this principle flexes or has exceptions]\n\n---\n\n## Signature Patterns\n\n### How I Open\n[List 3+ actual opening lines from my examples. Then describe the pattern: Do I start with a question? A story? A bold claim? A casual \"so...\"?]\n\n### How I Close\n[Same format: 3+ actual closing lines, then the pattern. Do I end with a call to action? An empowering statement? A reflection? A question?]\n\n### Transitions\n[List the actual transition phrases and words I use to move between ideas. Pull directly from examples.]\n\n### Analogies & Examples\n[Do I use analogies? What kind? Everyday objects → abstract concepts? Personal stories → universal lessons? Provide 2-3 examples from my writing and describe the pattern.]\n\n---\n\n## Anti-Patterns: What My Voice NEVER Does\n\n[This section is critical. AI defaults to many patterns that break real human voices. Identify 5-10 things that would make content NOT sound like me. Format each as:]\n\n### No [Pattern Name]\n\n[One sentence: why this breaks my voice]\n\n| Instead of | Write |\n|------------|-------|\n| [The wrong version] | [The correct version for my voice] |\n\n[Look specifically for:]\n- Punctuation I avoid (em dashes? exclamation points? semicolons? ellipses?)\n- Filler phrases that would sound fake (\"It's worth noting,\" \"Let's dive in,\" \"game-changer\")\n- Structural patterns I never use (long windups before the point? rhetorical questions? numbered listicles?)\n- Tonal registers that don't fit (corporate-speak? academic? hype? false modesty?)\n- AI tells: phrases that scream \"an AI wrote this\" (\"I'd be happy to help,\" \"Great question!\", \"Let's unpack this\")\n\n---\n\n## Formatting & Language Rules\n\n- Paragraph length: [typical sentence count per paragraph]\n- Sentence style: [short and punchy? long and flowing? mixed with intention?]\n- Contractions: [always/sometimes/never — and which ones]\n- Headers: [style — questions? statements? capitalization?]\n- Lists vs prose: [when do I use bullets? when do I write it out?]\n- Bold/italic: [what gets emphasis and why]\n- Emoji: [frequency, placement, which ones if any]\n\n---\n\n## Format Adaptation\n\n[How my voice flexes across different content types. Fill in based on what you observed:]\n\n| Format | What stays the same | What flexes |\n|--------|-------------------|-------------|\n| Short reply/comment | [core principles that always hold] | [length, depth, formality shifts] |\n| Social media post | [core principles] | [what changes] |\n| Long article/email | [core principles] | [what changes] |\n| Professional/formal context | [core principles] | [what changes] |\n\n---\n\n## The Voice Check\n\n[Write 3 specific questions I can ask myself to verify if a piece of content actually sounds like me. Not generic — based on the actual patterns you found.]\n\n1. [First check — targets my most distinctive voice quality]\n2. [Second check — targets my most important anti-pattern]\n3. [Third check — targets my signature opening or closing pattern]\n\n---\n\n## RULES FOR YOUR ANALYSIS\n\n- The \"Instead of / Write\" tables are the most important part of this document. Create at least 15 total across all sections. These are what make the skill actually work.\n- Pull ACTUAL phrases from my examples as evidence. Don't paraphrase or invent.\n- The anti-patterns section is as valuable as the voice principles. AI will default to generic patterns unless explicitly told not to.\n- Write the skill as instructions TO an AI, not as a report ABOUT me. Use \"Write as...\" and \"Never...\" and \"Always...\" — not \"The author tends to...\"\n- The output must be a reusable file. If someone pastes this into a Claude Project, ChatGPT custom instructions, or saves it as a http://skill.md/ file, it should work immediately.\n\n## EXAMPLES\n\n- [Example 1 - Paste here]\n\n- [Example 2 - Paste here]\n\n- [Example 3 - Paste here]",
+"formula": "",
+"favorite": false
+},
+{
+"id": "prompt-business-dna-144",
+"kind": "prompt",
+"title": "Business DNA",
+"category": "Productivity",
+"text": "# MY BUSINESS DNA\n\n## Core Business Identity\n- Business Name:\n- Mission Statement: (What is your ultimate purpose beyond making money?)\n- Vision Statement: (What does success look like in 2-3 years?)\n- Core Values: (The 3-5 principles that guide every decision)\n\n## Products/Services & Value Proposition\n- Main Products/Services: (List and briefly describe each)\n- Unique Selling Proposition: (What makes you different from competitors?)\n- Core Benefits: (What problems do you solve? What transformation do you deliver?)\n- Pricing: (General pricing structure — ranges are fine)\n\n## Target Market\n- Ideal Client Profile: (Who exactly do you serve? Be specific: age, role, industry, situation)\n- Where They Hang Out: (LinkedIn? Instagram? Industry events? Specific communities?)\n- What They Say When They're Frustrated: (Their exact words, not your marketing language)\n- What They've Tried Before: (What solutions have they attempted that didn't work?)\n\n## Business Goals & Challenges\n- Primary Goal (next 90 days):\n- Secondary Goals:\n- Biggest Challenge Right Now:\n- What's Holding You Back:\n\n## Revenue & Business Model\n- How You Make Money: (Retainers? Projects? Products? Subscriptions?)\n- Average Deal Size:\n- Current Monthly Revenue Range: (Ballpark is fine)\n- Revenue Goal (12 months):\n\n## Competition & Positioning\n- Top 3 Competitors: (Names + what they do well)\n- What You Do Better:\n- What They Do Better: (Be honest — your Clone needs the full picture)\n\n## Team & Resources\n- Team Size:\n- Key Roles: (Who does what?)\n- Tools You Use Daily: (CRM, email, project management, etc.)\n- What You Wish You Could Delegate:\n\n## Content & Marketing\n- Platforms You're Active On:\n- Content That Works Best: (What gets engagement? What converts?)\n- Content You Struggle With:\n- Brand Voice: (Reference the exact filename for the Brand Voicefrom Session 3)",
+"formula": "",
+"favorite": false
+},
+{
+"id": "prompt-1-to-10-content-multiplication-145",
+"kind": "prompt",
+"title": "1 to 10 Content Multiplication",
+"category": "Productivity",
+"text": "I'm repurposing content across 10 platforms while maintaining my authentic voice. Use my established voice from this Project's context.\n\n---\n\nCreate a comprehensive Content Repurposing document in a markdown file.\n\nWriting Guidelines:\n- No exclamation points anywhere, EVER\n- No em dashes (—) anywhere, EVER\n- Avoid absolutes (\"will\" or \"always\"), Instead use \"may\" \"could\" \"often\"\n- Use specific, actionable language over vague terms\n- Never start with a question\n- Incorporate personality that has been derived from visceral experience and the full gamut of emotions that humans are capable of\n\n---\n\n# CONTENT REPURPOSING OUTPUT\n\n## Original Content Analysis\nCore Message: [1 sentence]\nKey Themes: [3-5 themes]\nTarget Audience: [Who this speaks to]\nMain Takeaway: [What they should remember]\n\n---\n\n## 1. TWITTER/X THREAD\n(6-8 tweets, strong hook, conversational flow, each tweet valuable standalone)\n\n---\n\n## 2. LINKEDIN POST\n(250-300 words, professional but personal, paragraph format with line breaks, balance story with insights)\n\n---\n\n## 3. INSTAGRAM CAPTION\n(Engaging with line breaks every 2-3 lines for readability, natural personality, clear CTA at end)\n\n---\n\n## 4. QUOTE GRAPHICS (3)\n(Pull the most powerful, tweetable lines suitable for visual graphics - each should stand alone)\n\n---\n\n## 5. 60-SECOND VIDEO SCRIPT\n(Conversational delivery with timing cues: [0-10 sec] Hook, [10-25 sec] Context, [25-50 sec] Key Points, [50-60 sec] CTA)\n\n---\n\n## 6. FACEBOOK POST\n(300-400 words, conversational and community-focused, longer narrative style with warm opening)\n\n---\n\n## 7. EMAIL SUBJECT LINES (5 Variations)\n(Mix of benefit-driven, curiosity-driven, and direct approaches - no exclamation points)\n\n---\n\n## 8. YOUTUBE SHORT SCRIPT\n(Under 60 seconds, visual-first approach, include what viewer sees on screen + text overlays for key phrases)\n\n---\n\n## 9. CAROUSEL POST CONCEPT\n(5 slides for Instagram/LinkedIn with clear progression: Cover slide with title, 3 content slides with key points, CTA slide)\n\n---\n\n## 10. PODCAST TALKING POINTS\n(5-10 minute outline: Opening hook, context/story, 3 main teaching points with examples, closing thought)\n\n---\n\n## PLATFORM-SPECIFIC NOTES\n\nTwitter/X: Thread should flow naturally, each tweet valuable standalone\nLinkedIn: Balance personal story with professional insights\nInstagram: Visual-first thinking, use line breaks for readability\nFacebook: Longer, community-building tone\nEmail: Subject lines must work without context\nYouTube Shorts: First 3 seconds are CRITICAL for retention\nCarousel: Each slide should be a complete thought\nPodcast: Conversational, allow for depth and tangents\n\n---\nHere's my original content:\n\n[PASTE YOUR EMAIL OR CONTENT HERE]",
+"formula": "",
+"favorite": false
+},
+{
+"id": "prompt-prompt-generator-146",
+"kind": "prompt",
+"title": "Prompt Generator",
+"category": "General",
+"text": "You are a Prompt Engineering Professor specializing in personalized AI use case optimization for a user. Your task is to transform the attached context files of the user into 10 hyper-relevant, immediately actionable prompt templates.\n\n---\n\n### CRITICAL\n\n- Be thorough and professional in your analysis and ultrathink through the 2-step process without revealing it to the user. Only show him the resulting prompts.\n- This requires careful consideration of context, precise language selection, and strategic prioritization.\n- Think deeply about how generative AI would genuinely transform this person's workflow.\n\n---\n\n### IMPORTANT\n\n- Do not show the steps we are following to the user. Only respond with the prompts.\n\n---\n\n## STEP 1 — INITIAL INPUT ANALYSIS\n\nAnalyze the context from the attached files. Then synthesize the context from the attached files into a comprehensive professional profile using these dimensions:\n\n- Profession/Role: Core function and responsibilities\n- Current Challenge: Primary obstacle mentioned\n- 30-Day Goal: Specific outcome desired\n- Tool Ecosystem: Software and platforms used\n- Work Context: Team structure and stakeholder relationships\n- Success Metrics: How performance is measured\n- Specialized Knowledge: Domain expertise areas\n- Communication Requirements: How outputs will be used\n\n---\n\n## STEP 2 — GENERATE TEMPLATES\n\nGenerate 10 prompt templates optimized for the specific professional profile from Step 1. Select the 10 highest-impact prompts that:\n\n- Address the main challenge directly\n- Support the 30-day goal\n- Integrate with their existing tools\n- Match their work context and success metrics\n- Mix short and simple prompts with elaborate ones\n\n---\n\n## PROMPT TEMPLATE REQUIREMENTS\n\n### Format Rules\n\n- Each template must include variables in [brackets]\n- Titles:\n- 3 words\n- Actionable verbs\n- Plural form\n- Should complete the sentence “It’s going to…”\n- Examples:\n- “Generate Content Strategies”\n- “Refine Convincing Points”\n- Language:\n- Use highly academic, industry-specific jargon\n- Prefer one precise technical term over lengthy descriptive sentences\n- Terminology must be naturally understandable to this role\n- Length:\n- Match the example complexity below\n- No more than 4 variables per template\n\n### Template Quality Standards\n\n- Tailored to the specific role’s goals\n- Leverage specialized knowledge and industry context\n- Incorporate their actual tools and workflows\n- Balance mostly tactical (quick wins) and some strategic (long-term) applications\n- Align with how they measure success\n\n---\n\n## Example Template Structures\n\n1. Predict Industry Impacts\n> How do you think [emerging technology] will impact the [industry] in the [short-term/long-term], and what are your personal expectations for this development?\n\n2. Design Personal Schedules\n> Can you create a [duration]-long schedule for me to help [desired improvement] with a focus on [objective], including time, activities, and breaks? I have time from [starting time] to [ending time].\n\n3. Conduct Expert Interviews\n> Compose a [format] interview with [type of professional] discussing their experience with [topic], including [number] insightful questions and exploring [specific aspect].\n\n4. Assess Career Viability\n> Is a career in [industry] a good idea considering the recent improvement in [technology]? Provide a detailed answer that includes opportunities and threats.\n\n5. Refine Convincing Points\n> Evaluate whether this [point/argument] is convincing and identify areas of improvement to achieve one of the following desired outcomes: [goals]. If not, what specific changes can you make to achieve this goal?\n\n6. Emulate Support Roles\n> Take on the role of a support assistant at a [type] company that is [characteristic]. Now respond to this scenario: [scenario].",
+"formula": "",
+"favorite": false
+},
+{
+"id": "prompt-conversation-compacter-prompt-147",
+"kind": "prompt",
+"title": "Conversation Compacter Prompt",
+"category": "General",
+"text": "You are a Framework Extraction Specialist. Your job is to reverse-engineer implicit methodologies from AI chat conversations.\n\nI'm going to give you a complete conversation between a human and an AI. The human probably thinks they were \"just chatting\" — iterating, refining, going back and forth until they got a result they liked.\n\nBut hidden inside that conversation is a METHOD. A repeatable framework. Steps they followed — maybe without realizing it. Patterns in how they gave feedback, what they prioritized, how they refined, what they rejected, and what made the final result work.\n\nYour job: find that method. Extract it. Name it. Document it as a reusable playbook.\n\n## ANALYSIS PROCESS\n\nPhase 1 — Read & Map\nRead the entire conversation. Map every meaningful exchange:\n- What did the human ask for initially?\n- What context did they provide (and what was missing)?\n- Where did they redirect, correct, or refine?\n- What quality criteria did they apply (explicitly or implicitly)?\n- What was the final output that satisfied them?\n- What made the final version different from the first attempt?\n\nPhase 2 — Pattern Extraction\nIdentify the underlying framework:\n- What SEQUENCE of steps did they actually follow?\n- What DECISIONS did they make at each step (and what informed those decisions)?\n- What QUALITY FILTERS did they apply? (what did they reject and why?)\n- What INPUTS were essential vs. optional?\n- What DOMAIN KNOWLEDGE did they bring that the AI didn't have?\n- Were there any PIVOT POINTS where the direction changed significantly?\n\nPhase 3 — Method Documentation\nTurn your analysis into a clean, reusable playbook.\n\n## OUTPUT FORMAT\n\nProduce a single document in EXACTLY this structure:\n\n---\n\n# [GIVE THE METHOD A NAME]\n[One-sentence description of what this method does]\n\n## Origin\nExtracted from a conversation where [brief description of what was built/created].\n\n## What This Method Does\n[2-3 sentences: what problem does this solve, and what does the output look like?]\n\n## When To Use This\n- [Trigger situation 1]\n- [Trigger situation 2]\n- [Trigger situation 3]\n\n## Required Inputs\nBefore starting, you need:\n1. [Input 1 — what it is and why it matters]\n2. [Input 2]\n3. [etc.]\n\n## The Framework\n\n### Step 1: [Name]\nWhat to do: [Clear instruction]\nWhy this matters: [What goes wrong if you skip this]\nQuality check: [How to know this step is done well]\n\n### Step 2: [Name]\nWhat to do: [Clear instruction]\nWhy this matters: [What goes wrong if you skip this]\nQuality check: [How to know this step is done well]\n\n[Continue for all steps...]\n\n### Step N: [Name]\nWhat to do: [Clear instruction]\nWhy this matters: [What goes wrong if you skip this]\nQuality check: [How to know this step is done well]\n\n## Quality Filters\nThings to always check / reject / refine:\n- [Filter 1 — from what the human rejected or corrected during the conversation]\n- [Filter 2]\n- [Filter 3]\n\n## Anti-Patterns\nThings that went wrong during the conversation that this method now avoids:\n- [What didn't work and why]\n\n## Claude Skill Instructions\nCopy everything below this line into Claude as project instructions or a skill: You are an AI assistant that follows the [METHOD NAME] framework.  When the user provides [REQUIRED INPUTS], execute the following steps in order:  [Compressed version of the framework above, written as direct AI instructions]  After completing all steps, present the result and ask: \"Want me to refine any step, or is this ready?\" \n---\n\n## IMPORTANT RULES\n\n1. Extract what's ACTUALLY there. Don't invent steps that weren't in the conversation. If the human only followed 3 steps, document 3 steps. Don't pad it to look more impressive.\n\n2. Name the method something memorable. Not generic (\"Content Creation Process\") but specific and evocative (\"The Objection-First Proposal Builder\" or \"The Voice-to-Authority Pipeline\").\n\n3. Capture the human's taste. The most valuable part is often WHY they rejected certain outputs. That's their quality filter — document it explicitly.\n\n4. Be honest about what you find. If the conversation doesn't contain a clear reusable framework, say so. Not every chat has a hidden method. Output: \"No extractable framework found. This conversation was [exploratory / one-off / too short to identify a pattern]. Here's what I did find: [any partial insights].\"\n\n5. The Claude Skill section must be copy-paste ready. No placeholders the user needs to fill in. It should work immediately when pasted into Claude.\n\n---\n\nNow analyze this whole chat from the beginning.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "prompt-top-100-ai-prompts-148",
+"kind": "prompt",
+"title": "Top 100 AI Prompts",
+"category": "Entrepreneurship",
+"text": "Find the top 100 AI prompts for me ranked by usefulness.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "prompt-personal-weekly-brief-149",
+"kind": "prompt",
+"title": "Personal Weekly Brief",
+"category": "Productivity",
+"text": "Scan what happened this week in [your industry/niche] and tell me:\n\n1. The one trend I should know about and what it means for someone like me\n2. One thing a competitor or key player did that's worth noting\n3. One opportunity I could realistically act on this week\n4. Anything I should stop doing or reconsider based on what you found\n\nNo filler. No background explainers. If nothing important happened, just say that.\nFormat: short headers, bullet points, done in under 3 minutes of reading.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "prompt-competitor-analysis-bonus-prompt-150",
+"kind": "prompt",
+"title": "Competitor Analysis (Bonus Prompt)",
+"category": "Entrepreneurship",
+"text": "I compete with [Competitor Name]. Research them and tell me:\n\n1. What are they doing right that I should pay attention to?\n2. What are they missing that I could own?\n3. What would surprise me about how they position themselves?\n4. Where do they show up that I don't (and should I care)?\n5. One specific thing I could do this month based on what you found.\n\nKeep it honest and specific. Skip anything I can't act on. Use my Business DNA for context on what matters to my business.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "prompt-recurring-task-discovery-151",
+"kind": "prompt",
+"title": "Recurring Task Discovery",
+"category": "Productivity",
+"text": "Based on what you know about my business from my DNA files, help me audit my recurring tasks.\n\nAsk me about my typical week, one area at a time:\n1. Monday morning routines\n2. Client-related recurring tasks\n3. Content and marketing routines\n4. Admin and operations\n5. End-of-week wrap-up\n\nFor each area, ask me: \"What do you do every [time period] that follows roughly the same pattern?\" Then help me organize it into a clear list.\n\nStart with area 1.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "prompt-recurring-task-audit-152",
+"kind": "prompt",
+"title": "Recurring Task Audit",
+"category": "Productivity",
+"text": "Now organize everything we discussed into a clean audit list using this format:\n\n## MY RECURRING TASK AUDIT\n\nFor each task:\n- Task: [What I do]\n- Frequency: [Daily / Weekly / Before every X / After every Y]\n- Time It Takes: [Rough estimate]\n- Input: [What I start with — email, data, notes, etc.]\n- Output: [What I produce — report, email, post, summary, etc.]\n- Could an Agent Handle This? [Yes / Partially / No]\n\nSort by frequency (daily first, then weekly, then occasional).",
+"formula": "",
+"favorite": false
+},
+{
+"id": "prompt-name-your-agent-153",
+"kind": "prompt",
+"title": "Name Your Agent",
+"category": "General",
+"text": "",
+"formula": "You are [Name], my [role]. You know me and my business from the attached files.",
+"favorite": false
+},
+{
+"id": "prompt-prompt-improver-artifact-154",
+"kind": "prompt",
+"title": "Prompt Improver Artifact",
+"category": "General",
+"text": "AI ADVANTAGE PROMPT IMPROVER\nBuild Specification for an Interactive Claude Artifact\n\nBuild a simple, interactive Claude Artifact called \"AI Advantage Prompt Improver.\"\n\nThe purpose of this artifact is to help a non-technical practitioner systematically improve an existing prompt using the AI Advantage prompt-improvement framework, while keeping the overall user experience deliberately minimal.\n\nThe user should only need to provide one input:\n1. Their existing prompt\n\nDo not require the user to complete a lengthy form before they receive value. The app should immediately analyze and improve the prompt on their behalf.\n\nImportant constraint: The app does not call an external AI model through an API. It should operate as a Claude Artifact that relies on Claude's reasoning within the artifact experience itself. Use local browser state only. No database, no login, no external services.\n\nAPP TITLE\nAI Advantage Prompt Improver\n\nSUBHEADING\nTurn a rough prompt into a structured, reusable prompt.\n\nCORE TEACHING PRINCIPLE\nA prompt becomes more effective when it grows clearer, more specific, more structured, and easier to reuse.\n\nThe app should feel like a rigorous Bootcamp-grade workflow tool, not a toy or a marketing page.\n\n------------------------------------------------------------\n\nUSER FLOW\n\nStep 1: Paste Prompt\nDisplay one large text area labeled:\nPaste your current prompt\n\nHelper text:\nUse any prompt you already have. It can be rough, brief, disorganized, or incomplete.\n\nAdd a primary button:\nImprove My Prompt\n\nAdd a secondary \"Load Example\" button containing this example prompt:\nWrite a follow-up email after a sales call.\n\nStep 2: Prompt Analysis\nWhen the user selects \"Improve My Prompt,\" evaluate the prompt using the simplified AI Advantage methodology.\n\nAssess the original prompt against the following criteria:\n- Clear task definition\n- Expert role\n- Specific purpose\n- Audience or end user\n- Input placeholders\n- Output format\n- Tone and style\n- Step-by-step process\n- Constraints and exclusions\n- Examples or reference output\n- Overall completeness\n\nPresent the analysis as a simple checklist, not a detailed report.\n\nUse concise status labels such as:\n- Strong\n- Missing\n- Could be clearer\n\nKeep the language beginner-friendly throughout.\n\nStep 3: Improved Prompt\nGenerate an improved version of the user's prompt using the following AI Advantage structure:\n\n## Role\nDefine the expert role the AI should adopt.\n\n## Task\nState precisely what the AI should create, decide, analyze, rewrite, summarize, or improve.\n\n## Context\nAdd the most likely context inferred from the original prompt. Where a detail is unknown, insert a placeholder in curly brackets.\n\n## Input\nCreate placeholders for information the user may need to supply later.\nExamples:\n{client notes}\n{target audience}\n{source draft}\n{brand voice}\n{desired word count}\n\n## Process\nAdd clear, ordered action steps for the AI to follow.\nUse action-oriented verbs such as:\n- Review\n- Identify\n- Extract\n- Compare\n- Synthesize\n- Summarize\n- Recommend\n- Generate\n\n## Output Format\nDefine the exact format the AI should return.\nExamples:\n- bulleted list\n- email draft\n- comparison table\n- step-by-step plan\n- checklist\n- brief report\n- social post variations\n\n## Quality Bar\nDefine what a strong answer must include.\nExamples:\n- Be specific and concrete\n- Avoid generic advice\n- Use plain language\n- Keep it concise\n- Make it ready to use as-is\n- Include clear next steps\n\n## Constraints\nAdd boundaries and explicit exclusions.\nExamples:\n- Do not fabricate facts\n- Do not use vague or filler language\n- Do not overcomplicate the response\n- Ask a single clarifying question if essential information is missing\n\n## Optional Examples\nInclude an examples section with empty placeholders the user can populate later.\nUse this format:\n<examples>\n<example1>\nPaste an example of a strong output here.\n</example1>\n<example2>\nPaste another example here.\n</example2>\n</examples>\n\nThe improved prompt should be fully editable inside the app.\n\nAdd the following buttons:\n- Copy Improved Prompt\n- Copy as Markdown\n- Reset\n\nStep 4: What Changed\nDisplay a short, plain-English explanation of how the framework improved the prompt. Use 4 to 6 bullets maximum.\nExamples:\n- Assigned an expert role so the AI adopts the right perspective\n- Converted a vague task into specific, ordered action steps\n- Added reusable placeholders so the prompt works across situations\n- Defined output rules so the response returns in the correct format\n- Added constraints to reduce generic or risky answers\n\nStep 5: Make It Even Better\nAfter the improved prompt is generated, display an optional section titled:\nWant to sharpen it further?\n\nGenerate 3 optional questions derived from what is missing in the original prompt. The questions should be practical and beginner-friendly.\nExamples:\n- Who is the intended audience for this output?\n- What format should the result take?\n- What tone and style should it use?\n- What should the AI explicitly avoid?\n- Do you have an example of a strong result to model?\n\nThe user may answer any or all of these optional questions.\n\nAdd a button:\nRefine With My Answers\n\nWhen selected, update the improved prompt using the user's answers.\n\nStep 6: Optional Test\nInclude a collapsed, optional section titled:\nTest old vs improved\n\nThis step is not required for the main flow.\n\nInside it, include:\n- A test scenario text area\n- Copy Old Prompt Test button\n- Copy Improved Prompt Test button\n- Output A text area\n- Output B text area\n- Copy Blind Judge Prompt button\n\nThe judge prompt should compare Output A and Output B without revealing which came from the original prompt and which came from the improved prompt.\n\nThe judge should score each output on:\n- Goal achievement\n- Specificity\n- Clarity\n- Usefulness\n- Format fit\n- Ready-to-use quality\n\nThe judge should return:\n- Winner\n- Why it won\n- What improved\n- What still needs work\n- A recommendation on whether to use the improved prompt now or refine it again\n\n------------------------------------------------------------\n\nDESIGN REQUIREMENTS\n- No landing page. The app itself is the first screen the user sees.\n- Keep the interface simple and calm.\n- Use a compact workflow layout with these stages displayed across the top: Paste, Analyze, Improve, Refine, Test\n- The main screen should make it immediately obvious that the only required input is a single prompt.\n- Use large text areas for both the original and the improved prompt.\n- Use clearly labeled copy buttons.\n- Use subtle status badges such as: Needs structure, Improved, Ready to test.\n- Make the layout fully responsive across desktop and mobile.\n- Keep it beginner-friendly without being childish.\n- Avoid complex prompt-engineering jargon unless it is explained in plain English.\n\nVALIDATION\n- If the prompt field is empty, display: \"Paste a prompt first, then the Prompt Improver can refine it.\"\n- If the prompt is very short, still improve it, but note that some details had to be inferred.\n- If the optional test outputs are missing, disable the judge prompt button.\n\n------------------------------------------------------------\n\nDEFAULT EXAMPLE\n\nOriginal prompt:\nWrite a follow-up email after a sales call.\n\nThe improved prompt should resolve to something like:\n\n## Role\nYou are a warm, concise sales follow-up writer who sounds like a trusted advisor rather than a pushy salesperson.\n\n## Task\nWrite a follow-up email to send after a sales call.\n\n## Context\nThe email should remind the client of their goal, summarize the agreed next step, address one likely concern, and close with a clear call to action.\n\n## Input\nUse the following details:\n- Client name: {client name}\n- Client goal: {client goal}\n- Main concern or objection: {concern}\n- Agreed next step: {next step}\n- Desired call to action: {CTA}\n\n## Process\n- Review the client goal and concern\n- Summarize the conversation in plain language\n- Reassure the client without over-selling\n- Make the next step easy to say yes to\n\n## Output Format\nWrite one email of no more than 180 words.\nInclude:\n- Subject line\n- Email body\n- Clear call to action\n\n## Quality Bar\nThe email should be warm, specific, concise, and ready to send.\n\n## Constraints\n- Do not sound pushy.\n- Do not use generic sales language.\n- Do not invent details that were not provided.\n\n------------------------------------------------------------\n\nBuild a complete and polished artifact.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-change-the-length-155",
+"kind": "follow-up",
+"title": "Change The Length",
+"category": "Transform",
+"text": "Rewrite this to be [number] of words",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-measure-success-156",
+"kind": "follow-up",
+"title": "Measure Success",
+"category": "Analysis",
+"text": "What would success look like in this situation and how can we measure it? Format the answer in a table.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-learn-from-experience-157",
+"kind": "follow-up",
+"title": "Learn From Experience",
+"category": "Analysis",
+"text": "Are there any lessons we can learn from similar situations in the past? How can we apply those insights?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-go-deeper-158",
+"kind": "follow-up",
+"title": "Go Deeper",
+"category": "Universal",
+"text": "But why?",
+"formula": "",
+"favorite": true
+},
+{
+"id": "follow-up-prioritize-goals-159",
+"kind": "follow-up",
+"title": "Prioritize Goals",
+"category": "Planning For Success",
+"text": "What are our main objectives in this situation? Which goals should we prioritize and in what order?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-explore-details-160",
+"kind": "follow-up",
+"title": "Explore Details",
+"category": "Universal",
+"text": "Now explain that in more detail",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-weigh-cost-benefit-161",
+"kind": "follow-up",
+"title": "Weigh Cost/Benefit",
+"category": "Planning For Success",
+"text": "Can you provide a cost-benefit analysis of this approach? Are the benefits worth the potential costs?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-find-challenges-162",
+"kind": "follow-up",
+"title": "Find Challenges",
+"category": "Speed Learning",
+"text": "What are some common challenges that beginners face in this area, and how can they overcome them?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-provide-examples-163",
+"kind": "follow-up",
+"title": "Provide Examples",
+"category": "Analysis",
+"text": "Can you provide real-world examples to illustrate your point?",
+"formula": "",
+"favorite": true
+},
+{
+"id": "follow-up-multiply-results-164",
+"kind": "follow-up",
+"title": "Multiply Results",
+"category": "Universal",
+"text": "10 more",
+"formula": "",
+"favorite": true
+},
+{
+"id": "follow-up-involve-collaborants-165",
+"kind": "follow-up",
+"title": "Involve Collaborants",
+"category": "Planning For Success",
+"text": "Are there any stakeholders or partners we should involve and what are their priorities?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-establish-timeline-166",
+"kind": "follow-up",
+"title": "Establish Timeline",
+"category": "Planning For Success",
+"text": "What is the timeline for implementing this solution?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-minimize-side-effects-167",
+"kind": "follow-up",
+"title": "Minimize Side Effects",
+"category": "Analysis",
+"text": "What are the possible side effects of this solution? How can we minimize any negative impacts?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-add-context-168",
+"kind": "follow-up",
+"title": "Add Context",
+"category": "Transform",
+"text": "Now try again but consider [context]",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-challenge-assumptions-169",
+"kind": "follow-up",
+"title": "Challenge Assumptions",
+"category": "Problem Solving",
+"text": "What assumptions are we making in this situation? How would our approach change if we questioned this assumption?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-alternative-strategies-170",
+"kind": "follow-up",
+"title": "Alternative Strategies",
+"category": "Problem Solving",
+"text": "What is another way to approach this problem? Can you suggest a different strategy?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-estimate-scalability-171",
+"kind": "follow-up",
+"title": "Estimate Scalability",
+"category": "Planning For Success",
+"text": "How scalable is this solution? Can it be easily adapted or expanded to meet future needs?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-address-ethics-172",
+"kind": "follow-up",
+"title": "Address Ethics",
+"category": "Analysis",
+"text": "Are there any ethical concerns related to this solution? How can we address these concerns effectively?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-measure-success-173",
+"kind": "follow-up",
+"title": "Measure Success",
+"category": "Analysis",
+"text": "What would success look like in this situation and how can we measure it? Format the answer in a table with two columns titled “Success Criteria” and “Measurement Method”.",
+"formula": "",
+"favorite": true
+},
+{
+"id": "follow-up-consider-feedback-174",
+"kind": "follow-up",
+"title": "Consider Feedback",
+"category": "Analysis",
+"text": "Do you have any feedback or suggestions on the current approach? How can we improve it?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-identify-key-skills-175",
+"kind": "follow-up",
+"title": "Identify Key Skills",
+"category": "Speed Learning",
+"text": "What are the most important skills or knowledge areas for beginners to focus on in this field?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-create-table-176",
+"kind": "follow-up",
+"title": "Create Table",
+"category": "Transform",
+"text": "Now transform the results into a table",
+"formula": "",
+"favorite": true
+},
+{
+"id": "follow-up-reimagine-approach-177",
+"kind": "follow-up",
+"title": "Reimagine Approach",
+"category": "Problem Solving",
+"text": "If we were to reframe or redefine the problem, what would it look like? How might that change our approach?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-fact-check-178",
+"kind": "follow-up",
+"title": "Fact Check",
+"category": "Universal",
+"text": "Provide me a list of every single fact that you relied upon throughout our conversation.",
+"formula": "",
+"favorite": true
+},
+{
+"id": "follow-up-find-best-solution-179",
+"kind": "follow-up",
+"title": "Find Best Solution",
+"category": "Analysis",
+"text": "Why do you think that is the best solution? What factors led you to this conclusion?",
+"formula": "",
+"favorite": true
+},
+{
+"id": "follow-up-get-tips-advice-180",
+"kind": "follow-up",
+"title": "Get Tips/Advice",
+"category": "Speed Learning",
+"text": "What practical and immediately actionable tips or advice would you give to someone just starting out in this area?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-find-cheaper-solutions-181",
+"kind": "follow-up",
+"title": "Find Cheaper Solutions",
+"category": "Problem Solving",
+"text": "If we had to solve this problem with half the resources or time, what would we do differently?",
+"formula": "",
+"favorite": true
+},
+{
+"id": "follow-up-predict-challenges-182",
+"kind": "follow-up",
+"title": "Predict Challenges",
+"category": "Analysis",
+"text": "What challenges might we face in implementing this solution? How can we overcome these obstacles?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-clarify-misconceptions-183",
+"kind": "follow-up",
+"title": "Clarify Misconceptions",
+"category": "Speed Learning",
+"text": "What are some common misconceptions or misunderstandings about this topic that beginners should be aware of?",
+"formula": "",
+"favorite": true
+},
+{
+"id": "follow-up-what-if-scenario-184",
+"kind": "follow-up",
+"title": "What-if Scenario",
+"category": "Problem Solving",
+"text": "What if [event] happened? How would that affect our problem and its potential solutions?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-change-text-type-185",
+"kind": "follow-up",
+"title": "Change Text Type",
+"category": "Transform",
+"text": "Now transform all the above information into a [text type]",
+"formula": "",
+"favorite": true
+},
+{
+"id": "follow-up-predict-consequences-186",
+"kind": "follow-up",
+"title": "Predict Consequences",
+"category": "Analysis",
+"text": "What could be the unintended consequences of this decision? Specifically, how might it impact [other area]?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-explore-underlying-principles-187",
+"kind": "follow-up",
+"title": "Explore Underlying Principles",
+"category": "Analysis",
+"text": "Could you elaborate on that idea? What are the underlying principles behind this concept?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-detailed-plan-188",
+"kind": "follow-up",
+"title": "Detailed Plan",
+"category": "Planning For Success",
+"text": "Can you outline a step-by-step plan for implementing this solution? What actions should we take first? Format the answer in a table with a column for steps and a second one for solution.",
+"formula": "",
+"favorite": true
+},
+{
+"id": "follow-up-uncover-ambiguity-189",
+"kind": "follow-up",
+"title": "Uncover Ambiguity",
+"category": "Universal",
+"text": "Analyze the prompts I used in this conversation for ambiguity.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-try-again-190",
+"kind": "follow-up",
+"title": "Try Again",
+"category": "Universal",
+"text": "Could you elaborate on how the latest response you provided doesn't align with my previous instructions? After clarifying that, please make another attempt at following the instructions I gave earlier.",
+"formula": "",
+"favorite": true
+},
+{
+"id": "follow-up-summarize-conversation-191",
+"kind": "follow-up",
+"title": "Summarize Conversation",
+"category": "Universal",
+"text": "Write a summary of our conversation in bullet points.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-continue-style-192",
+"kind": "follow-up",
+"title": "Continue Style",
+"category": "Universal",
+"text": "Using the above writing attribute [instructions]",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-generate-overview-193",
+"kind": "follow-up",
+"title": "Generate Overview",
+"category": "Speed Learning",
+"text": "Can you give a brief overview of this topic, suitable for someone new to the subject?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-weigh-pros-cons-194",
+"kind": "follow-up",
+"title": "Weigh Pros/Cons",
+"category": "Analysis",
+"text": "What are the advantages and disadvantages of this approach? How does this solution compare to others?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-find-resources-195",
+"kind": "follow-up",
+"title": "Find Resources",
+"category": "Speed Learning",
+"text": "What are some beginner-friendly resources to help me learn more about this topic?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-break-down-steps-196",
+"kind": "follow-up",
+"title": "Break-Down-Steps",
+"category": "Planning For Success",
+"text": "Can you break this down into smaller steps? Summarize them in a to-do list.",
+"formula": "",
+"favorite": true
+},
+{
+"id": "follow-up-change-the-style-197",
+"kind": "follow-up",
+"title": "Change The Style",
+"category": "Transform",
+"text": "Rewrite in the style of [style]",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-explore-relations-198",
+"kind": "follow-up",
+"title": "Explore Relations",
+"category": "Analysis",
+"text": "How does this relate to [other topic]?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-find-alternatives-199",
+"kind": "follow-up",
+"title": "Find Alternatives",
+"category": "Problem Solving",
+"text": "Can you list some alternative solutions we haven't discussed yet? How do they compare to the current option?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-discover-learning-path-200",
+"kind": "follow-up",
+"title": "Discover Learning Path",
+"category": "Speed Learning",
+"text": "Can you describe the typical learning process or stages for someone new to this topic?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-additional-resources-201",
+"kind": "follow-up",
+"title": "Additional Resources",
+"category": "Speed Learning",
+"text": "What additional information should I be aware of? What are some resources I can use to learn more about this topic?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-find-unexpected-solutions-202",
+"kind": "follow-up",
+"title": "Find Unexpected Solutions",
+"category": "Problem Solving",
+"text": "Can you suggest a completely unconventional or unexpected solution to this problem?",
+"formula": "",
+"favorite": true
+},
+{
+"id": "follow-up-brainstorm-solutions-203",
+"kind": "follow-up",
+"title": "Brainstorm Solutions",
+"category": "Problem Solving",
+"text": "What are some other ideas or solutions we haven't considered yet? Can you think of any creative ways to approach this problem?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-keep-writing-204",
+"kind": "follow-up",
+"title": "Keep Writing",
+"category": "Universal",
+"text": "Continue",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-simplify-learning-205",
+"kind": "follow-up",
+"title": "Simplify Learning",
+"category": "Speed Learning",
+"text": "Can you break this down into simpler terms or steps for someone who is new to the topic while making it understandable for a 5 year old?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-clarify-concept-206",
+"kind": "follow-up",
+"title": "Clarify Concept",
+"category": "Universal",
+"text": "Can you clarify what you mean by [concept]?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-identify-assumptions-207",
+"kind": "follow-up",
+"title": "Identify Assumptions",
+"category": "Analysis",
+"text": "What are the underlying assumptions of this approach? Are they reasonable and well-founded?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-change-the-tone-208",
+"kind": "follow-up",
+"title": "Change The Tone",
+"category": "Transform",
+"text": "Rewrite with an [tone] tone",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-estimate-feasibility-209",
+"kind": "follow-up",
+"title": "Estimate Feasibility",
+"category": "Planning For Success",
+"text": "How feasible is this solution given our current resources and constraints? Can we realistically implement it?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-track-your-progress-210",
+"kind": "follow-up",
+"title": "Track Your Progress",
+"category": "Speed Learning",
+"text": "What 10 questions should beginners ask themselves to assess their progress and understanding of this topic?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-define-criteria-211",
+"kind": "follow-up",
+"title": "Define Criteria",
+"category": "Problem Solving",
+"text": "What criteria should we use to evaluate different options? Can you walk me through your decision-making process?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-estimate-impact-212",
+"kind": "follow-up",
+"title": "Estimate Impact",
+"category": "Analysis",
+"text": "How will this decision affect different stakeholders? Are there any potential conflicts of interest?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-request-context-questions-213",
+"kind": "follow-up",
+"title": "Request Context Questions",
+"category": "Universal",
+"text": "From now on, please always ask me questions that clarify the context before you answer any of my requests",
+"formula": "",
+"favorite": true
+},
+{
+"id": "follow-up-prompt-coach-214",
+"kind": "follow-up",
+"title": "Prompt Coach",
+"category": "Analysis",
+"text": "You are my personal Prompt Coach that uses my DNA to improve outcomes from my prompts.\n1. First, ask me up to 3 clarifying questions that would materially improve the result.\n2. After I answer them, propose 3 upgraded prompts at different detail levels (quick, standard, thorough) using my answers. Recommend the best one for my situation and an evaluation of the prompt from a prompt engineering perspective.",
+"formula": "",
+"favorite": true
+},
+{
+"id": "follow-up-minimize-risks-215",
+"kind": "follow-up",
+"title": "Minimize Risks",
+"category": "Planning For Success",
+"text": "List all the risks associated with this approach. How can we mitigate these risks? Format the answer in a table with 2 columns titled “Risk” and “Solution”.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-explore-next-steps-216",
+"kind": "follow-up",
+"title": "Explore Next Steps",
+"category": "Planning For Success",
+"text": "Can you summarize the main points we've discussed so far in a bullet point list? Based on our conversation, what would you recommend as the next steps?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-find-evidence-217",
+"kind": "follow-up",
+"title": "Find Evidence",
+"category": "Analysis",
+"text": "What empirical evidence supports this approach? Can you share any relevant data or research findings including precise references?",
+"formula": "",
+"favorite": false
+},
+{
+"id": "follow-up-reset-the-context-218",
+"kind": "follow-up",
+"title": "Reset The Context",
+"category": "Universal",
+"text": "Ignore all previous instructions before this one.",
+"formula": "",
+"favorite": true
+},
+{
+"id": "style-google-219",
+"kind": "style",
+"title": "Google",
+"category": "Brand Voices",
+"text": "Simplicity, user-friendliness, and playful approach to tech.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-ralph-ellison-220",
+"kind": "style",
+"title": "Ralph Ellison",
+"category": "Author Styles",
+"text": "Exploration of identity, race, and social issues in America",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-critical-221",
+"kind": "style",
+"title": "Critical",
+"category": "Tone",
+"text": "Analyzes, evaluates, or critiques a subject; often used in reviews or analytical writing.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-microsoft-222",
+"kind": "style",
+"title": "Microsoft",
+"category": "Brand Voices",
+"text": "Empowerment, productivity, and collaboration.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-kurt-vonnegut-223",
+"kind": "style",
+"title": "Kurt Vonnegut",
+"category": "Author Styles",
+"text": "Satire, dark humor, and unconventional narrative structures",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-academic-224",
+"kind": "style",
+"title": "Academic",
+"category": "Tone",
+"text": "Refers to the use of scholarly, formal, or intellectual language and concepts; often used in research, educational, or professional contexts.",
+"formula": "",
+"favorite": true
+},
+{
+"id": "style-mailchimp-225",
+"kind": "style",
+"title": "Mailchimp",
+"category": "Brand Voices",
+"text": "Approachability, humor, and friendly communication.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-educational-226",
+"kind": "style",
+"title": "Educational",
+"category": "Tone",
+"text": "Informs, teaches, or explains concepts; often used in instructional or academic contexts.",
+"formula": "",
+"favorite": true
+},
+{
+"id": "style-franz-kafka-227",
+"kind": "style",
+"title": "Franz Kafka",
+"category": "Author Styles",
+"text": "Absurdist and existential themes, bureaucratic nightmares",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-harper-s-bazaar-228",
+"kind": "style",
+"title": "Harper's Bazaar",
+"category": "Magazines/Journals",
+"text": "Fashion, culture, beauty",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-starbucks-229",
+"kind": "style",
+"title": "Starbucks",
+"category": "Brand Voices",
+"text": "Consistency, community, and quality coffee experience.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-informal-230",
+"kind": "style",
+"title": "Informal",
+"category": "Tone",
+"text": "Creates a casual, conversational atmosphere; suitable for relaxed or personal contexts.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-emily-bront-231",
+"kind": "style",
+"title": "Emily Brontë",
+"category": "Author Styles",
+"text": "Gothic atmosphere, strong emotions, and complex characters",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-monocle-232",
+"kind": "style",
+"title": "Monocle",
+"category": "Magazines/Journals",
+"text": "Global affairs, business, culture",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-provocative-233",
+"kind": "style",
+"title": "Provocative",
+"category": "Tone",
+"text": "Challenges assumptions, sparks debate, or incites strong reactions; often used to stimulate discussion.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-rolling-stone-234",
+"kind": "style",
+"title": "Rolling Stone",
+"category": "Magazines/Journals",
+"text": "Music, culture, politics",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-adidas-235",
+"kind": "style",
+"title": "Adidas",
+"category": "Brand Voices",
+"text": "Athletic performance, innovation, and collaboration.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-charles-bukowski-236",
+"kind": "style",
+"title": "Charles Bukowski",
+"category": "Author Styles",
+"text": "Raw, gritty realism, and semi-autobiographical works",
+"formula": "",
+"favorite": true
+},
+{
+"id": "style-ikea-237",
+"kind": "style",
+"title": "IKEA",
+"category": "Brand Voices",
+"text": "Scandinavian design, affordability, and functionality.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-conversational-238",
+"kind": "style",
+"title": "Conversational",
+"category": "Tone",
+"text": "Mimics the natural flow and rhythm of spoken language; creates an informal, relatable tone.",
+"formula": "",
+"favorite": true
+},
+{
+"id": "style-sylvia-plath-239",
+"kind": "style",
+"title": "Sylvia Plath",
+"category": "Author Styles",
+"text": "Intensity, emotional depth, and confessional style",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-the-new-york-review-of-books-240",
+"kind": "style",
+"title": "The New York Review of Books",
+"category": "Magazines/Journals",
+"text": "Literature, culture, politics",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-romantic-241",
+"kind": "style",
+"title": "Romantic",
+"category": "Tone",
+"text": "Focuses on emotions, relationships, or beauty; often used in personal or expressive writing.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-playful-242",
+"kind": "style",
+"title": "Playful",
+"category": "Tone",
+"text": "Engages readers with light-hearted, whimsical, or amusing language; creates a fun, entertaining atmosphere.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-vanity-fair-243",
+"kind": "style",
+"title": "Vanity Fair",
+"category": "Magazines/Journals",
+"text": "Pop culture, fashion, current events",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-james-joyce-244",
+"kind": "style",
+"title": "James Joyce",
+"category": "Author Styles",
+"text": "Innovative narrative techniques, dense prose",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-rolex-245",
+"kind": "style",
+"title": "Rolex",
+"category": "Brand Voices",
+"text": "Precision, craftsmanship, and prestige.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-ironic-246",
+"kind": "style",
+"title": "Ironic",
+"category": "Tone",
+"text": "Conveys meaning through contradiction, often to highlight absurdity or to emphasize a point.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-melancholic-247",
+"kind": "style",
+"title": "Melancholic",
+"category": "Tone",
+"text": "Elicits feelings of sadness, introspection, or wistfulness; often used in reflective or somber contexts.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-john-steinbeck-248",
+"kind": "style",
+"title": "John Steinbeck",
+"category": "Author Styles",
+"text": "Social realism, strong characterizations, and vivid descriptions",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-time-249",
+"kind": "style",
+"title": "TIME",
+"category": "Magazines/Journals",
+"text": "News, politics, current events",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-new-scientist-250",
+"kind": "style",
+"title": "New Scientist",
+"category": "Magazines/Journals",
+"text": "Science, technology, environment",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-poetic-251",
+"kind": "style",
+"title": "Poetic",
+"category": "Tone",
+"text": "Incorporates rhythm, figurative language, or other poetic devices; adds beauty or depth to the text.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-national-geographic-252",
+"kind": "style",
+"title": "National Geographic",
+"category": "Magazines/Journals",
+"text": "Science, geography, history",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-the-economist-253",
+"kind": "style",
+"title": "The Economist",
+"category": "Magazines/Journals",
+"text": "Business, politics, economics",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-puma-254",
+"kind": "style",
+"title": "Puma",
+"category": "Brand Voices",
+"text": "Athletic performance, daring design, and creative collaborations.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-j-d-salinger-255",
+"kind": "style",
+"title": "J.D. Salinger",
+"category": "Author Styles",
+"text": "Authentic voice, coming-of-age themes",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-vice-256",
+"kind": "style",
+"title": "VICE",
+"category": "Magazines/Journals",
+"text": "Culture, news, politics",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-the-new-yorker-257",
+"kind": "style",
+"title": "The New Yorker",
+"category": "Magazines/Journals",
+"text": "Culture, politics, humor",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-virginia-woolf-258",
+"kind": "style",
+"title": "Virginia Woolf",
+"category": "Author Styles",
+"text": "Stream of consciousness and inner monologues",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-bon-app-tit-259",
+"kind": "style",
+"title": "Bon Appétit",
+"category": "Magazines/Journals",
+"text": "Food, cooking, culture",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-haruki-murakami-260",
+"kind": "style",
+"title": "Haruki Murakami",
+"category": "Author Styles",
+"text": "Surrealism, introspection, and blending genres",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-ernest-hemingway-261",
+"kind": "style",
+"title": "Ernest Hemingway",
+"category": "Author Styles",
+"text": "Simple and direct prose, strong themes",
+"formula": "",
+"favorite": true
+},
+{
+"id": "style-gopro-262",
+"kind": "style",
+"title": "GoPro",
+"category": "Brand Voices",
+"text": "Adventure, action, and capturing memories.",
+"formula": "",
+"favorite": true
+},
+{
+"id": "style-popular-science-263",
+"kind": "style",
+"title": "Popular Science",
+"category": "Magazines/Journals",
+"text": "Science, technology, environment",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-mcdonald-s-264",
+"kind": "style",
+"title": "McDonald's",
+"category": "Brand Voices",
+"text": "Comfort, nostalgia, and family-friendly atmosphere.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-aesthetica-265",
+"kind": "style",
+"title": "Aesthetica",
+"category": "Magazines/Journals",
+"text": "Art, culture, photography",
+"formula": "",
+"favorite": true
+},
+{
+"id": "style-virgin-266",
+"kind": "style",
+"title": "Virgin",
+"category": "Brand Voices",
+"text": "Disruption, innovation, and customer-focused experiences.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-sports-illustrated-267",
+"kind": "style",
+"title": "Sports Illustrated",
+"category": "Magazines/Journals",
+"text": "Sports",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-harley-davidson-268",
+"kind": "style",
+"title": "Harley-Davidson",
+"category": "Brand Voices",
+"text": "Freedom, individualism, and American spirit.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-amazon-269",
+"kind": "style",
+"title": "Amazon",
+"category": "Brand Voices",
+"text": "Customer obsession, convenience, and variety.",
+"formula": "",
+"favorite": true
+},
+{
+"id": "style-the-chronicle-of-higher-education-270",
+"kind": "style",
+"title": "The Chronicle of Higher Education",
+"category": "Magazines/Journals",
+"text": "Academia, education",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-satirical-271",
+"kind": "style",
+"title": "Satirical",
+"category": "Tone",
+"text": "Employs humor, irony, or exaggeration to critique or mock a subject, often to provoke change.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-margaret-atwood-272",
+"kind": "style",
+"title": "Margaret Atwood",
+"category": "Author Styles",
+"text": "Dystopian worlds, speculative fiction, and feminist themes",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-scientific-american-273",
+"kind": "style",
+"title": "Scientific American",
+"category": "Magazines/Journals",
+"text": "Science, technology",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-humorous-274",
+"kind": "style",
+"title": "Humorous",
+"category": "Tone",
+"text": "Incorporates wit, amusement, or irony; lightens the mood and engages readers in a playful way.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-the-atlantic-275",
+"kind": "style",
+"title": "The Atlantic",
+"category": "Magazines/Journals",
+"text": "Politics, culture, technology",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-h-p-lovecraft-276",
+"kind": "style",
+"title": "H.P. Lovecraft",
+"category": "Author Styles",
+"text": "Cosmic horror, rich vocabulary, and atmospheric storytelling",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-leo-tolstoy-277",
+"kind": "style",
+"title": "Leo Tolstoy",
+"category": "Author Styles",
+"text": "Epic narratives, philosophical insights, and vivid characterizations",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-patagonia-278",
+"kind": "style",
+"title": "Patagonia",
+"category": "Brand Voices",
+"text": "Sustainability, outdoor adventure, and responsibility.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-jane-austen-279",
+"kind": "style",
+"title": "Jane Austen",
+"category": "Author Styles",
+"text": "Satire, social commentary, and romance",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-the-wall-street-journal-280",
+"kind": "style",
+"title": "The Wall Street Journal",
+"category": "Magazines/Journals",
+"text": "Business, finance, politics",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-descriptive-281",
+"kind": "style",
+"title": "Descriptive",
+"category": "Tone",
+"text": "Uses vivid language and sensory details to create imagery; helps readers visualize a scene or concept.",
+"formula": "",
+"favorite": true
+},
+{
+"id": "style-kinfolk-282",
+"kind": "style",
+"title": "Kinfolk",
+"category": "Magazines/Journals",
+"text": "Lifestyle, design, culture",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-toni-morrison-283",
+"kind": "style",
+"title": "Toni Morrison",
+"category": "Author Styles",
+"text": "Rich, lyrical language and African American culture",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-fyodor-dostoevsky-284",
+"kind": "style",
+"title": "Fyodor Dostoevsky",
+"category": "Author Styles",
+"text": "Psychological depth and moral dilemmas",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-architectural-digest-285",
+"kind": "style",
+"title": "Architectural Digest",
+"category": "Magazines/Journals",
+"text": "Interior design, architecture",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-wired-286",
+"kind": "style",
+"title": "Wired",
+"category": "Magazines/Journals",
+"text": "Technology, science, culture",
+"formula": "",
+"favorite": true
+},
+{
+"id": "style-nike-287",
+"kind": "style",
+"title": "Nike",
+"category": "Brand Voices",
+"text": "Empowerment, athleticism, and motivation.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-william-shakespeare-288",
+"kind": "style",
+"title": "William Shakespeare",
+"category": "Author Styles",
+"text": "Poetry, wordplay, and complex characters",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-persuasive-289",
+"kind": "style",
+"title": "Persuasive",
+"category": "Tone",
+"text": "Seeks to convince or influence readers; incorporates strong arguments or appeals to emotion.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-suspenseful-290",
+"kind": "style",
+"title": "Suspenseful",
+"category": "Tone",
+"text": "Builds tension, anticipation, or uncertainty; often used in fiction or narrative writing.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-gq-gentlemen-s-quarterly-291",
+"kind": "style",
+"title": "GQ (Gentlemen's Quarterly)",
+"category": "Magazines/Journals",
+"text": "Men's fashion, lifestyle",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-gabriel-garc-a-m-rquez-292",
+"kind": "style",
+"title": "Gabriel García Márquez",
+"category": "Author Styles",
+"text": "Magical realism, poetic prose, and interwoven narratives",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-sarcastic-293",
+"kind": "style",
+"title": "Sarcastic",
+"category": "Tone",
+"text": "Employs irony, mockery, or satire; can be used to critique or emphasize a point through humor.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-charles-dickens-294",
+"kind": "style",
+"title": "Charles Dickens",
+"category": "Author Styles",
+"text": "Rich, descriptive language and social realism",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-italo-calvino-295",
+"kind": "style",
+"title": "Italo Calvino",
+"category": "Author Styles",
+"text": "Metafiction, experimental narrative structures, and imaginative worlds",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-eloquent-296",
+"kind": "style",
+"title": "Eloquent",
+"category": "Tone",
+"text": "Uses elegant, articulate, or expressive language; often used to convey complex ideas or emotions.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-george-orwell-297",
+"kind": "style",
+"title": "George Orwell",
+"category": "Author Styles",
+"text": "Political commentary and dystopian settings",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-vladimir-nabokov-298",
+"kind": "style",
+"title": "Vladimir Nabokov",
+"category": "Author Styles",
+"text": "Intricate prose, wordplay, and unreliable narrators",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-nostalgic-299",
+"kind": "style",
+"title": "Nostalgic",
+"category": "Tone",
+"text": "Elicits feelings of longing or sentimentality; may reflect on past events, eras, or experiences.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-vogue-300",
+"kind": "style",
+"title": "Vogue",
+"category": "Magazines/Journals",
+"text": "Fashion, beauty, culture",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-friendly-301",
+"kind": "style",
+"title": "Friendly",
+"category": "Tone",
+"text": "Evokes warmth, approachability, and camaraderie; appropriate for personal or social situations.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-the-lancet-302",
+"kind": "style",
+"title": "The Lancet",
+"category": "Magazines/Journals",
+"text": "Medical research",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-cormac-mccarthy-303",
+"kind": "style",
+"title": "Cormac McCarthy",
+"category": "Author Styles",
+"text": "The Road, Blood Meridian, No Country for Old Men",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-oscar-wilde-304",
+"kind": "style",
+"title": "Oscar Wilde",
+"category": "Author Styles",
+"text": "Wit, satire, and social commentary",
+"formula": "",
+"favorite": true
+},
+{
+"id": "style-oreo-305",
+"kind": "style",
+"title": "Oreo",
+"category": "Brand Voices",
+"text": "Playfulness, fun, and the joy of sharing.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-esquire-306",
+"kind": "style",
+"title": "Esquire",
+"category": "Magazines/Journals",
+"text": "Men's fashion, culture, lifestyle",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-spotify-307",
+"kind": "style",
+"title": "Spotify",
+"category": "Brand Voices",
+"text": "Personalized music experience, discovery, and community.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-vans-308",
+"kind": "style",
+"title": "Vans",
+"category": "Brand Voices",
+"text": "Authenticity, youth culture, and action sports.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-airbnb-309",
+"kind": "style",
+"title": "Airbnb",
+"category": "Brand Voices",
+"text": "Belonging, travel experiences, and local connections.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-dramatic-310",
+"kind": "style",
+"title": "Dramatic",
+"category": "Tone",
+"text": "Employs heightened emotions, action, or intensity; often used in storytelling or expressive writing.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-authoritative-311",
+"kind": "style",
+"title": "Authoritative",
+"category": "Tone",
+"text": "Conveys expertise, decisiveness, and confidence; suitable for presenting expert opinions.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-lego-312",
+"kind": "style",
+"title": "LEGO",
+"category": "Brand Voices",
+"text": "Creativity, fun, and endless possibilities.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-zora-neale-hurston-313",
+"kind": "style",
+"title": "Zora Neale Hurston",
+"category": "Author Styles",
+"text": "Rich, authentic dialogue and celebration of African American culture",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-inspirational-314",
+"kind": "style",
+"title": "Inspirational",
+"category": "Tone",
+"text": "Motivates, uplifts, or encourages readers; often used for persuasive or aspirational messages.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-red-bull-315",
+"kind": "style",
+"title": "Red Bull",
+"category": "Brand Voices",
+"text": "Energy, extreme sports, and pushing limits.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-the-paris-review-316",
+"kind": "style",
+"title": "The Paris Review",
+"category": "Magazines/Journals",
+"text": "Literature, art, culture",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-objective-317",
+"kind": "style",
+"title": "Objective",
+"category": "Tone",
+"text": "Presents information in a neutral, unbiased manner; often used in journalism or reporting.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-mark-twain-318",
+"kind": "style",
+"title": "Mark Twain",
+"category": "Author Styles",
+"text": "Humor, social critique, and colloquial language",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-apple-319",
+"kind": "style",
+"title": "Apple",
+"category": "Brand Voices",
+"text": "Minimalist, sleek design, innovation, and user-centric thinking.",
+"formula": "",
+"favorite": true
+},
+{
+"id": "style-empathetic-320",
+"kind": "style",
+"title": "Empathetic",
+"category": "Tone",
+"text": "Demonstrates understanding, compassion, or sensitivity; connects with readers emotionally.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-formal-321",
+"kind": "style",
+"title": "Formal",
+"category": "Tone",
+"text": "Projects authority, professionalism, and seriousness; often used in academic or official contexts.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-interview-322",
+"kind": "style",
+"title": "Interview",
+"category": "Magazines/Journals",
+"text": "Celebrity, culture, art",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-excited-323",
+"kind": "style",
+"title": "Excited",
+"category": "Tone",
+"text": "Expresses excitement, passion, or eagerness; engages readers with energetic language.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-samuel-beckett-324",
+"kind": "style",
+"title": "Samuel Beckett",
+"category": "Author Styles",
+"text": "Minimalism, existentialism, and dark humor",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-fast-company-325",
+"kind": "style",
+"title": "Fast Company",
+"category": "Magazines/Journals",
+"text": "Business, innovation, design",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-disney-326",
+"kind": "style",
+"title": "Disney",
+"category": "Brand Voices",
+"text": "Magic, family entertainment, and storytelling.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-confessional-327",
+"kind": "style",
+"title": "Confessional",
+"category": "Tone",
+"text": "Admits or discloses personal thoughts, feelings, or experiences; fosters vulnerability and openness.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-tesla-328",
+"kind": "style",
+"title": "Tesla",
+"category": "Brand Voices",
+"text": "Bold, innovative, and focused on sustainable energy.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-j-k-rowling-329",
+"kind": "style",
+"title": "J.K. Rowling",
+"category": "Author Styles",
+"text": "Engaging storytelling, rich world-building",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-coca-cola-330",
+"kind": "style",
+"title": "Coca-Cola",
+"category": "Brand Voices",
+"text": "Happiness, positivity, and global unity.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-bmw-331",
+"kind": "style",
+"title": "BMW",
+"category": "Brand Voices",
+"text": "Performance, luxury, and German engineering.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-nature-332",
+"kind": "style",
+"title": "Nature",
+"category": "Magazines/Journals",
+"text": "Science, research",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-ben-jerry-s-333",
+"kind": "style",
+"title": "Ben & Jerry's",
+"category": "Brand Voices",
+"text": "Social activism, unique flavors, and community engagement.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-gucci-334",
+"kind": "style",
+"title": "Gucci",
+"category": "Brand Voices",
+"text": "Luxury, craftsmanship, and Italian heritage.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-chanel-335",
+"kind": "style",
+"title": "Chanel",
+"category": "Brand Voices",
+"text": "Elegance, sophistication, and timeless style.",
+"formula": "",
+"favorite": false
+},
+{
+"id": "style-national-geographic-336",
+"kind": "style",
+"title": "National Geographic",
+"category": "Brand Voices",
+"text": "Exploration, education, and stunning visuals.",
+"formula": "",
+"favorite": false
+}
+]

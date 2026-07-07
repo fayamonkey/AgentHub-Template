@@ -6,6 +6,7 @@ import Ideas from "./views/Ideas.jsx";
 import Wins from "./views/Wins.jsx";
 import Certificate from "./views/Certificate.jsx";
 import Images from "./views/Images.jsx";
+import PromptLibrary from "./views/PromptLibrary.jsx";
 
 const RUNGS = [
   { id: "R1", label: "Prompt" },
@@ -27,6 +28,7 @@ const APP_SECTIONS = [
   { id: "wins", label: "Wins", emoji: "🏆", table: "wins", unit: "wins", blurb: "Everything you have shipped" },
   { id: "images", label: "Images", emoji: "🎨", table: "images", unit: "images", blurb: "Generate images with AI" },
   { id: "certificate", label: "Certificate", emoji: "🏅", table: "certificates", unit: "cards", blurb: "Your shareable Win card" },
+  { id: "prompts", label: "Prompt Library", emoji: "📖", table: "prompts", unit: "prompts", blurb: "Searchable prompts, styles & follow-ups" },
 ];
 
 export default function App() {
@@ -145,7 +147,7 @@ export default function App() {
         </button>
       </nav>
 
-      {tab === "ideas" ? <Ideas /> : tab === "wins" ? <Wins /> : tab === "images" ? <Images /> : tab === "certificate" ? <Certificate /> : (
+      {tab === "ideas" ? <Ideas /> : tab === "wins" ? <Wins /> : tab === "images" ? <Images /> : tab === "certificate" ? <Certificate /> : tab === "prompts" ? <PromptLibrary /> : (
       <div className="wrap">
         <div className="hello">Welcome back 👋</div>
         <h1>{CONFIG.hubName || (CONFIG.ownerName ? `${CONFIG.ownerName}'s AI Hub` : "My AI Hub")}</h1>
